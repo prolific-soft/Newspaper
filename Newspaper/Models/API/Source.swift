@@ -28,6 +28,6 @@ struct Source: Codable, CodableConforming {
     let category: String
     let language: String
     let urlsToLogos: urlsToLogos
-    let sortByAvailable: [String]
+    let sortBysAvailable: [String]
     
 }

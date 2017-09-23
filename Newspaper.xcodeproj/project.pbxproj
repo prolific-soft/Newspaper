@@ -34,6 +34,7 @@
 		EF53C94C1F759D44009A1DB8 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		EF53C94E1F759D54009A1DB8 /* Sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources.swift; sourceTree = "<group>"; };
 		EF53C9521F75C983009A1DB8 /* NewsAPIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIServices.swift; sourceTree = "<group>"; };
+		EF53C9541F75EA16009A1DB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 				EF53C9371F758405009A1DB8 /* Assets.xcassets */,
 				EF53C9391F758405009A1DB8 /* LaunchScreen.storyboard */,
 				EF53C93C1F758405009A1DB8 /* Info.plist */,
+				EF53C9541F75EA16009A1DB8 /* GoogleService-Info.plist */,
 			);
 			path = Newspaper;
 			sourceTree = "<group>";
@@ -90,12 +92,28 @@
 		EF53C9471F759CE4009A1DB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EF53C9571F75EABD009A1DB8 /* API */,
+				EF53C9561F75EA9F009A1DB8 /* Firebase */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EF53C9561F75EA9F009A1DB8 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		EF53C9571F75EABD009A1DB8 /* API */ = {
+			isa = PBXGroup;
+			children = (
 				EF53C9481F759CF9009A1DB8 /* Article.swift */,
 				EF53C94A1F759D09009A1DB8 /* Articles.swift */,
 				EF53C94C1F759D44009A1DB8 /* Source.swift */,
 				EF53C94E1F759D54009A1DB8 /* Sources.swift */,
 			);
-			path = Models;
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

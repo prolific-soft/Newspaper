@@ -17,10 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
        
         let sourceOne = NewsAPIServices()
-        sourceOne.getArticles(source: "techcrunch", sortBy: "latest") { (result) in
-            
-            guard let results = result as? Articles else { return}
-            print(results.articles)
+//        sourceOne.getArticles(source: "techcrunch", sortBy: "latest") { (result) in
+//
+//            guard let results = result as? Articles else { return}
+//            print(results.articles)
+//        }
+//
+        sourceOne.getSources { (result) in
+            guard let results = result as? Sources else { return}
+            print(results.sources)
         }
         
         return true

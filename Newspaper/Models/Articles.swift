@@ -8,10 +8,10 @@
 
 import Foundation
 
-//Contains a list of articles
-//from the news API
+//Contains a list of Articles
 
-struct Articles: Codable {
+struct Articles: Codable, CodableConforming {
+    //Properties
     let status: String
     let source: String
     let sortBy: String

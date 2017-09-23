@@ -12,12 +12,12 @@
 		EF53C9361F758405009A1DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9341F758405009A1DB8 /* Main.storyboard */; };
 		EF53C9381F758405009A1DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9371F758405009A1DB8 /* Assets.xcassets */; };
 		EF53C93B1F758405009A1DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9391F758405009A1DB8 /* LaunchScreen.storyboard */; };
-		EF53C9431F75896D009A1DB8 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9421F75896D009A1DB8 /* Extentions.swift */; };
 		EF53C9461F759569009A1DB8 /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9451F759569009A1DB8 /* NetworkProcessor.swift */; };
 		EF53C9491F759CF9009A1DB8 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9481F759CF9009A1DB8 /* Article.swift */; };
 		EF53C94B1F759D09009A1DB8 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C94A1F759D09009A1DB8 /* Articles.swift */; };
 		EF53C94D1F759D44009A1DB8 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C94C1F759D44009A1DB8 /* Source.swift */; };
 		EF53C94F1F759D54009A1DB8 /* Sources.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C94E1F759D54009A1DB8 /* Sources.swift */; };
+		EF53C9531F75C983009A1DB8 /* NewsAPIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9521F75C983009A1DB8 /* NewsAPIServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +28,12 @@
 		EF53C9371F758405009A1DB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF53C93A1F758405009A1DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF53C93C1F758405009A1DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF53C9421F75896D009A1DB8 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		EF53C9451F759569009A1DB8 /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
 		EF53C9481F759CF9009A1DB8 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		EF53C94A1F759D09009A1DB8 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		EF53C94C1F759D44009A1DB8 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		EF53C94E1F759D54009A1DB8 /* Sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources.swift; sourceTree = "<group>"; };
+		EF53C9521F75C983009A1DB8 /* NewsAPIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,6 @@
 				EF53C9371F758405009A1DB8 /* Assets.xcassets */,
 				EF53C9391F758405009A1DB8 /* LaunchScreen.storyboard */,
 				EF53C93C1F758405009A1DB8 /* Info.plist */,
-				EF53C9421F75896D009A1DB8 /* Extentions.swift */,
 			);
 			path = Newspaper;
 			sourceTree = "<group>";
@@ -83,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				EF53C9451F759569009A1DB8 /* NetworkProcessor.swift */,
+				EF53C9521F75C983009A1DB8 /* NewsAPIServices.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -172,8 +172,8 @@
 			files = (
 				EF53C9331F758405009A1DB8 /* ViewController.swift in Sources */,
 				EF53C9311F758405009A1DB8 /* AppDelegate.swift in Sources */,
-				EF53C9431F75896D009A1DB8 /* Extentions.swift in Sources */,
 				EF53C94D1F759D44009A1DB8 /* Source.swift in Sources */,
+				EF53C9531F75C983009A1DB8 /* NewsAPIServices.swift in Sources */,
 				EF53C94F1F759D54009A1DB8 /* Sources.swift in Sources */,
 				EF53C9461F759569009A1DB8 /* NetworkProcessor.swift in Sources */,
 				EF53C94B1F759D09009A1DB8 /* Articles.swift in Sources */,

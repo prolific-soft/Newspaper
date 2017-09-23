@@ -9,8 +9,9 @@
 import Foundation
 
 //Contains a list of sources
-//from the API
-struct Sources: Codable {
-    let status : String
-    let sources : [Source]
+
+struct Sources: Codable, CodableConforming {
+    //Properties
+    let status: String
+    let sources: [Source]
 }

@@ -8,6 +8,15 @@
 
 import Foundation
 
+//The protocol that all API models
+// adopt for differentiation when decoding
+//to json. See  downloadJSONFromURL for use case
+
+protocol CodableConforming {
+    
+}
+
+//Makes a call to download JSON for a given API
 
 class NetworkProcessor {
     
@@ -20,36 +29,34 @@ class NetworkProcessor {
         self.url = url
     }
     
-    enum StructType {
-        case article
-        case articles
-        case source
-        case sources
-    }
-    
-    typealias JSONDictionaryHandler = ( ([String : Any]?)-> Void  )
+    typealias JSONObject = ( (Codable?) -> Void  )
     
     //Downloads json for a url
-    func downloadJSONFromURL(structType: StructType, _ completion : @escaping JSONDictionaryHandler ){
+    func downloadJSONFromURL(withStructType: String, _ completion : @escaping JSONObject ){
         let request = URLRequest(url: url)
         let dataTask = session.dataTask(with: request) { (data, response, error) in
-            
             if error == nil {
                 if let httpResponse = response as? HTTPURLResponse {
                     switch httpResponse.statusCode {
                     case 200:
+                        print("Success")
                         if let responseData = data {
                             do{
-//                                
-//                                switch structType {
-//                                    case .article
-//                                default:
-//                                    print("Error Matching Struct Type")
-//                                }
-//                                
-//                                 let downloadedObject = try JSONDecoder().decode(structType.self, from: responseData)
-//                                let articleList = articles.articles
-//                                //completion(downloadedObject)
+                                var downloadedObject : Codable?
+                                switch withStructType {
+                                case "article":
+                                    downloadedObject = try JSONDecoder().decode(Article.self, from: responseData)
+                                case "articles":
+                                   downloadedObject = try JSONDecoder().decode(Articles.self, from: responseData)
+                                    print("Articles was downloaded")
+                                case "source":
+                                   downloadedObject = try JSONDecoder().decode(Source.self, from: responseData)
+                                case "sources":
+                                   downloadedObject = try JSONDecoder().decode(Sources.self, from: responseData)
+                                default:
+                                    print("No conformable case was found!")
+                                }
+                                 completion(downloadedObject)
                             }catch let error as NSError {
                                 print("Error decoding: \(error)")
                             }
@@ -61,14 +68,8 @@ class NetworkProcessor {
             }else {
                 print(error?.localizedDescription ?? "Error downloading task")
             }
-            
-            
-            
         }
         dataTask.resume()
-        
-        
-        
         
     }
     

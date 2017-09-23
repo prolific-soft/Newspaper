@@ -10,7 +10,7 @@ import Foundation
 
 //Contains a list of Articles
 
-struct Articles: Codable, CodableConforming {
+class Articles: Codable {
     //Properties
     let status: String
     let source: String

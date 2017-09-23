@@ -11,7 +11,7 @@ import Foundation
 //A single article as defined in
 //the NEWS API
 
-struct Article: Codable, CodableConforming {
+class Article: Codable {
     //Properties
     let author: String
     let title: String

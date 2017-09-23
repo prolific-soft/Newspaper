@@ -19,7 +19,7 @@ struct urlsToLogos: Codable {
 //A source of an article as defined
 //in the NEWS API
 
-struct Source: Codable, CodableConforming {
+class Source: Codable {
     //Properties
     let id: String
     let name: String

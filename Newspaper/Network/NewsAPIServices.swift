@@ -17,7 +17,7 @@ struct NewsAPIServices {
     
     //Properties
     let baseURL = "https://newsapi.org/v1/"
-    let APIKey  = "a7d312d111564be8af66634a50ba3e24"
+    let APIKey  = ""
     
     //Search parameter keys
     struct searchParameters {

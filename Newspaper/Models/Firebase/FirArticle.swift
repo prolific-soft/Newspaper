@@ -39,20 +39,6 @@ struct FirArticle {
     }
     
     
-    init(source: String, addedByUser: String, completed: Bool, key: String = "", article: Article) {
-        self.key = key
-        self.source = source
-        self.addedByUser = addedByUser
-        self.completed = completed
-        self.ref = nil
-
-        self.author = article.author
-        self.title = article.title
-        self.description = article.description
-        self.url = article.url
-        self.urlToImage = article.urlToImage
-        self.publishedAt = article.publishedAt
-    }
     
     init(snapshot: DataSnapshot) {
         key = snapshot.key

@@ -8,14 +8,6 @@
 
 import Foundation
 
-//The protocol that all API models
-// adopt for differentiation when decoding
-//to json. See  downloadJSONFromURL for use case
-
-protocol CodableConforming {
-    
-}
-
 //Makes a call to download JSON for a given API
 
 class NetworkProcessor {

@@ -27,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             for item in articles {
                 
-                let firArticle = FirArticle(source: item.author, addedByUser: item.title, completed: false, article: item)
-                filist.append(firArticle)
+//                let firArticle = FirArticle(source: item.author, addedByUser: item.title, completed: false, article: item)
+//                filist.append(firArticle)
                 //print(item.description)
             }
             

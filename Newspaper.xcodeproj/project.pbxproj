@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		669A624C8F6FD631D8A42283 /* Pods_Newspaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBF7EAFAAB6CC33F51DC058 /* Pods_Newspaper.framework */; };
+		EF1831521F9FB36400BE0140 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1831511F9FB36400BE0140 /* Login.storyboard */; };
 		EF53C9311F758405009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9301F758405009A1DB8 /* AppDelegate.swift */; };
 		EF53C9331F758405009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9321F758405009A1DB8 /* ViewController.swift */; };
 		EF53C9361F758405009A1DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9341F758405009A1DB8 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		0FBF7EAFAAB6CC33F51DC058 /* Pods_Newspaper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newspaper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C56B5B7B975620DFBB369B7 /* Pods-Newspaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newspaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Newspaper/Pods-Newspaper.release.xcconfig"; sourceTree = "<group>"; };
 		B852147EC626797A51C02FB9 /* Pods-Newspaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newspaper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Newspaper/Pods-Newspaper.debug.xcconfig"; sourceTree = "<group>"; };
+		EF1831511F9FB36400BE0140 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		EF53C92D1F758405009A1DB8 /* Newspaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newspaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9301F758405009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C9321F758405009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EF1831501F9FB34800BE0140 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				EF1831511F9FB36400BE0140 /* Login.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		EF1831541F9FB82C00BE0140 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		EF53C9241F758405009A1DB8 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +111,8 @@
 		EF53C92F1F758405009A1DB8 /* Newspaper */ = {
 			isa = PBXGroup;
 			children = (
+				EF1831541F9FB82C00BE0140 /* ViewController */,
+				EF1831501F9FB34800BE0140 /* StoryBoards */,
 				EF53C9471F759CE4009A1DB8 /* Models */,
 				EF53C9441F758EED009A1DB8 /* Network */,
 				EF53C9301F758405009A1DB8 /* AppDelegate.swift */,
@@ -209,6 +228,7 @@
 				EF53C93B1F758405009A1DB8 /* LaunchScreen.storyboard in Resources */,
 				EF53C95B1F75F70C009A1DB8 /* GoogleService-Info.plist in Resources */,
 				EF53C9381F758405009A1DB8 /* Assets.xcassets in Resources */,
+				EF1831521F9FB36400BE0140 /* Login.storyboard in Resources */,
 				EF53C9361F758405009A1DB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

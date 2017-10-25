@@ -13,9 +13,9 @@
 		EF1831591FA00BFB00BE0140 /* MoreLoginOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1831581FA00BFB00BE0140 /* MoreLoginOptionViewController.swift */; };
 		EF18315D1FA011C000BE0140 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF18315C1FA011C000BE0140 /* LogInViewController.swift */; };
 		EF18315F1FA011EB00BE0140 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF18315E1FA011EB00BE0140 /* CreateAccountViewController.swift */; };
+		EF1831611FA0D1EF00BE0140 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1831601FA0D1EF00BE0140 /* AuthService.swift */; };
 		EF53C9311F758405009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9301F758405009A1DB8 /* AppDelegate.swift */; };
 		EF53C9331F758405009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9321F758405009A1DB8 /* ViewController.swift */; };
-		EF53C9361F758405009A1DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9341F758405009A1DB8 /* Main.storyboard */; };
 		EF53C9381F758405009A1DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9371F758405009A1DB8 /* Assets.xcassets */; };
 		EF53C93B1F758405009A1DB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9391F758405009A1DB8 /* LaunchScreen.storyboard */; };
 		EF53C9461F759569009A1DB8 /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9451F759569009A1DB8 /* NetworkProcessor.swift */; };
@@ -38,10 +38,10 @@
 		EF18315B1FA00CE200BE0140 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		EF18315C1FA011C000BE0140 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		EF18315E1FA011EB00BE0140 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		EF1831601FA0D1EF00BE0140 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		EF53C92D1F758405009A1DB8 /* Newspaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newspaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9301F758405009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C9321F758405009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EF53C9351F758405009A1DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF53C9371F758405009A1DB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF53C93A1F758405009A1DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF53C93C1F758405009A1DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,7 +146,6 @@
 				EF53C9441F758EED009A1DB8 /* Network */,
 				EF53C9301F758405009A1DB8 /* AppDelegate.swift */,
 				EF53C9321F758405009A1DB8 /* ViewController.swift */,
-				EF53C9341F758405009A1DB8 /* Main.storyboard */,
 				EF53C9371F758405009A1DB8 /* Assets.xcassets */,
 				EF18315A1FA00CCA00BE0140 /* icons */,
 				EF53C9391F758405009A1DB8 /* LaunchScreen.storyboard */,
@@ -178,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				EF53C95C1F75F83C009A1DB8 /* FirArticle.swift */,
+				EF1831601FA0D1EF00BE0140 /* AuthService.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -259,7 +259,6 @@
 				EF53C95B1F75F70C009A1DB8 /* GoogleService-Info.plist in Resources */,
 				EF53C9381F758405009A1DB8 /* Assets.xcassets in Resources */,
 				EF1831521F9FB36400BE0140 /* Login.storyboard in Resources */,
-				EF53C9361F758405009A1DB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,13 +290,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Newspaper/Pods-Newspaper-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -341,20 +344,13 @@
 				EF53C94B1F759D09009A1DB8 /* Articles.swift in Sources */,
 				EF53C9491F759CF9009A1DB8 /* Article.swift in Sources */,
 				EF53C95D1F75F83C009A1DB8 /* FirArticle.swift in Sources */,
+				EF1831611FA0D1EF00BE0140 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EF53C9341F758405009A1DB8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF53C9351F758405009A1DB8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EF53C9391F758405009A1DB8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

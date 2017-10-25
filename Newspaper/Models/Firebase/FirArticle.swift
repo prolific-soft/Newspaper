@@ -38,7 +38,7 @@ struct FirArticle {
         case completed = "completed"
     }
     
-    
+    //Add init with codable article
     
     init(snapshot: DataSnapshot) {
         key = snapshot.key

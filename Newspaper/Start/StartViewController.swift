@@ -17,6 +17,7 @@ class StartViewController: UIViewController {
 
     
     @IBAction func exploreButtonTapped(_ sender: UIButton) {
+        
     }
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {

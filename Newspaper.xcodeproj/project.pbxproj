@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		669A624C8F6FD631D8A42283 /* Pods_Newspaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBF7EAFAAB6CC33F51DC058 /* Pods_Newspaper.framework */; };
 		EF1831521F9FB36400BE0140 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1831511F9FB36400BE0140 /* Login.storyboard */; };
+		EF1831571FA008D000BE0140 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1831561FA008D000BE0140 /* StartViewController.swift */; };
+		EF1831591FA00BFB00BE0140 /* MoreLoginOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1831581FA00BFB00BE0140 /* MoreLoginOptionViewController.swift */; };
+		EF18315D1FA011C000BE0140 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF18315C1FA011C000BE0140 /* LogInViewController.swift */; };
+		EF18315F1FA011EB00BE0140 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF18315E1FA011EB00BE0140 /* CreateAccountViewController.swift */; };
 		EF53C9311F758405009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9301F758405009A1DB8 /* AppDelegate.swift */; };
 		EF53C9331F758405009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9321F758405009A1DB8 /* ViewController.swift */; };
 		EF53C9361F758405009A1DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9341F758405009A1DB8 /* Main.storyboard */; };
@@ -29,6 +33,11 @@
 		5C56B5B7B975620DFBB369B7 /* Pods-Newspaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newspaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Newspaper/Pods-Newspaper.release.xcconfig"; sourceTree = "<group>"; };
 		B852147EC626797A51C02FB9 /* Pods-Newspaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newspaper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Newspaper/Pods-Newspaper.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1831511F9FB36400BE0140 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		EF1831561FA008D000BE0140 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		EF1831581FA00BFB00BE0140 /* MoreLoginOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreLoginOptionViewController.swift; sourceTree = "<group>"; };
+		EF18315B1FA00CE200BE0140 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		EF18315C1FA011C000BE0140 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		EF18315E1FA011EB00BE0140 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		EF53C92D1F758405009A1DB8 /* Newspaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newspaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9301F758405009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C9321F758405009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +99,25 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		EF1831551FA008B100BE0140 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				EF1831561FA008D000BE0140 /* StartViewController.swift */,
+				EF1831581FA00BFB00BE0140 /* MoreLoginOptionViewController.swift */,
+				EF18315C1FA011C000BE0140 /* LogInViewController.swift */,
+				EF18315E1FA011EB00BE0140 /* CreateAccountViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		EF18315A1FA00CCA00BE0140 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				EF18315B1FA00CE200BE0140 /* delete.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
 		EF53C9241F758405009A1DB8 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +139,7 @@
 		EF53C92F1F758405009A1DB8 /* Newspaper */ = {
 			isa = PBXGroup;
 			children = (
+				EF1831551FA008B100BE0140 /* Start */,
 				EF1831541F9FB82C00BE0140 /* ViewController */,
 				EF1831501F9FB34800BE0140 /* StoryBoards */,
 				EF53C9471F759CE4009A1DB8 /* Models */,
@@ -119,6 +148,7 @@
 				EF53C9321F758405009A1DB8 /* ViewController.swift */,
 				EF53C9341F758405009A1DB8 /* Main.storyboard */,
 				EF53C9371F758405009A1DB8 /* Assets.xcassets */,
+				EF18315A1FA00CCA00BE0140 /* icons */,
 				EF53C9391F758405009A1DB8 /* LaunchScreen.storyboard */,
 				EF53C93C1F758405009A1DB8 /* Info.plist */,
 				EF53C95A1F75F70C009A1DB8 /* GoogleService-Info.plist */,
@@ -302,8 +332,12 @@
 				EF53C9311F758405009A1DB8 /* AppDelegate.swift in Sources */,
 				EF53C94D1F759D44009A1DB8 /* Source.swift in Sources */,
 				EF53C9531F75C983009A1DB8 /* NewsAPIServices.swift in Sources */,
+				EF1831591FA00BFB00BE0140 /* MoreLoginOptionViewController.swift in Sources */,
+				EF18315F1FA011EB00BE0140 /* CreateAccountViewController.swift in Sources */,
 				EF53C94F1F759D54009A1DB8 /* Sources.swift in Sources */,
+				EF1831571FA008D000BE0140 /* StartViewController.swift in Sources */,
 				EF53C9461F759569009A1DB8 /* NetworkProcessor.swift in Sources */,
+				EF18315D1FA011C000BE0140 /* LogInViewController.swift in Sources */,
 				EF53C94B1F759D09009A1DB8 /* Articles.swift in Sources */,
 				EF53C9491F759CF9009A1DB8 /* Article.swift in Sources */,
 				EF53C95D1F75F83C009A1DB8 /* FirArticle.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class LogInViewController: UIViewController {
 
@@ -16,14 +17,20 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        SVProgressHUD.setDefaultMaskType(.black)
     }
 
     
     @IBAction func loginButtonTapped(_ sender: Any) {
-        
-        
+        guard let emailText = emailTextfield.text, let passwordText = passwordTextfield.text else {
+            return
+        }
+        AuthService.signIn(email: emailText, password: passwordText, onSuccess: {
+           SVProgressHUD.showSuccess(withStatus: "Success!")
+            
+        }) { (ErrorMessage) in
+            SVProgressHUD.showError(withStatus: ErrorMessage!)
+        }
     }
     
 

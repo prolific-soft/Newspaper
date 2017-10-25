@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class CreateAccountViewController: UIViewController {
 
@@ -21,9 +22,20 @@ class CreateAccountViewController: UIViewController {
     }
 
 
-    @IBOutlet weak var createAccountButtonTapped: UIButton!
     
-
+    @IBAction func createAccountButtonTapped(_ sender: UIButton) {
+        
+        guard let emailText = emailTextField.text, let passwordText = passwordTextField.text else {
+            return
+        }
+        AuthService.signUp(email: emailText, password: passwordText, onSuccess: {
+            SVProgressHUD.showSuccess(withStatus: "Success!")
+            
+        }) { (ErrorMessage) in
+            SVProgressHUD.showError(withStatus: ErrorMessage!)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

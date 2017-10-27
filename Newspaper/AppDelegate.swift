@@ -17,39 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
          FirebaseApp.configure()
-        let sourceOne = NewsAPIServices()
-        sourceOne.getArticles(source: "techcrunch", sortBy: "latest") { (result) in
 
-            guard let results = result as? Articles else { return}
-            let articles = results.articles
-            
-            var filist: [FirArticle] = []
-            
-            for item in articles {
-                
-//                let firArticle = FirArticle(source: item.author, addedByUser: item.title, completed: false, article: item)
-//                filist.append(firArticle)
-                //print(item.description)
-            }
-            
-            let rootRef = Database.database().reference()
-            let ref = rootRef.child("Articles")
-            let samArticle = ref.child("Sam")
-            print(filist[2].toAnyObject())
-            samArticle.setValue(filist[2].toAnyObject())
-            let johnArticle = ref.child("Johns")
-            johnArticle.setValue(filist[3].toAnyObject())
-            let bobbyArticle = ref.child("Bobby")
-            bobbyArticle.setValue(filist[4].toAnyObject())
-            let saraArticle = ref.child("Sarah")
-            saraArticle.setValue(filist[5].toAnyObject())
-            //print(results.articles)
+        let ser = SourceList()
+        
+        ser.getSources { (sources) in
+            let newSorted = SourceList()
+            let comp = newSorted.sortSourceToCategories(list: sources)
+            print("+++++++++++++++++++++++++++")
+            print(comp)
+            print("+++++++++++++++++++++++++++")
         }
 
-//        sourceOne.getSources { (result) in
-//            guard let results = result as? Sources else { return}
-//            print(results.sources.count)
-//        }
         
         return true
     }

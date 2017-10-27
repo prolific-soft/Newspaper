@@ -12,7 +12,7 @@ class CategoryExploreTableViewController: UITableViewController {
 
     //Class Properties
     let numberOfSections = 2
-    let collectionViewItems = 10
+    var collectionViewItems = 9
     var height = CGFloat()
     var imageCategory = [String : UIImage]()
     
@@ -24,8 +24,9 @@ class CategoryExploreTableViewController: UITableViewController {
         
         //Init Image Categories
        
-        imageCategory = ["business" :  UIImage(named: "business")!, "entertainment" :  UIImage(named: "entertainment")! ,
-        "gaming" :  UIImage(named: "gaming")!, "general" :  UIImage(named: "general")!, "music" :  UIImage(named: "music")!, "politics" :  UIImage(named: "politics")!, "science" :  UIImage(named: "science")!, "sports" :  UIImage(named: "sports")!, "tech" :  UIImage(named: "tech")!]
+        imageCategory = ["Business" :  UIImage(named: "business")!, "Entertainment" :  UIImage(named: "entertainment")! ,
+        "Gaming" :  UIImage(named: "gaming")!, "General" :  UIImage(named: "general")!, "Music" :  UIImage(named: "music")!, "Politics" :  UIImage(named: "politics")!, "Science" :  UIImage(named: "science")!, "Sports" :  UIImage(named: "sports")!, "Tech" :  UIImage(named: "tech")!]
+        collectionViewItems = imageCategory.count
     }
 
     // MARK: - Table view data source

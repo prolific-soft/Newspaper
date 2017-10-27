@@ -31,6 +31,9 @@
 		EFAD063A1FA25FBA00E36241 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06391FA25FBA00E36241 /* SearchTableViewCell.swift */; };
 		EFAD063C1FA25FE500E36241 /* CategoryExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD063B1FA25FE500E36241 /* CategoryExploreTableViewCell.swift */; };
 		EFAD063E1FA2601E00E36241 /* CategoryExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD063D1FA2601E00E36241 /* CategoryExploreCollectionViewCell.swift */; };
+		EFAD06421FA342FC00E36241 /* ExploreOpenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06411FA342FC00E36241 /* ExploreOpenTableViewController.swift */; };
+		EFAD06441FA34C5000E36241 /* ExploreOpenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06431FA34C5000E36241 /* ExploreOpenTableViewCell.swift */; };
+		EFAD06471FA3819800E36241 /* SourceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06461FA3819800E36241 /* SourceList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +68,9 @@
 		EFAD063B1FA25FE500E36241 /* CategoryExploreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryExploreTableViewCell.swift; sourceTree = "<group>"; };
 		EFAD063D1FA2601E00E36241 /* CategoryExploreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryExploreCollectionViewCell.swift; sourceTree = "<group>"; };
 		EFAD063F1FA2C8FA00E36241 /* category */ = {isa = PBXFileReference; lastKnownFileType = folder; path = category; sourceTree = "<group>"; };
+		EFAD06411FA342FC00E36241 /* ExploreOpenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreOpenTableViewController.swift; sourceTree = "<group>"; };
+		EFAD06431FA34C5000E36241 /* ExploreOpenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreOpenTableViewCell.swift; sourceTree = "<group>"; };
+		EFAD06461FA3819800E36241 /* SourceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 		EF53C92F1F758405009A1DB8 /* Newspaper */ = {
 			isa = PBXGroup;
 			children = (
+				EFAD06401FA342C600E36241 /* Explore Open */,
 				EFAD06361FA25E8600E36241 /* Category Explore */,
 				EFAD06331FA25D8100E36241 /* Enums */,
 				EF1831551FA008B100BE0140 /* Start */,
@@ -183,6 +190,7 @@
 		EF53C9471F759CE4009A1DB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EFAD06451FA3818200E36241 /* Objects */,
 				EF53C9571F75EABD009A1DB8 /* API */,
 				EF53C9561F75EA9F009A1DB8 /* Firebase */,
 			);
@@ -226,6 +234,23 @@
 				EFAD063D1FA2601E00E36241 /* CategoryExploreCollectionViewCell.swift */,
 			);
 			path = "Category Explore";
+			sourceTree = "<group>";
+		};
+		EFAD06401FA342C600E36241 /* Explore Open */ = {
+			isa = PBXGroup;
+			children = (
+				EFAD06411FA342FC00E36241 /* ExploreOpenTableViewController.swift */,
+				EFAD06431FA34C5000E36241 /* ExploreOpenTableViewCell.swift */,
+			);
+			path = "Explore Open";
+			sourceTree = "<group>";
+		};
+		EFAD06451FA3818200E36241 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				EFAD06461FA3819800E36241 /* SourceList.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,13 +402,16 @@
 				EF53C94F1F759D54009A1DB8 /* Sources.swift in Sources */,
 				EFAD063E1FA2601E00E36241 /* CategoryExploreCollectionViewCell.swift in Sources */,
 				EF1831571FA008D000BE0140 /* StartViewController.swift in Sources */,
+				EFAD06421FA342FC00E36241 /* ExploreOpenTableViewController.swift in Sources */,
 				EFAD063C1FA25FE500E36241 /* CategoryExploreTableViewCell.swift in Sources */,
 				EF53C9461F759569009A1DB8 /* NetworkProcessor.swift in Sources */,
+				EFAD06441FA34C5000E36241 /* ExploreOpenTableViewCell.swift in Sources */,
 				EF18315D1FA011C000BE0140 /* LogInViewController.swift in Sources */,
 				EF53C94B1F759D09009A1DB8 /* Articles.swift in Sources */,
 				EF53C9491F759CF9009A1DB8 /* Article.swift in Sources */,
 				EF53C95D1F75F83C009A1DB8 /* FirArticle.swift in Sources */,
 				EF1831611FA0D1EF00BE0140 /* AuthService.swift in Sources */,
+				EFAD06471FA3819800E36241 /* SourceList.swift in Sources */,
 				EFAD06351FA25DD400E36241 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,5 +14,6 @@ enum Cell : String {
     case searchTableViewCell = "searchTableViewCell"
     case categoryExploreTableViewCell = "categoryExploreTableViewCell"
     case categoryExploreCollectionViewCell = "categoryExploreCollectionViewCell"
+    case exploreOpenTableViewCell = "exploreOpenTableViewCell"
 
 }

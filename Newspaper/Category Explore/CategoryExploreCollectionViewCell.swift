@@ -12,6 +12,14 @@ class CategoryExploreCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var categoryImage: UIImageView!
     
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    //Sets up the cell
+    func setUp(name : String, image : UIImage) {
+        categoryImage.image = image
+        categoryLabel.text = name
+    }
+    
     
     
 }

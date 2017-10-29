@@ -15,6 +15,7 @@ class CategoryExploreTableViewController: UITableViewController {
     var collectionViewItems = 9
     var height = CGFloat()
     var imageCategory = [String : UIImage]()
+    var sourceCategories = [String : [Source]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +24,20 @@ class CategoryExploreTableViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
         //Init Image Categories
-       
         imageCategory = ["Business" :  UIImage(named: "business")!, "Entertainment" :  UIImage(named: "entertainment")! ,
         "Gaming" :  UIImage(named: "gaming")!, "General" :  UIImage(named: "general")!, "Music" :  UIImage(named: "music")!, "Politics" :  UIImage(named: "politics")!, "Science" :  UIImage(named: "science")!, "Sports" :  UIImage(named: "sports")!, "Tech" :  UIImage(named: "tech")!]
         collectionViewItems = imageCategory.count
+        
+        
+        let ser = SourceList()
+        ser.getSources { (sources) in
+            let newSorted = SourceList()
+            let comp = newSorted.sortSourceToCategories(list: sources)
+            self.sourceCategories = comp
+//            print("+++++++++++++++++++++++++++")
+//            print(comp)
+//            print("+++++++++++++++++++++++++++")
+        }
     }
 
     // MARK: - Table view data source
@@ -39,6 +50,35 @@ class CategoryExploreTableViewController: UITableViewController {
         //Numeber of section from datasource for section 1
         return section == 0 ? 1 : 1
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toExploreOpen" {
+            if let exploreOpenTableViewController = segue.destination as? ExploreOpenTableViewController {
+                //let keys = Array(imageCategory.keys)
+                let cell = sender as! CategoryExploreCollectionViewCell
+               
+                //let keyName = keys[(sender as! IndexPath).row]
+                let selectedCategory = sourceCategories[ cell.categoryLabel.text!.lowercased()]
+                
+                print("================== 1 ======================")
+                print("\(cell.categoryLabel.text!.lowercased())")
+                 print("==========================================")
+                
+                print("===============   2   ===============")
+                print("\(selectedCategory?.description)")
+                print("===================================")
+            
+                
+                if let sourceCat = selectedCategory {
+                    exploreOpenTableViewController.sourceList = sourceCat
+                }
+                
+                
+            }
+        }
+    }
+
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell =  UITableViewCell()
@@ -95,7 +135,7 @@ extension CategoryExploreTableViewController : UICollectionViewDataSource, UICol
         
         let keyName = keys[indexPath.row]
         cell.setUp(name: keyName, image: imageCategory[keyName]!)
-        print("========++++++++========= \(indexPath.row)")
+
         
         return cell
     }
@@ -112,4 +152,16 @@ extension CategoryExploreTableViewController : UICollectionViewDataSource, UICol
         
     }
     
+}
+
+
+extension CategoryExploreTableViewController
+{
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//         self.performSegue(withIdentifier: "toExploreOpen", sender: indexPath)
+//    }
+//
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         self.performSegue(withIdentifier: "toExploreOpen", sender: indexPath)
+    }
 }

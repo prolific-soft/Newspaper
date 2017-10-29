@@ -26,6 +26,11 @@ class ExploreOpenTableViewCell: UITableViewCell {
         // Initialization code
     }
 
+    func setUp(withSource : Source){
+        sourceTitle.text = withSource.name
+        sourceDescription.text = withSource.description
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

@@ -10,14 +10,18 @@ import UIKit
 
 class ExploreOpenTableViewController: UITableViewController {
 
+    var sourceList = [Source]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Preserve selection between presentations
          self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        self.tableView.estimatedRowHeight = self.tableView.rowHeight
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+        
     }
 
     
@@ -28,12 +32,14 @@ class ExploreOpenTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return sourceList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.exploreOpenTableViewCell.rawValue, for: indexPath) as! ExploreOpenTableViewCell
-        // Configure the cell...
+        
+        let source = sourceList[indexPath.row]
+        cell.setUp(withSource: source)
 
         return cell
     }

@@ -245,7 +245,7 @@
                                                     <connections>
                                                         <outlet property="categoryImage" destination="ryD-H1-iCK" id="cSN-2x-HxO"/>
                                                         <outlet property="categoryLabel" destination="YgI-eW-Mcw" id="ZFW-ru-ubm"/>
-                                                        <segue destination="wap-0R-PfZ" kind="show" id="9YG-7r-nKO"/>
+                                                        <segue destination="wap-0R-PfZ" kind="show" identifier="toExploreOpen" id="9YG-7r-nKO"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>

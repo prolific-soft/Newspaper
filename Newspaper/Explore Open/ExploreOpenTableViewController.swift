@@ -39,6 +39,8 @@ class ExploreOpenTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.exploreOpenTableViewCell.rawValue, for: indexPath) as! ExploreOpenTableViewCell
         
         let source = sourceList[indexPath.row]
+        
+        
         cell.setUp(withSource: source)
 
         return cell

@@ -34,9 +34,9 @@ class CategoryExploreTableViewController: UITableViewController {
             let newSorted = SourceList()
             let comp = newSorted.sortSourceToCategories(list: sources)
             self.sourceCategories = comp
-//            print("+++++++++++++++++++++++++++")
-//            print(comp)
-//            print("+++++++++++++++++++++++++++")
+            print("+++++++++++++++++++++++++++")
+            print(comp)
+            print("+++++++++++++++++++++++++++")
         }
     }
 
@@ -59,15 +59,15 @@ class CategoryExploreTableViewController: UITableViewController {
                
                 //let keyName = keys[(sender as! IndexPath).row]
                 let selectedCategory = sourceCategories[ cell.categoryLabel.text!.lowercased()]
-                
-                print("================== 1 ======================")
-                print("\(cell.categoryLabel.text!.lowercased())")
-                 print("==========================================")
-                
-                print("===============   2   ===============")
-                print("\(selectedCategory?.description)")
-                print("===================================")
-            
+//                
+//                print("================== 1 ======================")
+//                print("\(cell.categoryLabel.text!.lowercased())")
+//                 print("==========================================")
+//                
+//                print("===============   2   ===============")
+//                print("\(selectedCategory?.description)")
+//                print("===================================")
+//            
                 
                 if let sourceCat = selectedCategory {
                     exploreOpenTableViewController.sourceList = sourceCat
@@ -132,10 +132,8 @@ extension CategoryExploreTableViewController : UICollectionViewDataSource, UICol
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.categoryExploreCollectionViewCell.rawValue, for: indexPath)  as! CategoryExploreCollectionViewCell
         let keys = Array(imageCategory.keys)
         
-        
         let keyName = keys[indexPath.row]
         cell.setUp(name: keyName, image: imageCategory[keyName]!)
-
         
         return cell
     }
@@ -157,11 +155,11 @@ extension CategoryExploreTableViewController : UICollectionViewDataSource, UICol
 
 extension CategoryExploreTableViewController
 {
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//         self.performSegue(withIdentifier: "toExploreOpen", sender: indexPath)
-//    }
-//
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
          self.performSegue(withIdentifier: "toExploreOpen", sender: indexPath)
     }
+
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//         self.performSegue(withIdentifier: "toExploreOpen", sender: indexPath)
+//    }
 }

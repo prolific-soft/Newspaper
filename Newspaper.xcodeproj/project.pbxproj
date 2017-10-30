@@ -34,6 +34,7 @@
 		EFAD06421FA342FC00E36241 /* ExploreOpenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06411FA342FC00E36241 /* ExploreOpenTableViewController.swift */; };
 		EFAD06441FA34C5000E36241 /* ExploreOpenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06431FA34C5000E36241 /* ExploreOpenTableViewCell.swift */; };
 		EFAD06471FA3819800E36241 /* SourceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06461FA3819800E36241 /* SourceList.swift */; };
+		EFAD06491FA77BE400E36241 /* SourceImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06481FA77BE400E36241 /* SourceImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,9 @@
 		EFAD06411FA342FC00E36241 /* ExploreOpenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreOpenTableViewController.swift; sourceTree = "<group>"; };
 		EFAD06431FA34C5000E36241 /* ExploreOpenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreOpenTableViewCell.swift; sourceTree = "<group>"; };
 		EFAD06461FA3819800E36241 /* SourceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceList.swift; sourceTree = "<group>"; };
+		EFAD06481FA77BE400E36241 /* SourceImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceImages.swift; sourceTree = "<group>"; };
+		EFAD064B1FA783DA00E36241 /* abc-news-au.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "abc-news-au.png"; sourceTree = "<group>"; };
+		EFAD064C1FA7868C00E36241 /* cnn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cnn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 				EF53C9321F758405009A1DB8 /* ViewController.swift */,
 				EF53C9371F758405009A1DB8 /* Assets.xcassets */,
 				EFAD063F1FA2C8FA00E36241 /* category */,
+				EFAD064A1FA783BB00E36241 /* Source Image */,
 				EF18315A1FA00CCA00BE0140 /* icons */,
 				EF53C9391F758405009A1DB8 /* LaunchScreen.storyboard */,
 				EF53C93C1F758405009A1DB8 /* Info.plist */,
@@ -249,8 +254,18 @@
 			isa = PBXGroup;
 			children = (
 				EFAD06461FA3819800E36241 /* SourceList.swift */,
+				EFAD06481FA77BE400E36241 /* SourceImages.swift */,
 			);
 			path = Objects;
+			sourceTree = "<group>";
+		};
+		EFAD064A1FA783BB00E36241 /* Source Image */ = {
+			isa = PBXGroup;
+			children = (
+				EFAD064B1FA783DA00E36241 /* abc-news-au.png */,
+				EFAD064C1FA7868C00E36241 /* cnn.png */,
+			);
+			path = "Source Image";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +413,7 @@
 				EF53C9531F75C983009A1DB8 /* NewsAPIServices.swift in Sources */,
 				EFAD063A1FA25FBA00E36241 /* SearchTableViewCell.swift in Sources */,
 				EF1831591FA00BFB00BE0140 /* MoreLoginOptionViewController.swift in Sources */,
+				EFAD06491FA77BE400E36241 /* SourceImages.swift in Sources */,
 				EF18315F1FA011EB00BE0140 /* CreateAccountViewController.swift in Sources */,
 				EF53C94F1F759D54009A1DB8 /* Sources.swift in Sources */,
 				EFAD063E1FA2601E00E36241 /* CategoryExploreCollectionViewCell.swift in Sources */,

@@ -27,8 +27,23 @@ class ExploreOpenTableViewCell: UITableViewCell {
     }
 
     func setUp(withSource : Source){
+        
+        let list = SourceImages().getSourceImages()
+        
+        
         sourceTitle.text = withSource.name
         sourceDescription.text = withSource.description
+        
+        for item in list {
+            if(withSource.id == item.key){
+                sourceImageView.image = item.image
+            }
+            
+            
+        }
+        
+ 
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

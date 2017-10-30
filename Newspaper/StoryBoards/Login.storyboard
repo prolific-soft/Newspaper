@@ -285,21 +285,21 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6GP-6K-CoE">
-                                            <rect key="frame" x="0.0" y="7.5" width="80" height="70"/>
+                                            <rect key="frame" x="8" y="7.5" width="70" height="70"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="80" id="4Hq-wt-wYt"/>
-                                                <constraint firstAttribute="width" secondItem="6GP-6K-CoE" secondAttribute="height" multiplier="8:7" id="WIH-ki-wjT"/>
+                                                <constraint firstAttribute="width" constant="70" id="4Hq-wt-wYt"/>
+                                                <constraint firstAttribute="width" secondItem="6GP-6K-CoE" secondAttribute="height" multiplier="8:7" constant="-10" id="WIH-ki-wjT"/>
                                                 <constraint firstAttribute="height" constant="70" id="am6-bO-wQU"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="BBC News" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O59-j6-huP">
-                                            <rect key="frame" x="87.5" y="7.5" width="279.5" height="27.5"/>
+                                            <rect key="frame" x="88" y="7.5" width="279" height="27.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="The LAD Bible is one of the largest community for guys aged 16-30 in the world. Send us your funniest pictures and videos!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDh-ur-miz">
-                                            <rect key="frame" x="87.5" y="36" width="279.5" height="87.5"/>
+                                            <rect key="frame" x="88" y="36" width="279" height="87.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -335,11 +335,11 @@
                                         <constraint firstAttribute="bottom" secondItem="kae-Zn-cTA" secondAttribute="bottom" constant="9.5" id="5Rq-Uw-nQd"/>
                                         <constraint firstItem="yDh-ur-miz" firstAttribute="top" secondItem="O59-j6-huP" secondAttribute="bottom" constant="1.5" id="99J-7U-siF"/>
                                         <constraint firstItem="O59-j6-huP" firstAttribute="top" secondItem="PM3-dq-pR1" secondAttribute="top" constant="8" id="XxF-SD-y6X"/>
-                                        <constraint firstItem="yDh-ur-miz" firstAttribute="leading" secondItem="6GP-6K-CoE" secondAttribute="trailing" constant="8" id="dfJ-Vw-QNg"/>
+                                        <constraint firstItem="yDh-ur-miz" firstAttribute="leading" secondItem="6GP-6K-CoE" secondAttribute="trailing" constant="10" id="dfJ-Vw-QNg"/>
                                         <constraint firstAttribute="trailing" secondItem="yDh-ur-miz" secondAttribute="trailing" constant="8" id="jps-Sh-EdW"/>
                                         <constraint firstItem="yDh-ur-miz" firstAttribute="top" secondItem="O59-j6-huP" secondAttribute="bottom" constant="1.5" id="l25-zH-Szu"/>
-                                        <constraint firstItem="6GP-6K-CoE" firstAttribute="leading" secondItem="PM3-dq-pR1" secondAttribute="leading" id="m9E-c8-eMy"/>
-                                        <constraint firstItem="O59-j6-huP" firstAttribute="leading" secondItem="6GP-6K-CoE" secondAttribute="trailing" constant="8" id="od7-kT-RZK"/>
+                                        <constraint firstItem="6GP-6K-CoE" firstAttribute="leading" secondItem="PM3-dq-pR1" secondAttribute="leading" constant="8" id="m9E-c8-eMy"/>
+                                        <constraint firstItem="O59-j6-huP" firstAttribute="leading" secondItem="6GP-6K-CoE" secondAttribute="trailing" constant="10" id="od7-kT-RZK"/>
                                         <constraint firstAttribute="trailing" secondItem="O59-j6-huP" secondAttribute="trailing" constant="8" id="rcq-Cy-bQA"/>
                                         <constraint firstItem="kae-Zn-cTA" firstAttribute="top" secondItem="yDh-ur-miz" secondAttribute="bottom" constant="6" id="umX-Jf-tYQ"/>
                                     </constraints>

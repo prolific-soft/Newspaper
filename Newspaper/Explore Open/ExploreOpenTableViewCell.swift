@@ -41,6 +41,12 @@ class ExploreOpenTableViewCell: UITableViewCell {
             }
         }
         
+        //Circlar Image
+        sourceImageView.layer.borderWidth = 0.5
+        sourceImageView.layer.masksToBounds = false
+        sourceImageView.layer.borderColor = UIColor.white.cgColor
+        sourceImageView.layer.cornerRadius = sourceImageView.frame.height/2
+        sourceImageView.clipsToBounds = true
  
         
     }

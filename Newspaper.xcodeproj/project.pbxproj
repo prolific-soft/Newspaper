@@ -49,6 +49,73 @@
 		EF18315E1FA011EB00BE0140 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		EF1831601FA0D1EF00BE0140 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		EF1831691FA2369400BE0140 /* image-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image-placeholder.png"; sourceTree = "<group>"; };
+		EF184D471FA7D2C1000459A4 /* business-insider-uk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "business-insider-uk.png"; sourceTree = "<group>"; };
+		EF184D481FA7D2C1000459A4 /* bloomberg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bloomberg.png; sourceTree = "<group>"; };
+		EF184D491FA7D2C1000459A4 /* bbc-news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bbc-news.png"; sourceTree = "<group>"; };
+		EF184D4A1FA7D2C1000459A4 /* football-italia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "football-italia.png"; sourceTree = "<group>"; };
+		EF184D4B1FA7D2C1000459A4 /* newsweek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newsweek.png; sourceTree = "<group>"; };
+		EF184D4C1FA7D2C2000459A4 /* fortune.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fortune.png; sourceTree = "<group>"; };
+		EF184D4D1FA7D2C2000459A4 /* nfl-news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nfl-news.png"; sourceTree = "<group>"; };
+		EF184D4E1FA7D2C2000459A4 /* spiegel-online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spiegel-online.png"; sourceTree = "<group>"; };
+		EF184D4F1FA7D2C2000459A4 /* national-geographic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "national-geographic.png"; sourceTree = "<group>"; };
+		EF184D501FA7D2C2000459A4 /* techradar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = techradar.png; sourceTree = "<group>"; };
+		EF184D511FA7D2C2000459A4 /* the-huffington-post.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-huffington-post.png"; sourceTree = "<group>"; };
+		EF184D521FA7D2C2000459A4 /* independent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = independent.png; sourceTree = "<group>"; };
+		EF184D531FA7D2C2000459A4 /* wired-de.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wired-de.png"; sourceTree = "<group>"; };
+		EF184D541FA7D2C2000459A4 /* the-washington-post.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-washington-post.png"; sourceTree = "<group>"; };
+		EF184D551FA7D2C2000459A4 /* al-jazeera-english.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "al-jazeera-english.png"; sourceTree = "<group>"; };
+		EF184D561FA7D2C2000459A4 /* new-york-magazine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-york-magazine.png"; sourceTree = "<group>"; };
+		EF184D571FA7D2C3000459A4 /* reuters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reuters.png; sourceTree = "<group>"; };
+		EF184D581FA7D2C3000459A4 /* the-sport-bible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-sport-bible.png"; sourceTree = "<group>"; };
+		EF184D591FA7D2C3000459A4 /* the-lad-bible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-lad-bible.png"; sourceTree = "<group>"; };
+		EF184D5A1FA7D2C3000459A4 /* the-new-york-times.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-new-york-times.png"; sourceTree = "<group>"; };
+		EF184D5B1FA7D2C3000459A4 /* metro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metro.png; sourceTree = "<group>"; };
+		EF184D5C1FA7D2C3000459A4 /* fox-sports.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fox-sports.png"; sourceTree = "<group>"; };
+		EF184D5D1FA7D2C3000459A4 /* breitbart-news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "breitbart-news.png"; sourceTree = "<group>"; };
+		EF184D5E1FA7D2C3000459A4 /* bbc-sport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bbc-sport.png"; sourceTree = "<group>"; };
+		EF184D5F1FA7D2C3000459A4 /* bild.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bild.png; sourceTree = "<group>"; };
+		EF184D601FA7D2C3000459A4 /* ign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ign.png; sourceTree = "<group>"; };
+		EF184D611FA7D2C3000459A4 /* engadget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = engadget.png; sourceTree = "<group>"; };
+		EF184D621FA7D2C4000459A4 /* mtv-news-uk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mtv-news-uk.png"; sourceTree = "<group>"; };
+		EF184D631FA7D2C4000459A4 /* reddit-r-all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reddit-r-all.png"; sourceTree = "<group>"; };
+		EF184D641FA7D2C4000459A4 /* financial-times.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "financial-times.png"; sourceTree = "<group>"; };
+		EF184D651FA7D2C4000459A4 /* wirtschafts-woche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wirtschafts-woche.png"; sourceTree = "<group>"; };
+		EF184D661FA7D2C4000459A4 /* the-times-of-india.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-times-of-india.png"; sourceTree = "<group>"; };
+		EF184D671FA7D2C4000459A4 /* focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focus.png; sourceTree = "<group>"; };
+		EF184D681FA7D2C5000459A4 /* espn-cric-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "espn-cric-info.png"; sourceTree = "<group>"; };
+		EF184D691FA7D2C5000459A4 /* entertainment-weekly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "entertainment-weekly.png"; sourceTree = "<group>"; };
+		EF184D6A1FA7D2C5000459A4 /* the-guardian-au.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-guardian-au.png"; sourceTree = "<group>"; };
+		EF184D6B1FA7D2C5000459A4 /* the-next-web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-next-web.png"; sourceTree = "<group>"; };
+		EF184D6C1FA7D2C5000459A4 /* four-four-two.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "four-four-two.png"; sourceTree = "<group>"; };
+		EF184D6D1FA7D2C5000459A4 /* mashable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mashable.png; sourceTree = "<group>"; };
+		EF184D6E1FA7D2C5000459A4 /* techcrunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = techcrunch.png; sourceTree = "<group>"; };
+		EF184D6F1FA7D2C6000459A4 /* polygon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = polygon.png; sourceTree = "<group>"; };
+		EF184D701FA7D2C6000459A4 /* google-news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-news.png"; sourceTree = "<group>"; };
+		EF184D711FA7D2C6000459A4 /* the-verge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-verge.png"; sourceTree = "<group>"; };
+		EF184D721FA7D2C6000459A4 /* t3n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t3n.png; sourceTree = "<group>"; };
+		EF184D731FA7D2C6000459A4 /* cnbc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cnbc.png; sourceTree = "<group>"; };
+		EF184D741FA7D2C6000459A4 /* associated-press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "associated-press.png"; sourceTree = "<group>"; };
+		EF184D751FA7D2C6000459A4 /* new-scientist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-scientist.png"; sourceTree = "<group>"; };
+		EF184D761FA7D2C7000459A4 /* hacker-news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hacker-news.png"; sourceTree = "<group>"; };
+		EF184D771FA7D2C7000459A4 /* the-guardian-uk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-guardian-uk.png"; sourceTree = "<group>"; };
+		EF184D781FA7D2C7000459A4 /* gruenderszene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gruenderszene.png; sourceTree = "<group>"; };
+		EF184D791FA7D2C7000459A4 /* mtv-news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mtv-news.png"; sourceTree = "<group>"; };
+		EF184D7A1FA7D2C7000459A4 /* buzzfeed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buzzfeed.png; sourceTree = "<group>"; };
+		EF184D7B1FA7D2C7000459A4 /* talksport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = talksport.png; sourceTree = "<group>"; };
+		EF184D7C1FA7D2C8000459A4 /* the-economist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-economist.png"; sourceTree = "<group>"; };
+		EF184D7D1FA7D2C8000459A4 /* business-insider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "business-insider.png"; sourceTree = "<group>"; };
+		EF184D7E1FA7D2C8000459A4 /* espn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = espn.png; sourceTree = "<group>"; };
+		EF184D7F1FA7D2C8000459A4 /* handelsblatt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = handelsblatt.png; sourceTree = "<group>"; };
+		EF184D801FA7D2C8000459A4 /* the-hindu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-hindu.png"; sourceTree = "<group>"; };
+		EF184D811FA7D2C8000459A4 /* the-wall-street-journal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-wall-street-journal.png"; sourceTree = "<group>"; };
+		EF184D821FA7D2C9000459A4 /* mirror.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mirror.png; sourceTree = "<group>"; };
+		EF184D831FA7D2C9000459A4 /* recode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recode.png; sourceTree = "<group>"; };
+		EF184D841FA7D2C9000459A4 /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
+		EF184D851FA7D2C9000459A4 /* ars-technica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ars-technica.png"; sourceTree = "<group>"; };
+		EF184D861FA7D2C9000459A4 /* der-tagesspiegel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "der-tagesspiegel.png"; sourceTree = "<group>"; };
+		EF184D871FA7D2C9000459A4 /* die-zeit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "die-zeit.png"; sourceTree = "<group>"; };
+		EF184D881FA7D2CA000459A4 /* the-telegraph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-telegraph.png"; sourceTree = "<group>"; };
+		EF184D891FA7D2CA000459A4 /* usa-today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "usa-today.png"; sourceTree = "<group>"; };
 		EF53C92D1F758405009A1DB8 /* Newspaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newspaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9301F758405009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C9321F758405009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,7 +241,7 @@
 				EF53C9321F758405009A1DB8 /* ViewController.swift */,
 				EF53C9371F758405009A1DB8 /* Assets.xcassets */,
 				EFAD063F1FA2C8FA00E36241 /* category */,
-				EFAD064A1FA783BB00E36241 /* Source Image */,
+				EFAD064A1FA783BB00E36241 /* Source Images */,
 				EF18315A1FA00CCA00BE0140 /* icons */,
 				EF53C9391F758405009A1DB8 /* LaunchScreen.storyboard */,
 				EF53C93C1F758405009A1DB8 /* Info.plist */,
@@ -259,13 +326,80 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
-		EFAD064A1FA783BB00E36241 /* Source Image */ = {
+		EFAD064A1FA783BB00E36241 /* Source Images */ = {
 			isa = PBXGroup;
 			children = (
 				EFAD064B1FA783DA00E36241 /* abc-news-au.png */,
 				EFAD064C1FA7868C00E36241 /* cnn.png */,
+				EF184D551FA7D2C2000459A4 /* al-jazeera-english.png */,
+				EF184D851FA7D2C9000459A4 /* ars-technica.png */,
+				EF184D741FA7D2C6000459A4 /* associated-press.png */,
+				EF184D491FA7D2C1000459A4 /* bbc-news.png */,
+				EF184D5E1FA7D2C3000459A4 /* bbc-sport.png */,
+				EF184D5F1FA7D2C3000459A4 /* bild.png */,
+				EF184D481FA7D2C1000459A4 /* bloomberg.png */,
+				EF184D5D1FA7D2C3000459A4 /* breitbart-news.png */,
+				EF184D471FA7D2C1000459A4 /* business-insider-uk.png */,
+				EF184D7D1FA7D2C8000459A4 /* business-insider.png */,
+				EF184D7A1FA7D2C7000459A4 /* buzzfeed.png */,
+				EF184D731FA7D2C6000459A4 /* cnbc.png */,
+				EF184D861FA7D2C9000459A4 /* der-tagesspiegel.png */,
+				EF184D871FA7D2C9000459A4 /* die-zeit.png */,
+				EF184D611FA7D2C3000459A4 /* engadget.png */,
+				EF184D691FA7D2C5000459A4 /* entertainment-weekly.png */,
+				EF184D681FA7D2C5000459A4 /* espn-cric-info.png */,
+				EF184D7E1FA7D2C8000459A4 /* espn.png */,
+				EF184D641FA7D2C4000459A4 /* financial-times.png */,
+				EF184D671FA7D2C4000459A4 /* focus.png */,
+				EF184D4A1FA7D2C1000459A4 /* football-italia.png */,
+				EF184D4C1FA7D2C2000459A4 /* fortune.png */,
+				EF184D6C1FA7D2C5000459A4 /* four-four-two.png */,
+				EF184D5C1FA7D2C3000459A4 /* fox-sports.png */,
+				EF184D701FA7D2C6000459A4 /* google-news.png */,
+				EF184D781FA7D2C7000459A4 /* gruenderszene.png */,
+				EF184D761FA7D2C7000459A4 /* hacker-news.png */,
+				EF184D7F1FA7D2C8000459A4 /* handelsblatt.png */,
+				EF184D601FA7D2C3000459A4 /* ign.png */,
+				EF184D521FA7D2C2000459A4 /* independent.png */,
+				EF184D6D1FA7D2C5000459A4 /* mashable.png */,
+				EF184D5B1FA7D2C3000459A4 /* metro.png */,
+				EF184D821FA7D2C9000459A4 /* mirror.png */,
+				EF184D621FA7D2C4000459A4 /* mtv-news-uk.png */,
+				EF184D791FA7D2C7000459A4 /* mtv-news.png */,
+				EF184D4F1FA7D2C2000459A4 /* national-geographic.png */,
+				EF184D751FA7D2C6000459A4 /* new-scientist.png */,
+				EF184D561FA7D2C2000459A4 /* new-york-magazine.png */,
+				EF184D4B1FA7D2C1000459A4 /* newsweek.png */,
+				EF184D4D1FA7D2C2000459A4 /* nfl-news.png */,
+				EF184D6F1FA7D2C6000459A4 /* polygon.png */,
+				EF184D831FA7D2C9000459A4 /* recode.png */,
+				EF184D631FA7D2C4000459A4 /* reddit-r-all.png */,
+				EF184D571FA7D2C3000459A4 /* reuters.png */,
+				EF184D4E1FA7D2C2000459A4 /* spiegel-online.png */,
+				EF184D721FA7D2C6000459A4 /* t3n.png */,
+				EF184D7B1FA7D2C7000459A4 /* talksport.png */,
+				EF184D6E1FA7D2C5000459A4 /* techcrunch.png */,
+				EF184D501FA7D2C2000459A4 /* techradar.png */,
+				EF184D7C1FA7D2C8000459A4 /* the-economist.png */,
+				EF184D6A1FA7D2C5000459A4 /* the-guardian-au.png */,
+				EF184D771FA7D2C7000459A4 /* the-guardian-uk.png */,
+				EF184D801FA7D2C8000459A4 /* the-hindu.png */,
+				EF184D511FA7D2C2000459A4 /* the-huffington-post.png */,
+				EF184D591FA7D2C3000459A4 /* the-lad-bible.png */,
+				EF184D5A1FA7D2C3000459A4 /* the-new-york-times.png */,
+				EF184D6B1FA7D2C5000459A4 /* the-next-web.png */,
+				EF184D581FA7D2C3000459A4 /* the-sport-bible.png */,
+				EF184D881FA7D2CA000459A4 /* the-telegraph.png */,
+				EF184D661FA7D2C4000459A4 /* the-times-of-india.png */,
+				EF184D711FA7D2C6000459A4 /* the-verge.png */,
+				EF184D811FA7D2C8000459A4 /* the-wall-street-journal.png */,
+				EF184D541FA7D2C2000459A4 /* the-washington-post.png */,
+				EF184D841FA7D2C9000459A4 /* time.png */,
+				EF184D891FA7D2CA000459A4 /* usa-today.png */,
+				EF184D531FA7D2C2000459A4 /* wired-de.png */,
+				EF184D651FA7D2C4000459A4 /* wirtschafts-woche.png */,
 			);
-			path = "Source Image";
+			path = "Source Images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

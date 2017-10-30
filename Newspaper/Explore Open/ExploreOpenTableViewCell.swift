@@ -29,6 +29,7 @@ class ExploreOpenTableViewCell: UITableViewCell {
     func setUp(withSource : Source){
         
         let list = SourceImages().getSourceImages()
+        sourceImageView.image = UIImage() // Clears Image memory so no repeats
         
         
         sourceTitle.text = withSource.name
@@ -38,8 +39,6 @@ class ExploreOpenTableViewCell: UITableViewCell {
             if(withSource.id == item.key){
                 sourceImageView.image = item.image
             }
-            
-            
         }
         
  

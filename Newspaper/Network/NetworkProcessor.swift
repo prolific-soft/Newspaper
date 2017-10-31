@@ -22,6 +22,7 @@ class NetworkProcessor {
     }
     
     typealias JSONObject = ( (Codable?) -> Void  )
+    typealias DataHandler = ( (Data?, HTTPURLResponse?, Error?) -> Void  )
     
     //Downloads json for a url
     func downloadJSONFromURL(withStructType: String, _ completion : @escaping JSONObject ){
@@ -65,7 +66,30 @@ class NetworkProcessor {
         
     }
     
+    //Downloads ImageData from URL
+    func downloadImageDataFromURL( _ completion : @escaping DataHandler ){
+        let request = URLRequest(url: url)
+        let dataTask = session.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                if let httpResponse = response as? HTTPURLResponse {
+                    switch httpResponse.statusCode {
+                    case 200:
+                        print("Success downloading Image")
+                        if let responseData = data {
+                            completion(responseData, nil, nil)
+                        }
+                    default:
+                        return
+                    }
+                }
+            }else {
+                completion(nil, nil, error!)
+            }
+        }
+        dataTask.resume()
+    }
     
     
     
-}
+    
+}// End class NetworkProcessor

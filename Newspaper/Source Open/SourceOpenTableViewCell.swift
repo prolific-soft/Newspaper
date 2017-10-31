@@ -32,9 +32,33 @@ class SourceOpenTableViewCell: UITableViewCell {
         //Set Selected Article
         self.article = withArticle
         sourceTitleLabel.text = withArticle.title
+        sourceNameLabel.text = withArticle.author
+        
+        
+        //Format Time to Hours Ago before setting
+        //sourceTimeLabel.text = withArticle.publishedAt
+        
+        downloadImage(article: withArticle)
  
     }
     
+    func downloadImage(article: Article){
+        
+        sourceImageView.image = nil
+        guard let urlLink = article.urlToImage else {return}
+        guard let url = URL(string: urlLink) else {return}
+        let imageDownloader = NetworkProcessor(url: url)
+        
+        imageDownloader.downloadImageDataFromURL { (imageData, response, error) in
+            
+            DispatchQueue.main.async {
+                if let data = imageData {
+                    self.sourceImageView.image = UIImage(data: data)
+                    
+                }
+            }
+        }
+    }
     
 
-}
+}// End SourceOpenTableViewCell

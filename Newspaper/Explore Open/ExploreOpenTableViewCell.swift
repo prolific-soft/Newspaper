@@ -20,8 +20,9 @@ class ExploreOpenTableViewCell: UITableViewCell {
     
     @IBOutlet weak var articleCount: UILabel!
     
-    //Selected Source
+    //Class Properties
     var source : Source?
+    var articles : [Article]?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,7 +52,35 @@ class ExploreOpenTableViewCell: UITableViewCell {
         sourceImageView.layer.borderColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 0.5).cgColor
         sourceImageView.layer.cornerRadius = sourceImageView.frame.height/2
         sourceImageView.clipsToBounds = true
-  
+        
+     loadArticles(sourceID: withSource.id)
+        
+    }
+    
+    func loadArticles(sourceID: String){
+        let tempService = NewsAPIServices()
+        tempService.getArticles(source: sourceID, sortBy: "top", { (result) in
+            guard let sourceResult = result as? Articles else {return}
+            
+            
+//            let articles = sourceResult.articles
+//            print("&&&&&&&&&&")
+//            print("Articles")
+//            print("\(articles.description)")
+//            print("&&&&&&&&&&")
+//            self.articles = articles
+            
+            DispatchQueue.main.async {
+                let articles = sourceResult.articles
+                print("&&&&&&&&&&")
+                print("Articles")
+                print("\(articles.description)")
+                print("&&&&&&&&&&")
+                self.articles = articles
+            }
+            
+            
+        })
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -11,7 +11,7 @@ import UIKit
 class ExploreOpenTableViewController: UITableViewController {
 
     var sourceList = [Source]()
-    var newsSource : Source!
+    var articles = [Article]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,21 +51,15 @@ class ExploreOpenTableViewController: UITableViewController {
                     return
                 }
                 
+//                print("&&&&&&&&&&")
+//                print("IndexPath")
+//                print("\(indexPath.description)")
+//                print("&&&&&&&&&&")
+                
                 let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ExploreOpenTableViewCell
-                if let newSource = cell?.source {
-                    let tempService = NewsAPIServices()
-                    tempService.getArticles(source: newSource.id, sortBy: "top", { (result) in
-                        guard let sourceResult = result as? Articles else {return}
-                        
-                        DispatchQueue.main.async {
-                            let articles = sourceResult.articles
-                            sourceOpenTableViewController.articles = articles
-                        }
-                        
-                    })
-                }
-                
-                
+                sourceOpenTableViewController.articles = (cell?.articles)!
+
+            
             }
         }
     }// End prepare for segue

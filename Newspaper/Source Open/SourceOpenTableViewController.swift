@@ -50,7 +50,6 @@ class SourceOpenTableViewController: UITableViewController {
     }
     
 
-
     /*
     // MARK: - Navigation
 

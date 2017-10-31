@@ -352,7 +352,6 @@
                                     <outlet property="sourceImageView" destination="6GP-6K-CoE" id="BQf-Pu-oNw"/>
                                     <outlet property="sourceTitle" destination="O59-j6-huP" id="b0j-zZ-6Mh"/>
                                     <outlet property="subscriberCount" destination="ZHe-aw-iOH" id="BPK-AE-q7D"/>
-                                    <segue destination="KB3-Yl-jwj" kind="show" identifier="toSourceOpen" id="hWD-E7-8wm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -361,6 +360,9 @@
                             <outlet property="delegate" destination="wap-0R-PfZ" id="BD7-Kk-6yr"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="KB3-Yl-jwj" kind="show" identifier="toSourceOpen" id="UaG-gq-Pnz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkT-eT-UCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

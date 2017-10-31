@@ -47,8 +47,7 @@ class ExploreOpenTableViewCell: UITableViewCell {
         sourceImageView.layer.borderColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 0.5).cgColor
         sourceImageView.layer.cornerRadius = sourceImageView.frame.height/2
         sourceImageView.clipsToBounds = true
- 
-        
+  
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

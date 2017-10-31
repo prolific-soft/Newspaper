@@ -20,6 +20,8 @@ class ExploreOpenTableViewCell: UITableViewCell {
     
     @IBOutlet weak var articleCount: UILabel!
     
+    //Selected Source
+    var source : Source?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,9 +30,11 @@ class ExploreOpenTableViewCell: UITableViewCell {
 
     func setUp(withSource : Source){
         
+        //Set selected Source
+        self.source = withSource
+        
         let list = SourceImages().getSourceImages()
         sourceImageView.image = UIImage() // Clears Image memory so no repeats
-        
         
         sourceTitle.text = withSource.name
         sourceDescription.text = withSource.description

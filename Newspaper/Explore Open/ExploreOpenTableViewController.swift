@@ -11,6 +11,7 @@ import UIKit
 class ExploreOpenTableViewController: UITableViewController {
 
     var sourceList = [Source]()
+    var newsSource : Source!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,17 +43,52 @@ class ExploreOpenTableViewController: UITableViewController {
         return cell
     }
     
-
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        if segue.identifier == Segue.toSourceOpen.rawValue {
+            if let sourceOpenTableViewController = segue.destination as? SourceOpenTableViewController {
+
+                guard let indexPath = sender as? NSIndexPath else {
+                    return
+                }
+                
+                let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ExploreOpenTableViewCell
+                if let newSource = cell?.source {
+                    let tempService = NewsAPIServices()
+                    tempService.getArticles(source: newSource.id, sortBy: "top", { (result) in
+                        guard let sourceResult = result as? Articles else {return}
+                        
+                        DispatchQueue.main.async {
+                            let articles = sourceResult.articles
+                            sourceOpenTableViewController.articles = articles
+                        }
+                        
+                    })
+                }
+                
+                
+            }
+        }
+    }// End prepare for segue
 
 }
+
+extension ExploreOpenTableViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: Segue.toSourceOpen.rawValue, sender: indexPath)
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

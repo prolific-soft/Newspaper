@@ -21,12 +21,18 @@ class SourceOpenTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
+        print("*&&&*********000000000************&&&&&")
+        print("Fourth Articles Loaded")
+        print("\(articles)")
+        print("*&&&*********000000000************&&&&&")
+        
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

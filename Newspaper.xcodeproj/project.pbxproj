@@ -16,6 +16,7 @@
 		EF1831611FA0D1EF00BE0140 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1831601FA0D1EF00BE0140 /* AuthService.swift */; };
 		EF184D8C1FA813E8000459A4 /* SourceOpenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184D8B1FA813E8000459A4 /* SourceOpenTableViewController.swift */; };
 		EF184D8E1FA815F7000459A4 /* SourceOpenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184D8D1FA815F7000459A4 /* SourceOpenTableViewCell.swift */; };
+		EF184D901FA8C6F9000459A4 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184D8F1FA8C6F9000459A4 /* Segue.swift */; };
 		EF53C9311F758405009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9301F758405009A1DB8 /* AppDelegate.swift */; };
 		EF53C9331F758405009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9321F758405009A1DB8 /* ViewController.swift */; };
 		EF53C9381F758405009A1DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9371F758405009A1DB8 /* Assets.xcassets */; };
@@ -120,6 +121,7 @@
 		EF184D891FA7D2CA000459A4 /* usa-today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "usa-today.png"; sourceTree = "<group>"; };
 		EF184D8B1FA813E8000459A4 /* SourceOpenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceOpenTableViewController.swift; sourceTree = "<group>"; };
 		EF184D8D1FA815F7000459A4 /* SourceOpenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceOpenTableViewCell.swift; sourceTree = "<group>"; };
+		EF184D8F1FA8C6F9000459A4 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		EF53C92D1F758405009A1DB8 /* Newspaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newspaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9301F758405009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C9321F758405009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				EFAD06341FA25DD400E36241 /* Cell.swift */,
+				EF184D8F1FA8C6F9000459A4 /* Segue.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				EF53C9461F759569009A1DB8 /* NetworkProcessor.swift in Sources */,
 				EFAD06441FA34C5000E36241 /* ExploreOpenTableViewCell.swift in Sources */,
 				EF184D8E1FA815F7000459A4 /* SourceOpenTableViewCell.swift in Sources */,
+				EF184D901FA8C6F9000459A4 /* Segue.swift in Sources */,
 				EF184D8C1FA813E8000459A4 /* SourceOpenTableViewController.swift in Sources */,
 				EF18315D1FA011C000BE0140 /* LogInViewController.swift in Sources */,
 				EF53C94B1F759D09009A1DB8 /* Articles.swift in Sources */,

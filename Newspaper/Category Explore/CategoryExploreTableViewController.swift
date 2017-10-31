@@ -34,9 +34,9 @@ class CategoryExploreTableViewController: UITableViewController {
             let newSorted = SourceList()
             let comp = newSorted.sortSourceToCategories(list: sources)
             self.sourceCategories = comp
-            print("+++++++++++++++++++++++++++")
-            print(comp)
-            print("+++++++++++++++++++++++++++")
+//            print("+++++++++++++++++++++++++++")
+//            print(comp)
+//            print("+++++++++++++++++++++++++++")
         }
     }
 
@@ -52,14 +52,10 @@ class CategoryExploreTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toExploreOpen" {
+        if segue.identifier == Segue.toExploreOpen.rawValue {
             if let exploreOpenTableViewController = segue.destination as? ExploreOpenTableViewController {
                 //let keys = Array(imageCategory.keys)
                 let cell = sender as! CategoryExploreCollectionViewCell
-               
-
-                
-                
                 let selectedCategory = sourceCategories[cell.categoryLabel.text!.lowercased()]
 //                
 //                print("================== 1 ======================")
@@ -69,10 +65,9 @@ class CategoryExploreTableViewController: UITableViewController {
 //                print("===============   2   ===============")
 //                print("\(selectedCategory?.description)")
 //                print("===================================")
-//            
-                
+
                 if let sourceCat = selectedCategory {
-                    exploreOpenTableViewController.sourceList = sourceCat
+                    exploreOpenTableViewController.sourceList = sourceCat 
                 }
                 
                 
@@ -158,7 +153,7 @@ extension CategoryExploreTableViewController : UICollectionViewDataSource, UICol
 extension CategoryExploreTableViewController
 {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-         self.performSegue(withIdentifier: "toExploreOpen", sender: indexPath)
+         self.performSegue(withIdentifier: Segue.toExploreOpen.rawValue, sender: indexPath)
     }
 
 //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

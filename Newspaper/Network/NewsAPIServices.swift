@@ -17,7 +17,7 @@ struct NewsAPIServices {
     
     //Properties
     let baseURL = "https://newsapi.org/v1/"
-    let APIKey  = ""
+    let APIKey  = "a7d312d111564be8af66634a50ba3e24"
     
     //Search parameter keys
     struct searchParameters {
@@ -40,7 +40,7 @@ struct NewsAPIServices {
     
     //Gets Articles for a given source
     func getArticles(source: String, sortBy: String, _ completion : @escaping JSONResult) {
-        //https://newsapi.org/v1/articles?source=techcrunch&sortBy=latest&apiKey=a7d312d111564be8af66634a50ba3e24
+        //https://newsapi.org/v1/articles?source=techcrunch&sortBy=latest&apiKey=
         let urlString = "\(baseURL)\(searchParameters.articles)?\(searchParameters.source)=\(source)&sortBy=\(sortBy)&apiKey=\(APIKey)"
         let url = URL(string: urlString)
         let articleProcessor = NetworkProcessor(url: url!)

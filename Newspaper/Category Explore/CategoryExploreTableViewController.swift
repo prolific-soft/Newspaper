@@ -25,7 +25,7 @@ class CategoryExploreTableViewController: UITableViewController {
         
         //Init Image Categories
         imageCategory = ["Business" :  UIImage(named: "business")!, "Entertainment" :  UIImage(named: "entertainment")! ,
-        "Gaming" :  UIImage(named: "gaming")!, "General" :  UIImage(named: "general")!, "Music" :  UIImage(named: "music")!, "Politics" :  UIImage(named: "politics")!, "Science" :  UIImage(named: "science")!, "Sports" :  UIImage(named: "sports")!, "Tech" :  UIImage(named: "tech")!]
+        "Gaming" :  UIImage(named: "gaming")!, "General" :  UIImage(named: "general")!, "Music" :  UIImage(named: "music")!, "Politics" :  UIImage(named: "politics")!, "science-and-nature" :  UIImage(named: "science")!, "Sport" :  UIImage(named: "sports")!, "Technology" :  UIImage(named: "tech")!]
         collectionViewItems = imageCategory.count
         
         
@@ -57,8 +57,10 @@ class CategoryExploreTableViewController: UITableViewController {
                 //let keys = Array(imageCategory.keys)
                 let cell = sender as! CategoryExploreCollectionViewCell
                
-                //let keyName = keys[(sender as! IndexPath).row]
-                let selectedCategory = sourceCategories[ cell.categoryLabel.text!.lowercased()]
+
+                
+                
+                let selectedCategory = sourceCategories[cell.categoryLabel.text!.lowercased()]
 //                
 //                print("================== 1 ======================")
 //                print("\(cell.categoryLabel.text!.lowercased())")

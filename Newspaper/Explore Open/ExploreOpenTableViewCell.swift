@@ -42,9 +42,9 @@ class ExploreOpenTableViewCell: UITableViewCell {
         }
         
         //Circlar Image
-        sourceImageView.layer.borderWidth = 0.5
+        sourceImageView.layer.borderWidth = 0.25
         sourceImageView.layer.masksToBounds = false
-        sourceImageView.layer.borderColor = UIColor.white.cgColor
+        sourceImageView.layer.borderColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 0.5).cgColor
         sourceImageView.layer.cornerRadius = sourceImageView.frame.height/2
         sourceImageView.clipsToBounds = true
  

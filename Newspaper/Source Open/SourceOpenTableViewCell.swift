@@ -44,7 +44,15 @@ class SourceOpenTableViewCell: UITableViewCell {
     
     func downloadImage(article: Article){
         
-        sourceImageView.image = nil
+        var tempImage = UIImage()
+
+        
+        sourceImageView.layer.borderWidth = 0.25
+        sourceImageView.layer.masksToBounds = false
+        sourceImageView.layer.borderColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 0.5).cgColor
+        sourceImageView.layer.cornerRadius = 7
+        sourceImageView.clipsToBounds = true
+        
         guard let urlLink = article.urlToImage else {return}
         guard let url = URL(string: urlLink) else {return}
         let imageDownloader = NetworkProcessor(url: url)
@@ -53,8 +61,8 @@ class SourceOpenTableViewCell: UITableViewCell {
             
             DispatchQueue.main.async {
                 if let data = imageData {
-                    self.sourceImageView.image = UIImage(data: data)
-                    
+                    tempImage = UIImage(data: data)!
+                    self.sourceImageView.image = tempImage
                 }
             }
         }

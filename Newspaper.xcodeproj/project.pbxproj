@@ -17,6 +17,7 @@
 		EF184D8C1FA813E8000459A4 /* SourceOpenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184D8B1FA813E8000459A4 /* SourceOpenTableViewController.swift */; };
 		EF184D8E1FA815F7000459A4 /* SourceOpenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184D8D1FA815F7000459A4 /* SourceOpenTableViewCell.swift */; };
 		EF184D901FA8C6F9000459A4 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184D8F1FA8C6F9000459A4 /* Segue.swift */; };
+		EF184D941FAABD43000459A4 /* ArticleOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184D931FAABD43000459A4 /* ArticleOpenViewController.swift */; };
 		EF53C9311F758405009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9301F758405009A1DB8 /* AppDelegate.swift */; };
 		EF53C9331F758405009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9321F758405009A1DB8 /* ViewController.swift */; };
 		EF53C9381F758405009A1DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9371F758405009A1DB8 /* Assets.xcassets */; };
@@ -122,6 +123,7 @@
 		EF184D8B1FA813E8000459A4 /* SourceOpenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceOpenTableViewController.swift; sourceTree = "<group>"; };
 		EF184D8D1FA815F7000459A4 /* SourceOpenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceOpenTableViewCell.swift; sourceTree = "<group>"; };
 		EF184D8F1FA8C6F9000459A4 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		EF184D931FAABD43000459A4 /* ArticleOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOpenViewController.swift; sourceTree = "<group>"; };
 		EF53C92D1F758405009A1DB8 /* Newspaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newspaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9301F758405009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C9321F758405009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,14 @@
 			path = "Source Open";
 			sourceTree = "<group>";
 		};
+		EF184D921FAABD00000459A4 /* Article Open */ = {
+			isa = PBXGroup;
+			children = (
+				EF184D931FAABD43000459A4 /* ArticleOpenViewController.swift */,
+			);
+			path = "Article Open";
+			sourceTree = "<group>";
+		};
 		EF53C9241F758405009A1DB8 = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +254,7 @@
 		EF53C92F1F758405009A1DB8 /* Newspaper */ = {
 			isa = PBXGroup;
 			children = (
+				EF184D921FAABD00000459A4 /* Article Open */,
 				EF184D8A1FA812DE000459A4 /* Source Open */,
 				EFAD06401FA342C600E36241 /* Explore Open */,
 				EFAD06361FA25E8600E36241 /* Category Explore */,
@@ -582,6 +593,7 @@
 				EF53C95D1F75F83C009A1DB8 /* FirArticle.swift in Sources */,
 				EF1831611FA0D1EF00BE0140 /* AuthService.swift in Sources */,
 				EFAD06471FA3819800E36241 /* SourceList.swift in Sources */,
+				EF184D941FAABD43000459A4 /* ArticleOpenViewController.swift in Sources */,
 				EFAD06351FA25DD400E36241 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

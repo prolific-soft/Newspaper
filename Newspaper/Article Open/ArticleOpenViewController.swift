@@ -10,6 +10,12 @@ import UIKit
 
 class ArticleOpenViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var articleImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -18,6 +18,10 @@
 		EF184D8E1FA815F7000459A4 /* SourceOpenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184D8D1FA815F7000459A4 /* SourceOpenTableViewCell.swift */; };
 		EF184D901FA8C6F9000459A4 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184D8F1FA8C6F9000459A4 /* Segue.swift */; };
 		EF184D941FAABD43000459A4 /* ArticleOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184D931FAABD43000459A4 /* ArticleOpenViewController.swift */; };
+		EF184D971FAB96EA000459A4 /* SubscriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184D961FAB96EA000459A4 /* SubscriptionTableViewController.swift */; };
+		EF184DA11FAB9BBA000459A4 /* StarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DA01FAB9BBA000459A4 /* StarsTableViewController.swift */; };
+		EF184DA41FAB9C7E000459A4 /* SavedPagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DA31FAB9C7E000459A4 /* SavedPagesTableViewController.swift */; };
+		EF184DA71FAB9CF2000459A4 /* TagsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DA61FAB9CF2000459A4 /* TagsTableViewController.swift */; };
 		EF53C9311F758405009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9301F758405009A1DB8 /* AppDelegate.swift */; };
 		EF53C9331F758405009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9321F758405009A1DB8 /* ViewController.swift */; };
 		EF53C9381F758405009A1DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9371F758405009A1DB8 /* Assets.xcassets */; };
@@ -124,6 +128,16 @@
 		EF184D8D1FA815F7000459A4 /* SourceOpenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceOpenTableViewCell.swift; sourceTree = "<group>"; };
 		EF184D8F1FA8C6F9000459A4 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		EF184D931FAABD43000459A4 /* ArticleOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOpenViewController.swift; sourceTree = "<group>"; };
+		EF184D961FAB96EA000459A4 /* SubscriptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionTableViewController.swift; sourceTree = "<group>"; };
+		EF184D991FAB9A43000459A4 /* subscription@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "subscription@2x.png"; sourceTree = "<group>"; };
+		EF184D9A1FAB9A44000459A4 /* subscriptions@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "subscriptions@2x.png"; sourceTree = "<group>"; };
+		EF184D9B1FAB9A44000459A4 /* saved_pages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "saved_pages@2x.png"; sourceTree = "<group>"; };
+		EF184D9C1FAB9A44000459A4 /* tags@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tags@2x.png"; sourceTree = "<group>"; };
+		EF184D9D1FAB9A44000459A4 /* SavedPages@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SavedPages@2x.png"; sourceTree = "<group>"; };
+		EF184D9E1FAB9AB6000459A4 /* Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stars@2x.png"; sourceTree = "<group>"; };
+		EF184DA01FAB9BBA000459A4 /* StarsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsTableViewController.swift; sourceTree = "<group>"; };
+		EF184DA31FAB9C7E000459A4 /* SavedPagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPagesTableViewController.swift; sourceTree = "<group>"; };
+		EF184DA61FAB9CF2000459A4 /* TagsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTableViewController.swift; sourceTree = "<group>"; };
 		EF53C92D1F758405009A1DB8 /* Newspaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newspaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9301F758405009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C9321F758405009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +224,12 @@
 		EF18315A1FA00CCA00BE0140 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				EF184D9B1FAB9A44000459A4 /* saved_pages@2x.png */,
+				EF184D9E1FAB9AB6000459A4 /* Stars@2x.png */,
+				EF184D9A1FAB9A44000459A4 /* subscriptions@2x.png */,
+				EF184D9C1FAB9A44000459A4 /* tags@2x.png */,
+				EF184D9D1FAB9A44000459A4 /* SavedPages@2x.png */,
+				EF184D991FAB9A43000459A4 /* subscription@2x.png */,
 				EF1831691FA2369400BE0140 /* image-placeholder.png */,
 				EF18315B1FA00CE200BE0140 /* delete.png */,
 			);
@@ -233,6 +253,38 @@
 			path = "Article Open";
 			sourceTree = "<group>";
 		};
+		EF184D951FAB96A3000459A4 /* Subscriptions */ = {
+			isa = PBXGroup;
+			children = (
+				EF184D961FAB96EA000459A4 /* SubscriptionTableViewController.swift */,
+			);
+			path = Subscriptions;
+			sourceTree = "<group>";
+		};
+		EF184D9F1FAB9BA1000459A4 /* Stars */ = {
+			isa = PBXGroup;
+			children = (
+				EF184DA01FAB9BBA000459A4 /* StarsTableViewController.swift */,
+			);
+			path = Stars;
+			sourceTree = "<group>";
+		};
+		EF184DA21FAB9C64000459A4 /* Saved Pages */ = {
+			isa = PBXGroup;
+			children = (
+				EF184DA31FAB9C7E000459A4 /* SavedPagesTableViewController.swift */,
+			);
+			path = "Saved Pages";
+			sourceTree = "<group>";
+		};
+		EF184DA51FAB9CDF000459A4 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				EF184DA61FAB9CF2000459A4 /* TagsTableViewController.swift */,
+			);
+			path = Tags;
+			sourceTree = "<group>";
+		};
 		EF53C9241F758405009A1DB8 = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +306,10 @@
 		EF53C92F1F758405009A1DB8 /* Newspaper */ = {
 			isa = PBXGroup;
 			children = (
+				EF184DA51FAB9CDF000459A4 /* Tags */,
+				EF184DA21FAB9C64000459A4 /* Saved Pages */,
+				EF184D9F1FAB9BA1000459A4 /* Stars */,
+				EF184D951FAB96A3000459A4 /* Subscriptions */,
 				EF184D921FAABD00000459A4 /* Article Open */,
 				EF184D8A1FA812DE000459A4 /* Source Open */,
 				EFAD06401FA342C600E36241 /* Explore Open */,
@@ -576,6 +632,7 @@
 				EFAD063A1FA25FBA00E36241 /* SearchTableViewCell.swift in Sources */,
 				EF1831591FA00BFB00BE0140 /* MoreLoginOptionViewController.swift in Sources */,
 				EFAD06491FA77BE400E36241 /* SourceImages.swift in Sources */,
+				EF184DA41FAB9C7E000459A4 /* SavedPagesTableViewController.swift in Sources */,
 				EF18315F1FA011EB00BE0140 /* CreateAccountViewController.swift in Sources */,
 				EF53C94F1F759D54009A1DB8 /* Sources.swift in Sources */,
 				EFAD063E1FA2601E00E36241 /* CategoryExploreCollectionViewCell.swift in Sources */,
@@ -585,15 +642,18 @@
 				EF53C9461F759569009A1DB8 /* NetworkProcessor.swift in Sources */,
 				EFAD06441FA34C5000E36241 /* ExploreOpenTableViewCell.swift in Sources */,
 				EF184D8E1FA815F7000459A4 /* SourceOpenTableViewCell.swift in Sources */,
+				EF184DA71FAB9CF2000459A4 /* TagsTableViewController.swift in Sources */,
 				EF184D901FA8C6F9000459A4 /* Segue.swift in Sources */,
 				EF184D8C1FA813E8000459A4 /* SourceOpenTableViewController.swift in Sources */,
 				EF18315D1FA011C000BE0140 /* LogInViewController.swift in Sources */,
+				EF184D971FAB96EA000459A4 /* SubscriptionTableViewController.swift in Sources */,
 				EF53C94B1F759D09009A1DB8 /* Articles.swift in Sources */,
 				EF53C9491F759CF9009A1DB8 /* Article.swift in Sources */,
 				EF53C95D1F75F83C009A1DB8 /* FirArticle.swift in Sources */,
 				EF1831611FA0D1EF00BE0140 /* AuthService.swift in Sources */,
 				EFAD06471FA3819800E36241 /* SourceList.swift in Sources */,
 				EF184D941FAABD43000459A4 /* ArticleOpenViewController.swift in Sources */,
+				EF184DA11FAB9BBA000459A4 /* StarsTableViewController.swift in Sources */,
 				EFAD06351FA25DD400E36241 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

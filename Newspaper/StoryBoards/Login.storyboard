@@ -119,6 +119,142 @@
             </objects>
             <point key="canvasLocation" x="-2970" y="2245"/>
         </scene>
+        <!--Subscriptions-->
+        <scene sceneID="9Q1-GM-C8u">
+            <objects>
+                <tableViewController id="jAw-yp-PW6" customClass="SubscriptionTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cwu-jv-NWR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Xw0-if-hBN">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xw0-if-hBN" id="1YV-1g-2sA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jAw-yp-PW6" id="uLa-Gj-GPj"/>
+                            <outlet property="delegate" destination="jAw-yp-PW6" id="fyE-GT-YKS"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Subscriptions" image="subscription.png" id="N3M-9B-y6w"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wI1-Tn-pyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3606" y="4022"/>
+        </scene>
+        <!--Stars-->
+        <scene sceneID="cDX-35-tVJ">
+            <objects>
+                <tableViewController id="SXK-k9-c6L" customClass="StarsTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gkA-9T-CKl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6ox-SL-Ym9">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6ox-SL-Ym9" id="j3w-Uz-HGC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SXK-k9-c6L" id="i6V-wv-TRI"/>
+                            <outlet property="delegate" destination="SXK-k9-c6L" id="ZYo-vl-S8a"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Stars" image="Stars" id="AHp-DK-VPo"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NEQ-gi-xZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2580" y="4021"/>
+        </scene>
+        <!--Saved pages-->
+        <scene sceneID="S1d-Nu-W7H">
+            <objects>
+                <tableViewController id="I7n-GH-QXe" customClass="SavedPagesTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cH9-7z-Ua1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Epw-G0-BVR">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Epw-G0-BVR" id="7TK-zs-4H7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="I7n-GH-QXe" id="Og8-2t-f3M"/>
+                            <outlet property="delegate" destination="I7n-GH-QXe" id="EGo-ao-RrO"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Saved pages" image="SavedPages.png" id="q2H-2Q-UGd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4it-ra-Gry" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1686" y="4024"/>
+        </scene>
+        <!--Tags-->
+        <scene sceneID="XH4-rF-ZWd">
+            <objects>
+                <tableViewController id="K0g-As-hKX" customClass="TagsTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nkz-JJ-bgj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WvT-eB-AAi">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WvT-eB-AAi" id="PrG-94-ZsB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="K0g-As-hKX" id="hzy-zB-ge4"/>
+                            <outlet property="delegate" destination="K0g-As-hKX" id="FLO-vz-Fpw"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Tags" image="tags" id="RxV-sB-6Hc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8n7-pP-kTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-609" y="4021"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="OG5-BW-5kY">
+            <objects>
+                <tabBarController id="p7Z-i2-guY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wS4-MU-lEf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jAw-yp-PW6" kind="relationship" relationship="viewControllers" id="LXi-Bi-hk9"/>
+                        <segue destination="SXK-k9-c6L" kind="relationship" relationship="viewControllers" id="bJ1-ym-kSG"/>
+                        <segue destination="I7n-GH-QXe" kind="relationship" relationship="viewControllers" id="EPb-yf-SjW"/>
+                        <segue destination="K0g-As-hKX" kind="relationship" relationship="viewControllers" id="i1l-wy-v5Y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mAd-56-SRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2297" y="3170"/>
+        </scene>
         <!--More Login Option View Controller-->
         <scene sceneID="jlk-Nm-Rp8">
             <objects>
@@ -535,6 +671,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d2w-VY-SwN"/>
                     </view>
+                    <connections>
+                        <outlet property="articleImage" destination="JfJ-zb-jqX" id="lbJ-GX-fpY"/>
+                        <outlet property="authorLabel" destination="hfh-nD-0KV" id="SyA-G2-2Wn"/>
+                        <outlet property="descriptionLabel" destination="RSy-zU-dMf" id="FbH-kH-Lmv"/>
+                        <outlet property="titleLabel" destination="yQX-uQ-6jk" id="ZYJ-do-ylV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPi-EN-kDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -607,7 +749,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SavedPages.png" width="26" height="32"/>
+        <image name="Stars" width="32" height="32"/>
         <image name="delete.png" width="500" height="500"/>
         <image name="image-placeholder" width="200" height="200"/>
+        <image name="subscription.png" width="26" height="32"/>
+        <image name="tags" width="33" height="33"/>
     </resources>
 </document>

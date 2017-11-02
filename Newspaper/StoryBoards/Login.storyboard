@@ -131,18 +131,132 @@
         <scene sceneID="9Q1-GM-C8u">
             <objects>
                 <tableViewController id="jAw-yp-PW6" customClass="SubscriptionTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cwu-jv-NWR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cwu-jv-NWR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Xw0-if-hBN">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="subscriptionSearchTableViewCell" rowHeight="58" id="Xw0-if-hBN" customClass="SubscriptionSearchTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xw0-if-hBN" id="1YV-1g-2sA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" text="Search" translatesAutoresizingMaskIntoConstraints="NO" id="fMn-yI-NWV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                            <color key="barTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <offsetWrapper key="searchTextPositionAdjustment" horizontal="1" vertical="-5"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="fMn-yI-NWV" secondAttribute="trailing" id="Aw0-xq-IzD"/>
+                                        <constraint firstItem="fMn-yI-NWV" firstAttribute="leading" secondItem="1YV-1g-2sA" secondAttribute="leading" id="jTK-M9-d8Q"/>
+                                        <constraint firstItem="fMn-yI-NWV" firstAttribute="top" secondItem="1YV-1g-2sA" secondAttribute="top" id="lIR-9a-VMk"/>
+                                        <constraint firstAttribute="bottom" secondItem="fMn-yI-NWV" secondAttribute="bottom" constant="3.5" id="tN7-D8-nPn"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="subscriptionSearchBar" destination="fMn-yI-NWV" id="HrJ-PA-IWA"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="allArticlesTableViewCell" rowHeight="55" id="9mp-PO-Ays" customClass="AllArticlesTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9mp-PO-Ays" id="4wQ-e2-u7W">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHi-Q2-Wz2">
+                                            <rect key="frame" x="31" y="17" width="334" height="21"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All articles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1l2-fm-vJo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="168" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="168" id="BfY-kp-HBD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000+" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbz-JN-hhD">
+                                                    <rect key="frame" x="168" y="0.0" width="166" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="166" id="x1z-sf-nrG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="iHi-Q2-Wz2" secondAttribute="trailing" constant="10" id="1Kj-ye-sms"/>
+                                        <constraint firstItem="iHi-Q2-Wz2" firstAttribute="leading" secondItem="4wQ-e2-u7W" secondAttribute="leading" constant="31" id="Wsl-5h-4Pk"/>
+                                        <constraint firstAttribute="bottom" secondItem="iHi-Q2-Wz2" secondAttribute="bottom" constant="17" id="Y2p-nN-evu"/>
+                                        <constraint firstItem="iHi-Q2-Wz2" firstAttribute="top" secondItem="4wQ-e2-u7W" secondAttribute="top" constant="17" id="sqg-xl-rEO"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="numberOfArticleCountLabel" destination="Wbz-JN-hhD" id="z4A-S5-s9M"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subsriptionSourcesTableViewCell" rowHeight="55" id="Hgj-hd-gKH" customClass="SubsriptionSourcesTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="141" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hgj-hd-gKH" id="7aL-XY-c9c">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbc-news" translatesAutoresizingMaskIntoConstraints="NO" id="dtG-Qx-v8h">
+                                            <rect key="frame" x="18" y="6" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="dtG-Qx-v8h" secondAttribute="height" multiplier="1:1" id="pCk-Ct-xMh"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WY6-fA-RzG">
+                                            <rect key="frame" x="75" y="18" width="292" height="18.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNM-pv-cUF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="228" height="18.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="228" id="haE-uQ-1rt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000+" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzH-b4-MWm">
+                                                    <rect key="frame" x="228" y="0.0" width="64" height="18.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="QnQ-R9-1Lv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="WY6-fA-RzG" secondAttribute="trailing" constant="8" id="2q8-WJ-FST"/>
+                                        <constraint firstItem="WY6-fA-RzG" firstAttribute="leading" secondItem="dtG-Qx-v8h" secondAttribute="trailing" constant="17" id="AgO-eM-qQg"/>
+                                        <constraint firstItem="dtG-Qx-v8h" firstAttribute="top" secondItem="7aL-XY-c9c" secondAttribute="top" constant="6" id="D5j-Tz-zB9"/>
+                                        <constraint firstAttribute="bottom" secondItem="dtG-Qx-v8h" secondAttribute="bottom" constant="8.5" id="KsR-ix-4If"/>
+                                        <constraint firstAttribute="bottom" secondItem="WY6-fA-RzG" secondAttribute="bottom" constant="18" id="Rhe-gf-BBx"/>
+                                        <constraint firstItem="dtG-Qx-v8h" firstAttribute="leading" secondItem="7aL-XY-c9c" secondAttribute="leading" constant="18" id="W5p-6d-PUA"/>
+                                        <constraint firstItem="WY6-fA-RzG" firstAttribute="top" secondItem="7aL-XY-c9c" secondAttribute="top" constant="18" id="xyk-sw-0pu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="sourceCountLabel" destination="LzH-b4-MWm" id="v3B-2v-S0C"/>
+                                    <outlet property="sourceImageView" destination="dtG-Qx-v8h" id="6eb-on-Zp6"/>
+                                    <outlet property="sourceNameLabel" destination="GNM-pv-cUF" id="W9x-mL-hH8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -156,7 +270,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wI1-Tn-pyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3606" y="4022"/>
+            <point key="canvasLocation" x="-3607.1999999999998" y="4021.4392803598203"/>
         </scene>
         <!--Stars Table View Controller-->
         <scene sceneID="cDX-35-tVJ">
@@ -766,15 +880,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bbc-news" width="144" height="144"/>
         <image name="delete.png" width="500" height="500"/>
         <image name="image-placeholder" width="200" height="200"/>
         <image name="saved.png" width="21" height="26"/>
-        <image name="saved_filled" width="26" height="32"/>
-        <image name="star.png" width="32" height="32"/>
-        <image name="star_filled" width="32" height="32"/>
-        <image name="subs.png" width="26" height="32"/>
-        <image name="subs_filled" width="26" height="32"/>
+        <image name="saved_filled" width="21" height="26"/>
+        <image name="star.png" width="26" height="26"/>
+        <image name="star_filled" width="26" height="26"/>
+        <image name="subs.png" width="21" height="26"/>
+        <image name="subs_filled" width="21" height="26"/>
         <image name="tags.png" width="33" height="33"/>
-        <image name="tags_filled.png" width="33" height="33"/>
+        <image name="tags_filled.png" width="27" height="27"/>
     </resources>
 </document>

@@ -17,7 +17,7 @@ class ExploreOpenTableViewController: UITableViewController {
         super.viewDidLoad()
 
         // Preserve selection between presentations
-         self.clearsSelectionOnViewWillAppear = false
+         self.clearsSelectionOnViewWillAppear = true
         
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension

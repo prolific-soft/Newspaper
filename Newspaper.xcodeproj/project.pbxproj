@@ -22,6 +22,9 @@
 		EF184DA11FAB9BBA000459A4 /* StarsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DA01FAB9BBA000459A4 /* StarsTableViewController.swift */; };
 		EF184DA41FAB9C7E000459A4 /* SavedPagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DA31FAB9C7E000459A4 /* SavedPagesTableViewController.swift */; };
 		EF184DA71FAB9CF2000459A4 /* TagsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DA61FAB9CF2000459A4 /* TagsTableViewController.swift */; };
+		EF184DB31FABCE99000459A4 /* SubscriptionSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DB21FABCE99000459A4 /* SubscriptionSearchTableViewCell.swift */; };
+		EF184DB51FABD1C8000459A4 /* AllArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DB41FABD1C8000459A4 /* AllArticlesTableViewCell.swift */; };
+		EF184DB71FABD571000459A4 /* SubsriptionSourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DB61FABD571000459A4 /* SubsriptionSourcesTableViewCell.swift */; };
 		EF53C9311F758405009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9301F758405009A1DB8 /* AppDelegate.swift */; };
 		EF53C9331F758405009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9321F758405009A1DB8 /* ViewController.swift */; };
 		EF53C9381F758405009A1DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9371F758405009A1DB8 /* Assets.xcassets */; };
@@ -139,6 +142,9 @@
 		EF184DA31FAB9C7E000459A4 /* SavedPagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPagesTableViewController.swift; sourceTree = "<group>"; };
 		EF184DA61FAB9CF2000459A4 /* TagsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTableViewController.swift; sourceTree = "<group>"; };
 		EF184DA91FABC069000459A4 /* Tab_Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tab_Icons; sourceTree = "<group>"; };
+		EF184DB21FABCE99000459A4 /* SubscriptionSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionSearchTableViewCell.swift; sourceTree = "<group>"; };
+		EF184DB41FABD1C8000459A4 /* AllArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticlesTableViewCell.swift; sourceTree = "<group>"; };
+		EF184DB61FABD571000459A4 /* SubsriptionSourcesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsriptionSourcesTableViewCell.swift; sourceTree = "<group>"; };
 		EF53C92D1F758405009A1DB8 /* Newspaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newspaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9301F758405009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C9321F758405009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +264,9 @@
 			isa = PBXGroup;
 			children = (
 				EF184D961FAB96EA000459A4 /* SubscriptionTableViewController.swift */,
+				EF184DB21FABCE99000459A4 /* SubscriptionSearchTableViewCell.swift */,
+				EF184DB41FABD1C8000459A4 /* AllArticlesTableViewCell.swift */,
+				EF184DB61FABD571000459A4 /* SubsriptionSourcesTableViewCell.swift */,
 			);
 			path = Subscriptions;
 			sourceTree = "<group>";
@@ -635,7 +644,9 @@
 				EF1831591FA00BFB00BE0140 /* MoreLoginOptionViewController.swift in Sources */,
 				EFAD06491FA77BE400E36241 /* SourceImages.swift in Sources */,
 				EF184DA41FAB9C7E000459A4 /* SavedPagesTableViewController.swift in Sources */,
+				EF184DB51FABD1C8000459A4 /* AllArticlesTableViewCell.swift in Sources */,
 				EF18315F1FA011EB00BE0140 /* CreateAccountViewController.swift in Sources */,
+				EF184DB71FABD571000459A4 /* SubsriptionSourcesTableViewCell.swift in Sources */,
 				EF53C94F1F759D54009A1DB8 /* Sources.swift in Sources */,
 				EFAD063E1FA2601E00E36241 /* CategoryExploreCollectionViewCell.swift in Sources */,
 				EF1831571FA008D000BE0140 /* StartViewController.swift in Sources */,
@@ -656,6 +667,7 @@
 				EFAD06471FA3819800E36241 /* SourceList.swift in Sources */,
 				EF184D941FAABD43000459A4 /* ArticleOpenViewController.swift in Sources */,
 				EF184DA11FAB9BBA000459A4 /* StarsTableViewController.swift in Sources */,
+				EF184DB31FABCE99000459A4 /* SubscriptionSearchTableViewCell.swift in Sources */,
 				EFAD06351FA25DD400E36241 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,5 +16,8 @@ enum Cell : String {
     case categoryExploreCollectionViewCell = "categoryExploreCollectionViewCell"
     case exploreOpenTableViewCell = "exploreOpenTableViewCell"
     case sourceOpenTableViewCell = "sourceOpenTableViewCell"
+    case subscriptionSearchTableViewCell = "subscriptionSearchTableViewCell"
+    case allArticlesTableViewCell = "allArticlesTableViewCell"
+    case subsriptionSourcesTableViewCell = "subsriptionSourcesTableViewCell"
 
 }

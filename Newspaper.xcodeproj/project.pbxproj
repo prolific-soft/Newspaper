@@ -138,6 +138,7 @@
 		EF184DA01FAB9BBA000459A4 /* StarsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsTableViewController.swift; sourceTree = "<group>"; };
 		EF184DA31FAB9C7E000459A4 /* SavedPagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPagesTableViewController.swift; sourceTree = "<group>"; };
 		EF184DA61FAB9CF2000459A4 /* TagsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsTableViewController.swift; sourceTree = "<group>"; };
+		EF184DA91FABC069000459A4 /* Tab_Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tab_Icons; sourceTree = "<group>"; };
 		EF53C92D1F758405009A1DB8 /* Newspaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newspaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9301F758405009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C9321F758405009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -323,6 +324,7 @@
 				EF53C9301F758405009A1DB8 /* AppDelegate.swift */,
 				EF53C9321F758405009A1DB8 /* ViewController.swift */,
 				EF53C9371F758405009A1DB8 /* Assets.xcassets */,
+				EF184DA91FABC069000459A4 /* Tab_Icons */,
 				EFAD063F1FA2C8FA00E36241 /* category */,
 				EFAD064A1FA783BB00E36241 /* Source Images */,
 				EF18315A1FA00CCA00BE0140 /* icons */,

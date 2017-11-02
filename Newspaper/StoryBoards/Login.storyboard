@@ -106,6 +106,14 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfW-HC-ZYp">
+                                <rect key="frame" x="131" y="487" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="p7Z-i2-guY" kind="show" id="WKe-mF-vQm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="yEz-aT-rZP"/>
@@ -119,7 +127,7 @@
             </objects>
             <point key="canvasLocation" x="-2970" y="2245"/>
         </scene>
-        <!--Subscriptions-->
+        <!--Subscription Table View Controller-->
         <scene sceneID="9Q1-GM-C8u">
             <objects>
                 <tableViewController id="jAw-yp-PW6" customClass="SubscriptionTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
@@ -142,13 +150,15 @@
                             <outlet property="delegate" destination="jAw-yp-PW6" id="fyE-GT-YKS"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Subscriptions" image="subscription.png" id="N3M-9B-y6w"/>
+                    <tabBarItem key="tabBarItem" title="" image="subs.png" selectedImage="subs_filled" id="N3M-9B-y6w">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wI1-Tn-pyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3606" y="4022"/>
         </scene>
-        <!--Stars-->
+        <!--Stars Table View Controller-->
         <scene sceneID="cDX-35-tVJ">
             <objects>
                 <tableViewController id="SXK-k9-c6L" customClass="StarsTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
@@ -171,13 +181,15 @@
                             <outlet property="delegate" destination="SXK-k9-c6L" id="ZYo-vl-S8a"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Stars" image="Stars" id="AHp-DK-VPo"/>
+                    <tabBarItem key="tabBarItem" title="" image="star.png" selectedImage="star_filled" id="AHp-DK-VPo">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEQ-gi-xZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2580" y="4021"/>
         </scene>
-        <!--Saved pages-->
+        <!--Saved Pages Table View Controller-->
         <scene sceneID="S1d-Nu-W7H">
             <objects>
                 <tableViewController id="I7n-GH-QXe" customClass="SavedPagesTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
@@ -200,13 +212,15 @@
                             <outlet property="delegate" destination="I7n-GH-QXe" id="EGo-ao-RrO"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Saved pages" image="SavedPages.png" id="q2H-2Q-UGd"/>
+                    <tabBarItem key="tabBarItem" title="" image="saved.png" selectedImage="saved_filled" id="q2H-2Q-UGd">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4it-ra-Gry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1686" y="4024"/>
         </scene>
-        <!--Tags-->
+        <!--Tags Table View Controller-->
         <scene sceneID="XH4-rF-ZWd">
             <objects>
                 <tableViewController id="K0g-As-hKX" customClass="TagsTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
@@ -229,7 +243,9 @@
                             <outlet property="delegate" destination="K0g-As-hKX" id="FLO-vz-Fpw"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Tags" image="tags" id="RxV-sB-6Hc"/>
+                    <tabBarItem key="tabBarItem" title="" image="tags.png" selectedImage="tags_filled.png" id="RxV-sB-6Hc">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8n7-pP-kTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,6 +259,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="jAw-yp-PW6" kind="relationship" relationship="viewControllers" id="LXi-Bi-hk9"/>
@@ -749,11 +766,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SavedPages.png" width="26" height="32"/>
-        <image name="Stars" width="32" height="32"/>
         <image name="delete.png" width="500" height="500"/>
         <image name="image-placeholder" width="200" height="200"/>
-        <image name="subscription.png" width="26" height="32"/>
-        <image name="tags" width="33" height="33"/>
+        <image name="saved.png" width="21" height="26"/>
+        <image name="saved_filled" width="26" height="32"/>
+        <image name="star.png" width="32" height="32"/>
+        <image name="star_filled" width="32" height="32"/>
+        <image name="subs.png" width="26" height="32"/>
+        <image name="subs_filled" width="26" height="32"/>
+        <image name="tags.png" width="33" height="33"/>
+        <image name="tags_filled.png" width="33" height="33"/>
     </resources>
 </document>

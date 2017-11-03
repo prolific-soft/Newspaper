@@ -22,5 +22,8 @@ enum Cell : String {
     
     case starsSearchTableViewCell = "starsSearchTableViewCell"
     case starsTableViewCell = "starsTableViewCell"
+    
+    case savedSearchTableViewCell = "savedSearchTableViewCell"
+    case savedSourceTableViewCell = "savedSourceTableViewCell"
 
 }

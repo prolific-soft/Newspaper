@@ -304,11 +304,11 @@
                                     <outlet property="starsSearchBar" destination="avR-ls-Fnw" id="VTE-nj-eyJ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="starsTableViewCell" rowHeight="100" id="afe-w9-Qus" customClass="StarsTableViewCell" customModule="Newspaper" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="375" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="starsTableViewCell" rowHeight="103" id="afe-w9-Qus" customClass="StarsTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="375" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="afe-w9-Qus" id="MDO-h5-mqb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breitbart-news" translatesAutoresizingMaskIntoConstraints="NO" id="7Lz-yY-tTb">
@@ -320,16 +320,16 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="goE-Ii-Ryc">
-                                            <rect key="frame" x="94" y="8" width="275" height="68"/>
+                                            <rect key="frame" x="94" y="8" width="275" height="71"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The LAD Bible is one of the largest community for guys aged 16-30 in the world. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKq-Zt-RMK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="45.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="48.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Dd-7d-Lp3">
-                                                    <rect key="frame" x="0.0" y="54.5" width="275" height="13.5"/>
+                                                    <rect key="frame" x="0.0" y="57.5" width="275" height="13.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrepreneur " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apw-dZ-3cQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="226" height="13.5"/>
@@ -385,25 +385,95 @@
         <scene sceneID="S1d-Nu-W7H">
             <objects>
                 <tableViewController id="I7n-GH-QXe" customClass="SavedPagesTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cH9-7z-Ua1">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cH9-7z-Ua1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Epw-G0-BVR">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedSearchTableViewCell" rowHeight="57" id="Epw-G0-BVR" customClass="SavedSearchTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Epw-G0-BVR" id="7TK-zs-4H7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="hk4-KK-Dti">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hk4-KK-Dti" firstAttribute="leading" secondItem="7TK-zs-4H7" secondAttribute="leading" id="534-l7-mQm"/>
+                                        <constraint firstItem="hk4-KK-Dti" firstAttribute="top" secondItem="7TK-zs-4H7" secondAttribute="top" id="MtS-5T-Kj7"/>
+                                        <constraint firstAttribute="trailing" secondItem="hk4-KK-Dti" secondAttribute="trailing" id="PI7-Cr-3Fp"/>
+                                        <constraint firstAttribute="bottom" secondItem="hk4-KK-Dti" secondAttribute="bottom" id="lBN-Y5-g0S"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="savedSearchBar" destination="hk4-KK-Dti" id="TFJ-GX-ccL"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ydy-OW-iGo">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedSourceTableViewCell" rowHeight="103" id="Ydy-OW-iGo" customClass="SavedSourceTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="85" width="375" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ydy-OW-iGo" id="WdF-Kp-2G2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="four-four-two" translatesAutoresizingMaskIntoConstraints="NO" id="UvC-df-DXD">
+                                            <rect key="frame" x="8" y="8" width="70" height="70"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="4mS-N0-jgh"/>
+                                                <constraint firstAttribute="width" secondItem="UvC-df-DXD" secondAttribute="height" multiplier="1:1" id="Fa8-cy-nvS"/>
+                                                <constraint firstAttribute="height" constant="70" id="M5w-sP-Qv1"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-VE-0my">
+                                            <rect key="frame" x="93" y="8" width="275" height="72.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIo-O1-4Er">
+                                                    <rect key="frame" x="0.0" y="0.0" width="273" height="64.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="273" id="0VV-Sg-9oO"/>
+                                                    </constraints>
+                                                    <string key="text">The LAD Bible is one of the largest community for guys aged 16-30 in the world. argest community for guys aged 16-30 in the world</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gf9-pW-VhG">
+                                                    <rect key="frame" x="0.0" y="72.5" width="275" height="0.0"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bloomberg argest community for guys aged 16-30 in the world argest community for guys aged 16-30 in the world" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buq-ji-OWA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="210" height="0.0"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="210" id="gtC-Gd-YpS"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dec 2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bE8-re-g1R">
+                                                            <rect key="frame" x="215" y="0.0" width="60" height="0.0"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="60" id="F2f-pM-KjV"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cdi-VE-0my" firstAttribute="top" secondItem="WdF-Kp-2G2" secondAttribute="top" constant="8" id="6qW-8v-CLE"/>
+                                        <constraint firstAttribute="bottom" secondItem="cdi-VE-0my" secondAttribute="bottom" constant="22" id="D0Z-gn-2Oc"/>
+                                        <constraint firstItem="UvC-df-DXD" firstAttribute="top" secondItem="WdF-Kp-2G2" secondAttribute="top" constant="8" id="G0c-Gm-4sx"/>
+                                        <constraint firstItem="UvC-df-DXD" firstAttribute="leading" secondItem="WdF-Kp-2G2" secondAttribute="leading" constant="8" id="UmO-sm-B95"/>
+                                        <constraint firstAttribute="trailing" secondItem="cdi-VE-0my" secondAttribute="trailing" constant="7" id="b9z-MF-Rnf"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -418,7 +488,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4it-ra-Gry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1686" y="4024"/>
+            <point key="canvasLocation" x="-1687.2" y="4023.2383808095956"/>
         </scene>
         <!--Tags Table View Controller-->
         <scene sceneID="XH4-rF-ZWd">
@@ -970,6 +1040,7 @@
         <image name="bbc-news" width="144" height="144"/>
         <image name="breitbart-news" width="152" height="152"/>
         <image name="delete.png" width="500" height="500"/>
+        <image name="four-four-two" width="144" height="144"/>
         <image name="image-placeholder" width="200" height="200"/>
         <image name="saved.png" width="21" height="26"/>
         <image name="saved_filled" width="21" height="26"/>

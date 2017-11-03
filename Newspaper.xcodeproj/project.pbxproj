@@ -39,6 +39,8 @@
 		EF53C9531F75C983009A1DB8 /* NewsAPIServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9521F75C983009A1DB8 /* NewsAPIServices.swift */; };
 		EF53C95B1F75F70C009A1DB8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF53C95A1F75F70C009A1DB8 /* GoogleService-Info.plist */; };
 		EF53C95D1F75F83C009A1DB8 /* FirArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C95C1F75F83C009A1DB8 /* FirArticle.swift */; };
+		EF5F8E9B1FAC1A740019EAA4 /* SavedSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8E9A1FAC1A740019EAA4 /* SavedSearchTableViewCell.swift */; };
+		EF5F8E9D1FAC1BB60019EAA4 /* SavedSourceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8E9C1FAC1BB60019EAA4 /* SavedSourceTableViewCell.swift */; };
 		EFAD06351FA25DD400E36241 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06341FA25DD400E36241 /* Cell.swift */; };
 		EFAD06381FA25F1400E36241 /* CategoryExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06371FA25F1400E36241 /* CategoryExploreTableViewController.swift */; };
 		EFAD063A1FA25FBA00E36241 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06391FA25FBA00E36241 /* SearchTableViewCell.swift */; };
@@ -163,6 +165,8 @@
 		EF53C9521F75C983009A1DB8 /* NewsAPIServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIServices.swift; sourceTree = "<group>"; };
 		EF53C95A1F75F70C009A1DB8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF53C95C1F75F83C009A1DB8 /* FirArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirArticle.swift; sourceTree = "<group>"; };
+		EF5F8E9A1FAC1A740019EAA4 /* SavedSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSearchTableViewCell.swift; sourceTree = "<group>"; };
+		EF5F8E9C1FAC1BB60019EAA4 /* SavedSourceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedSourceTableViewCell.swift; sourceTree = "<group>"; };
 		EFAD06341FA25DD400E36241 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		EFAD06371FA25F1400E36241 /* CategoryExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryExploreTableViewController.swift; sourceTree = "<group>"; };
 		EFAD06391FA25FBA00E36241 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				EF184DA31FAB9C7E000459A4 /* SavedPagesTableViewController.swift */,
+				EF5F8E9A1FAC1A740019EAA4 /* SavedSearchTableViewCell.swift */,
+				EF5F8E9C1FAC1BB60019EAA4 /* SavedSourceTableViewCell.swift */,
 			);
 			path = "Saved Pages";
 			sourceTree = "<group>";
@@ -647,6 +653,7 @@
 				EFAD06381FA25F1400E36241 /* CategoryExploreTableViewController.swift in Sources */,
 				EF53C9531F75C983009A1DB8 /* NewsAPIServices.swift in Sources */,
 				EFAD063A1FA25FBA00E36241 /* SearchTableViewCell.swift in Sources */,
+				EF5F8E9D1FAC1BB60019EAA4 /* SavedSourceTableViewCell.swift in Sources */,
 				EF1831591FA00BFB00BE0140 /* MoreLoginOptionViewController.swift in Sources */,
 				EFAD06491FA77BE400E36241 /* SourceImages.swift in Sources */,
 				EF184DA41FAB9C7E000459A4 /* SavedPagesTableViewController.swift in Sources */,
@@ -677,6 +684,7 @@
 				EF184DA11FAB9BBA000459A4 /* StarsTableViewController.swift in Sources */,
 				EF184DB31FABCE99000459A4 /* SubscriptionSearchTableViewCell.swift in Sources */,
 				EFAD06351FA25DD400E36241 /* Cell.swift in Sources */,
+				EF5F8E9B1FAC1A740019EAA4 /* SavedSearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

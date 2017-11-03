@@ -14,4 +14,8 @@ enum Segue : String {
     case toExploreOpen = "toExploreOpen"
     case toSourceOpen = "toSourceOpen"
     
+    // To TabBar Controller
+    case loginToTabbar = "loginToTabbar"
+    case signUpToTabbar = "signUpToTabbar"
+    
 }

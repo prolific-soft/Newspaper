@@ -19,5 +19,8 @@ enum Cell : String {
     case subscriptionSearchTableViewCell = "subscriptionSearchTableViewCell"
     case allArticlesTableViewCell = "allArticlesTableViewCell"
     case subsriptionSourcesTableViewCell = "subsriptionSourcesTableViewCell"
+    
+    case starsSearchTableViewCell = "starsSearchTableViewCell"
+    case starsTableViewCell = "starsTableViewCell"
 
 }

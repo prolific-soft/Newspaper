@@ -18,8 +18,8 @@ class SourceOpenTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = true
         
-        self.tableView.estimatedRowHeight = self.tableView.rowHeight
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+       // self.tableView.estimatedRowHeight = self.tableView.rowHeight
+        //self.tableView.rowHeight = UITableViewAutomaticDimension
         
         print("*&&&*********000000000************&&&&&")
         print("Fourth Articles Loaded")

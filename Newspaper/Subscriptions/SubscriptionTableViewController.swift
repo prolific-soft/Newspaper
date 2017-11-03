@@ -24,24 +24,36 @@ class SubscriptionTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return 1
+        case 2:
+            return 3
+        default:
+            return 1
+        }
     }
 
-    /*
+    //Deque Cells
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        var cell =  UITableViewCell()
+        if indexPath.section == 0 {
+            cell = tableView.dequeueReusableCell(withIdentifier: Cell.subscriptionSearchTableViewCell.rawValue, for: indexPath) as! SubscriptionSearchTableViewCell
+        }else if indexPath.section == 1  {
+            cell = tableView.dequeueReusableCell(withIdentifier: Cell.allArticlesTableViewCell.rawValue, for: indexPath) as! AllArticlesTableViewCell
+        }else if indexPath.section == 2  {
+            cell = tableView.dequeueReusableCell(withIdentifier: Cell.subsriptionSourcesTableViewCell.rawValue, for: indexPath) as! SubsriptionSourcesTableViewCell
+        }
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

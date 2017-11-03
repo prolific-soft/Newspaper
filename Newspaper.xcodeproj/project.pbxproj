@@ -25,6 +25,8 @@
 		EF184DB31FABCE99000459A4 /* SubscriptionSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DB21FABCE99000459A4 /* SubscriptionSearchTableViewCell.swift */; };
 		EF184DB51FABD1C8000459A4 /* AllArticlesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DB41FABD1C8000459A4 /* AllArticlesTableViewCell.swift */; };
 		EF184DB71FABD571000459A4 /* SubsriptionSourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DB61FABD571000459A4 /* SubsriptionSourcesTableViewCell.swift */; };
+		EF184DBB1FABE5D7000459A4 /* StarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DBA1FABE5D7000459A4 /* StarsTableViewCell.swift */; };
+		EF184DBD1FABE62E000459A4 /* StarsSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF184DBC1FABE62E000459A4 /* StarsSearchTableViewCell.swift */; };
 		EF53C9311F758405009A1DB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9301F758405009A1DB8 /* AppDelegate.swift */; };
 		EF53C9331F758405009A1DB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF53C9321F758405009A1DB8 /* ViewController.swift */; };
 		EF53C9381F758405009A1DB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF53C9371F758405009A1DB8 /* Assets.xcassets */; };
@@ -145,6 +147,8 @@
 		EF184DB21FABCE99000459A4 /* SubscriptionSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionSearchTableViewCell.swift; sourceTree = "<group>"; };
 		EF184DB41FABD1C8000459A4 /* AllArticlesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticlesTableViewCell.swift; sourceTree = "<group>"; };
 		EF184DB61FABD571000459A4 /* SubsriptionSourcesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubsriptionSourcesTableViewCell.swift; sourceTree = "<group>"; };
+		EF184DBA1FABE5D7000459A4 /* StarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsTableViewCell.swift; sourceTree = "<group>"; };
+		EF184DBC1FABE62E000459A4 /* StarsSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsSearchTableViewCell.swift; sourceTree = "<group>"; };
 		EF53C92D1F758405009A1DB8 /* Newspaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newspaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF53C9301F758405009A1DB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF53C9321F758405009A1DB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				EF184DA01FAB9BBA000459A4 /* StarsTableViewController.swift */,
+				EF184DBA1FABE5D7000459A4 /* StarsTableViewCell.swift */,
+				EF184DBC1FABE62E000459A4 /* StarsSearchTableViewCell.swift */,
 			);
 			path = Stars;
 			sourceTree = "<group>";
@@ -654,9 +660,11 @@
 				EFAD063C1FA25FE500E36241 /* CategoryExploreTableViewCell.swift in Sources */,
 				EF53C9461F759569009A1DB8 /* NetworkProcessor.swift in Sources */,
 				EFAD06441FA34C5000E36241 /* ExploreOpenTableViewCell.swift in Sources */,
+				EF184DBD1FABE62E000459A4 /* StarsSearchTableViewCell.swift in Sources */,
 				EF184D8E1FA815F7000459A4 /* SourceOpenTableViewCell.swift in Sources */,
 				EF184DA71FAB9CF2000459A4 /* TagsTableViewController.swift in Sources */,
 				EF184D901FA8C6F9000459A4 /* Segue.swift in Sources */,
+				EF184DBB1FABE5D7000459A4 /* StarsTableViewCell.swift in Sources */,
 				EF184D8C1FA813E8000459A4 /* SourceOpenTableViewController.swift in Sources */,
 				EF18315D1FA011C000BE0140 /* LogInViewController.swift in Sources */,
 				EF184D971FAB96EA000459A4 /* SubscriptionTableViewController.swift in Sources */,

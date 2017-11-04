@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
 
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //Sign In Already Existing User
+        if Auth.auth().currentUser != nil {
+            let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+            let tabVC = storyboard.instantiateViewController(withIdentifier: StoryboardID.tabbarViewController.rawValue) as! UITabBarController
+            self.present(tabVC, animated: true, completion: nil)
+        }
+    }
     
     @IBAction func exploreButtonTapped(_ sender: UIButton) {
         

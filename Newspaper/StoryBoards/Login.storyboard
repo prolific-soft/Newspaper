@@ -20,7 +20,7 @@
         <!--Start View Controller-->
         <scene sceneID="SlE-ym-Nmp">
             <objects>
-                <viewController id="v2d-j1-YGo" customClass="StartViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startViewController" id="v2d-j1-YGo" customClass="StartViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FjS-0W-9qD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,11 +106,6 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfW-HC-ZYp">
-                                <rect key="frame" x="131" y="487" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="yEz-aT-rZP"/>
@@ -604,7 +599,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fse-vJ-FdL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EMa-hO-Uca" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="startNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="EMa-hO-Uca" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ze7-fI-z3g">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -633,6 +628,6 @@
         <image name="image-placeholder" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bf5-fU-aNz"/>
+        <segue reference="j6W-g6-6W3"/>
     </inferredMetricsTieBreakers>
 </document>

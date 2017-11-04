@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import SVProgressHUD
 
 class SubscriptionTableViewController: UITableViewController {
 
@@ -17,7 +19,11 @@ class SubscriptionTableViewController: UITableViewController {
          self.clearsSelectionOnViewWillAppear = true
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //self.navigationItem.leftBarButtonItem
+        
+
     }
 
 
@@ -54,7 +60,21 @@ class SubscriptionTableViewController: UITableViewController {
         return cell
     }
 
+    //Temporary Logout User
+    //This will be implemented at the Slide Menu
+    @IBAction func logoutTapped(_ sender: Any) {
+        
+        do {
+            try Auth.auth().signOut()
+        }catch let logoutError {
+            SVProgressHUD.showError(withStatus: logoutError.localizedDescription)
+        }
 
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let navController = storyboard.instantiateViewController(withIdentifier: StoryboardID.startNavigationController.rawValue) as! UINavigationController
+        self.present(navController, animated: true, completion: nil)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

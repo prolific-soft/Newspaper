@@ -26,8 +26,8 @@ class LogInViewController: UIViewController {
             return
         }
         AuthService.signIn(email: emailText, password: passwordText, onSuccess: {
-           SVProgressHUD.showSuccess(withStatus: "Success!")
-            
+           //SVProgressHUD.showSuccess(withStatus: "Success!")
+            self.performSegue(withIdentifier: Segue.loginToTabbar.rawValue, sender: nil)
         }) { (ErrorMessage) in
             SVProgressHUD.showError(withStatus: ErrorMessage!)
         }

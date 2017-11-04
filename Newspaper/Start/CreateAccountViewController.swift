@@ -30,7 +30,7 @@ class CreateAccountViewController: UIViewController {
         }
         AuthService.signUp(email: emailText, password: passwordText, onSuccess: {
             SVProgressHUD.showSuccess(withStatus: "Success!")
-            
+            self.performSegue(withIdentifier: Segue.signUpToTabbar.rawValue, sender: nil)
         }) { (ErrorMessage) in
             SVProgressHUD.showError(withStatus: ErrorMessage!)
         }

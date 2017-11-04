@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tags-->
+        <scene sceneID="XH4-rF-ZWd">
+            <objects>
+                <tableViewController id="K0g-As-hKX" customClass="TagsTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nkz-JJ-bgj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tagSearchTableViewCell" rowHeight="57" id="WvT-eB-AAi" customClass="TagSearchTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="57"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WvT-eB-AAi" id="PrG-94-ZsB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="jCQ-tE-Jbx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                            <color key="barTintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="jCQ-tE-Jbx" secondAttribute="bottom" id="J4S-cu-8Bi"/>
+                                        <constraint firstAttribute="trailing" secondItem="jCQ-tE-Jbx" secondAttribute="trailing" id="RM3-hk-4rs"/>
+                                        <constraint firstItem="jCQ-tE-Jbx" firstAttribute="leading" secondItem="PrG-94-ZsB" secondAttribute="leading" id="d84-86-rtI"/>
+                                        <constraint firstItem="jCQ-tE-Jbx" firstAttribute="top" secondItem="PrG-94-ZsB" secondAttribute="top" id="hw4-zI-cpm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="allTagsTableViewCell" rowHeight="55" id="4pE-OX-7yr" customClass="AllTagsTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="85" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4pE-OX-7yr" id="Ahn-5G-lhQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5x-08-M27">
+                                            <rect key="frame" x="38" y="17" width="329" height="21"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.93000000000000005" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="P5x-08-M27" secondAttribute="bottom" constant="16.5" id="77J-Yx-PC7"/>
+                                        <constraint firstAttribute="trailing" secondItem="P5x-08-M27" secondAttribute="trailing" constant="8" id="gAM-R5-YHP"/>
+                                        <constraint firstItem="P5x-08-M27" firstAttribute="top" secondItem="Ahn-5G-lhQ" secondAttribute="top" constant="17" id="rXJ-mM-b8V"/>
+                                        <constraint firstItem="P5x-08-M27" firstAttribute="leading" secondItem="Ahn-5G-lhQ" secondAttribute="leading" constant="38" id="yuj-0c-nrX"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tagTableViewCell" rowHeight="55" id="RkC-u6-ago" customClass="TagTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="140" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RkC-u6-ago" id="AYz-uo-1j8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-price-tag-blue" translatesAutoresizingMaskIntoConstraints="NO" id="ZOx-SZ-5KV">
+                                            <rect key="frame" x="20" y="14" width="25" height="25"/>
+                                            <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="ZOx-SZ-5KV" secondAttribute="height" multiplier="1:1" id="9gn-Cz-SbU"/>
+                                                <constraint firstAttribute="height" constant="25" id="C2h-mw-Xmh"/>
+                                                <constraint firstAttribute="width" constant="25" id="rSd-9Z-TB0"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1d-oC-mHZ">
+                                            <rect key="frame" x="53" y="14" width="314" height="25"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.93000000000000005" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ZOx-SZ-5KV" firstAttribute="top" secondItem="AYz-uo-1j8" secondAttribute="top" constant="14" id="1eJ-VE-EtB"/>
+                                        <constraint firstAttribute="bottom" secondItem="U1d-oC-mHZ" secondAttribute="bottom" constant="16" id="Cp8-nv-a0d"/>
+                                        <constraint firstItem="U1d-oC-mHZ" firstAttribute="top" secondItem="AYz-uo-1j8" secondAttribute="top" constant="14" id="HRv-eL-o8D"/>
+                                        <constraint firstAttribute="bottom" secondItem="ZOx-SZ-5KV" secondAttribute="bottom" constant="16" id="XJf-Dw-9cd"/>
+                                        <constraint firstAttribute="trailing" secondItem="U1d-oC-mHZ" secondAttribute="trailing" constant="8" id="cLX-3j-6DX"/>
+                                        <constraint firstItem="U1d-oC-mHZ" firstAttribute="leading" secondItem="ZOx-SZ-5KV" secondAttribute="trailing" constant="8" id="in8-Q2-ngb"/>
+                                        <constraint firstItem="ZOx-SZ-5KV" firstAttribute="leading" secondItem="AYz-uo-1j8" secondAttribute="leading" constant="20" id="yz2-vT-ham"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="K0g-As-hKX" id="hzy-zB-ge4"/>
+                            <outlet property="delegate" destination="K0g-As-hKX" id="FLO-vz-Fpw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tags" id="IhQ-o6-Kxk">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="d8j-OP-aSF">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8n7-pP-kTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="4864"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C9p-ys-2oy">
+            <objects>
+                <navigationController storyboardIdentifier="navigationTags" automaticallyAdjustsScrollViewInsets="NO" id="oVA-mn-uqe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tags.png" selectedImage="tags_filled.png" id="RxV-sB-6Hc">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Of8-O7-P4n">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="K0g-As-hKX" kind="relationship" relationship="rootViewController" id="ZPW-on-WTo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hg-QR-LFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450" y="4002"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-price-tag-blue" width="100" height="100"/>
+        <image name="tags.png" width="33" height="33"/>
+        <image name="tags_filled.png" width="27" height="27"/>
+    </resources>
+</document>

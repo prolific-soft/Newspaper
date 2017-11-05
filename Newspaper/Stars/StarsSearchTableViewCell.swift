@@ -12,6 +12,8 @@ class StarsSearchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var starsSearchBar: UISearchBar!
     
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

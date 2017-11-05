@@ -8,6 +8,12 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Stars-->
         <scene sceneID="cDX-35-tVJ">
@@ -42,45 +48,37 @@
                                     <outlet property="starsSearchBar" destination="avR-ls-Fnw" id="VTE-nj-eyJ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="starsTableViewCell" rowHeight="103" id="afe-w9-Qus" customClass="StarsTableViewCell" customModule="Newspaper" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="375" height="103"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="starsTableViewCell" rowHeight="131" id="afe-w9-Qus" customClass="StarsTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="375" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="afe-w9-Qus" id="MDO-h5-mqb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breitbart-news" translatesAutoresizingMaskIntoConstraints="NO" id="7Lz-yY-tTb">
-                                            <rect key="frame" x="8" y="8" width="70" height="70"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="7Lz-yY-tTb" secondAttribute="height" multiplier="1:1" id="8vp-13-pNO"/>
-                                                <constraint firstAttribute="height" constant="70" id="e55-fA-2yt"/>
-                                                <constraint firstAttribute="width" constant="70" id="lDa-sa-QW4"/>
-                                            </constraints>
-                                        </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="goE-Ii-Ryc">
-                                            <rect key="frame" x="94" y="8" width="275" height="71"/>
+                                            <rect key="frame" x="94" y="8" width="275" height="99"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The LAD Bible is one of the largest community for guys aged 16-30 in the world. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKq-Zt-RMK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="48.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="73.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                                    <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Dd-7d-Lp3">
-                                                    <rect key="frame" x="0.0" y="57.5" width="275" height="13.5"/>
+                                                    <rect key="frame" x="0.0" y="82.5" width="275" height="16.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrepreneur " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apw-dZ-3cQ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="226" height="13.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="223" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                                             <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sep 2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbk-VH-ZaU">
-                                                            <rect key="frame" x="226" y="0.0" width="49" height="13.5"/>
+                                                            <rect key="frame" x="223" y="0.0" width="52" height="16.5"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="49" id="79I-Ni-U1N"/>
+                                                                <constraint firstAttribute="width" constant="52" id="79I-Ni-U1N"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
                                                             <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -88,14 +86,22 @@
                                                 </stackView>
                                             </subviews>
                                         </stackView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breitbart-news" translatesAutoresizingMaskIntoConstraints="NO" id="7Lz-yY-tTb">
+                                            <rect key="frame" x="11" y="8" width="70" height="66"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="7Lz-yY-tTb" secondAttribute="height" multiplier="1:1" constant="4" id="8vp-13-pNO"/>
+                                                <constraint firstAttribute="height" constant="66" id="e55-fA-2yt"/>
+                                                <constraint firstAttribute="width" constant="70" id="lDa-sa-QW4"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="7Lz-yY-tTb" firstAttribute="top" secondItem="MDO-h5-mqb" secondAttribute="top" constant="8" id="0RN-Ky-8kZ"/>
                                         <constraint firstAttribute="bottom" secondItem="goE-Ii-Ryc" secondAttribute="bottom" constant="24" id="GCO-Ed-5WL"/>
                                         <constraint firstItem="goE-Ii-Ryc" firstAttribute="top" secondItem="MDO-h5-mqb" secondAttribute="top" constant="8" id="S7F-bM-xvA"/>
                                         <constraint firstAttribute="trailing" secondItem="goE-Ii-Ryc" secondAttribute="trailing" constant="6" id="r5T-Ul-ZBT"/>
-                                        <constraint firstItem="7Lz-yY-tTb" firstAttribute="leading" secondItem="MDO-h5-mqb" secondAttribute="leading" constant="8" id="th7-f8-X4H"/>
-                                        <constraint firstItem="goE-Ii-Ryc" firstAttribute="leading" secondItem="7Lz-yY-tTb" secondAttribute="trailing" constant="16" id="u1A-Yo-Egd"/>
+                                        <constraint firstItem="7Lz-yY-tTb" firstAttribute="leading" secondItem="MDO-h5-mqb" secondAttribute="leading" constant="11" id="th7-f8-X4H"/>
+                                        <constraint firstItem="goE-Ii-Ryc" firstAttribute="leading" secondItem="7Lz-yY-tTb" secondAttribute="trailing" constant="13" id="u1A-Yo-Egd"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -122,7 +128,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEQ-gi-xZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2590" y="4864"/>
+            <point key="canvasLocation" x="-2591.1999999999998" y="4862.5187406296855"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uz0-jG-YIX">

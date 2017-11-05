@@ -19,15 +19,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          FirebaseApp.configure()
 
         let ser = SourceList()
+        var articles = [Article]()
         
         ser.getSources { (sources) in
             let newSorted = SourceList()
             let comp = newSorted.sortSourceToCategories(list: sources)
             print("+++++++++++++++++++++++++++")
-            print(comp)
+            //print(comp)
             print("+++++++++++++++++++++++++++")
         }
 
+        let services = NewsAPIServices()
+        services.getArticles(source: "cnn", sortBy: "top") { (result) in
+            guard let articleList = result as? Articles else {return}
+            
+            articles = articleList.articles
+            //print(">>>>>1>>>>>>>")
+            print(articles.count)
+        }
+        
         
         return true
     }

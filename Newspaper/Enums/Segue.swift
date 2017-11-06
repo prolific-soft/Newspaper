@@ -18,4 +18,7 @@ enum Segue : String {
     case loginToTabbar = "loginToTabbar"
     case signUpToTabbar = "signUpToTabbar"
     
+    //Subscription
+    case subscriptionToSourceOpen = "subscriptionToSourceOpen"
+    
 }

@@ -12,6 +12,10 @@ import SVProgressHUD
 
 class SubscriptionTableViewController: UITableViewController {
 
+    //class Properties
+    var imageCategory = [String : UIImage]()
+    var sourceCategories = [String : [Source]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,12 +27,13 @@ class SubscriptionTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         //self.navigationItem.leftBarButtonItem
         
+        
+        
 
     }
 
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         
         return 3
@@ -75,6 +80,12 @@ class SubscriptionTableViewController: UITableViewController {
         self.present(navController, animated: true, completion: nil)
     }
     
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //
+
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -119,5 +130,23 @@ class SubscriptionTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func loadSourcePlusImage() {
+        
+        var sourceWithImages = [String : UIImage]()
+        let loadImages = SourceImages().getSourceImages()
+   
+    }
+    
+    func loadFakeData() {
+        let ser = SourceList()
+        ser.getSources { (sources) in
+            let newSorted = SourceList()
+            let comp = newSorted.sortSourceToCategories(list: sources)
+            self.sourceCategories = comp
+            //            print("+++++++++++++++++++++++++++")
+            //            print(comp)
+            //            print("+++++++++++++++++++++++++++")
+        }
+    }
 
-}
+}//End class SubscriptionTableViewController

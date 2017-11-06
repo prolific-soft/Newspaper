@@ -13,6 +13,9 @@ class AllArticlesTableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfArticleCountLabel: UILabel!
     
     
+    var source : Source?
+    var articles : [Article]?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

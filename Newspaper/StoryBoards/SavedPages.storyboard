@@ -12,6 +12,7 @@
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
             <string>Avenir-Book</string>
+            <string>Avenir-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -48,14 +49,14 @@
                                     <outlet property="savedSearchBar" destination="hk4-KK-Dti" id="TFJ-GX-ccL"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedSourceTableViewCell" rowHeight="103" id="Ydy-OW-iGo" customClass="SavedSourceTableViewCell" customModule="Newspaper" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="85" width="375" height="103"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedSourceTableViewCell" rowHeight="131" id="Ydy-OW-iGo" customClass="SavedSourceTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="85" width="375" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ydy-OW-iGo" id="WdF-Kp-2G2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="four-four-two" translatesAutoresizingMaskIntoConstraints="NO" id="UvC-df-DXD">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="four-four-two" translatesAutoresizingMaskIntoConstraints="NO" id="UvC-df-DXD">
                                             <rect key="frame" x="8" y="8" width="70" height="70"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="70" id="4mS-N0-jgh"/>
@@ -64,20 +65,20 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-VE-0my">
-                                            <rect key="frame" x="93" y="8" width="275" height="72.5"/>
+                                            <rect key="frame" x="93" y="8" width="275" height="101"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIo-O1-4Er">
-                                                    <rect key="frame" x="0.0" y="0.0" width="273" height="48"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIo-O1-4Er">
+                                                    <rect key="frame" x="0.0" y="0.0" width="273" height="76.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="273" id="0VV-Sg-9oO"/>
                                                     </constraints>
                                                     <string key="text">The LAD Bible is one of the largest community for guys aged 16-30 in the world. argest community for guys aged 16-30 in the world</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.92000000000000004" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                                    <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gf9-pW-VhG">
-                                                    <rect key="frame" x="0.0" y="56" width="275" height="16.5"/>
+                                                    <rect key="frame" x="0.0" y="84.5" width="275" height="16.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bloomberg " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buq-ji-OWA">
                                                             <rect key="frame" x="0.0" y="0.0" width="210" height="16.5"/>
@@ -110,6 +111,12 @@
                                         <constraint firstAttribute="trailing" secondItem="cdi-VE-0my" secondAttribute="trailing" constant="7" id="b9z-MF-Rnf"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="sourceDateLabel" destination="bE8-re-g1R" id="Nfj-Yv-j2j"/>
+                                    <outlet property="sourceImageView" destination="UvC-df-DXD" id="yLB-P9-556"/>
+                                    <outlet property="sourceNameLabel" destination="buq-ji-OWA" id="Ur3-lR-Ydb"/>
+                                    <outlet property="sourceTitleLabel" destination="pIo-O1-4Er" id="ZXV-L3-De5"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -160,8 +167,124 @@
             </objects>
             <point key="canvasLocation" x="-1591" y="4002"/>
         </scene>
+        <!--Stars-->
+        <scene sceneID="Y5k-kP-fqk">
+            <objects>
+                <tableViewController id="cAL-X0-m86" customClass="StarsTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3hD-Mg-iZD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="starsSearchTableViewCell" rowHeight="58" id="1Yq-sJ-ABY" customClass="StarsSearchTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="58"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Yq-sJ-ABY" id="Kyo-Sr-O1S">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="QE9-sS-8xm">
+                                            <rect key="frame" x="0.0" y="1" width="375" height="56"/>
+                                            <color key="barTintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QE9-sS-8xm" firstAttribute="leading" secondItem="Kyo-Sr-O1S" secondAttribute="leading" id="8Vx-RV-Jvn"/>
+                                        <constraint firstItem="QE9-sS-8xm" firstAttribute="top" secondItem="Kyo-Sr-O1S" secondAttribute="top" constant="1" id="ECE-Km-4Lj"/>
+                                        <constraint firstAttribute="trailing" secondItem="QE9-sS-8xm" secondAttribute="trailing" id="Eh9-Km-FqO"/>
+                                        <constraint firstAttribute="bottom" secondItem="QE9-sS-8xm" secondAttribute="bottom" constant="0.5" id="qmU-3Z-ZiV"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="starsSearchBar" destination="QE9-sS-8xm" id="sW9-3L-EqR"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="starsTableViewCell" rowHeight="131" id="zm1-FR-9J3" customClass="StarsTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="375" height="131"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zm1-FR-9J3" id="jK0-7k-F9D">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="IG6-SL-bM6">
+                                            <rect key="frame" x="94" y="8" width="275" height="99"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The LAD Bible is one of the largest community for guys aged 16-30 in the world. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmj-Ow-zGG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="73.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                                    <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baP-6e-YcA">
+                                                    <rect key="frame" x="0.0" y="82.5" width="275" height="16.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrepreneur " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZz-rQ-zh3">
+                                                            <rect key="frame" x="0.0" y="0.0" width="223" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sep 2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c18-QG-s7u">
+                                                            <rect key="frame" x="223" y="0.0" width="52" height="16.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="52" id="Rw4-Oj-IYc"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
+                                                            <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breitbart-news" translatesAutoresizingMaskIntoConstraints="NO" id="WWg-QX-aBF">
+                                            <rect key="frame" x="11" y="8" width="70" height="66"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="1nb-nC-76V"/>
+                                                <constraint firstAttribute="height" constant="66" id="jfG-Sb-aZp"/>
+                                                <constraint firstAttribute="width" secondItem="WWg-QX-aBF" secondAttribute="height" multiplier="1:1" constant="4" id="ltU-AO-Fvg"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WWg-QX-aBF" firstAttribute="top" secondItem="jK0-7k-F9D" secondAttribute="top" constant="8" id="AFw-N3-VdF"/>
+                                        <constraint firstAttribute="trailing" secondItem="IG6-SL-bM6" secondAttribute="trailing" constant="6" id="CcP-TN-0e4"/>
+                                        <constraint firstItem="IG6-SL-bM6" firstAttribute="top" secondItem="jK0-7k-F9D" secondAttribute="top" constant="8" id="IS9-t7-vZx"/>
+                                        <constraint firstItem="WWg-QX-aBF" firstAttribute="leading" secondItem="jK0-7k-F9D" secondAttribute="leading" constant="11" id="JjK-HD-jfw"/>
+                                        <constraint firstAttribute="bottom" secondItem="IG6-SL-bM6" secondAttribute="bottom" constant="24" id="Ph4-HC-VDQ"/>
+                                        <constraint firstItem="IG6-SL-bM6" firstAttribute="leading" secondItem="WWg-QX-aBF" secondAttribute="trailing" constant="13" id="WXI-Cg-xVx"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="sourceDateMonthLabel" destination="c18-QG-s7u" id="9zZ-8W-p7c"/>
+                                    <outlet property="sourceImageView" destination="WWg-QX-aBF" id="zdd-NU-xjb"/>
+                                    <outlet property="sourceNameLabel" destination="EZz-rQ-zh3" id="DeX-fn-mv7"/>
+                                    <outlet property="sourceTitleLabel" destination="wmj-Ow-zGG" id="5dh-xo-ftD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cAL-X0-m86" id="4du-Y9-T2K"/>
+                            <outlet property="delegate" destination="cAL-X0-m86" id="u9c-z6-dYJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Stars" id="czi-4n-OOb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="fTM-5r-xV5">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="6fl-E6-j6v">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ycf-g0-DuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2591.1999999999998" y="4862.5187406296855"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="breitbart-news" width="152" height="152"/>
         <image name="four-four-two" width="144" height="144"/>
         <image name="saved.png" width="21" height="26"/>
         <image name="saved_filled" width="21" height="26"/>

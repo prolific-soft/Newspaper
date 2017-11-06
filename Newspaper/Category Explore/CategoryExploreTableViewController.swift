@@ -69,8 +69,6 @@ class CategoryExploreTableViewController: UITableViewController {
                 if let sourceCat = selectedCategory {
                     exploreOpenTableViewController.sourceList = sourceCat 
                 }
-                
-                
             }
         }
     }

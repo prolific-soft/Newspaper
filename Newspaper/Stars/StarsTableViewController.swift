@@ -11,7 +11,6 @@ import UIKit
 class StarsTableViewController: UITableViewController {
 
     var articles = [Article]()
-    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

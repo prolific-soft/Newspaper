@@ -10,17 +10,24 @@ import UIKit
 
 class SavedPagesTableViewController: UITableViewController {
 
+     var articles = [Article]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = true
+        
+        self.tableView.estimatedRowHeight = self.tableView.rowHeight
+        self.tableView.rowHeight = UITableViewAutomaticDimension
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.loadFakeArticles()
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,10 +36,10 @@ class SavedPagesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0 :
+        case 0:
             return 1
         case 1:
-            return 4
+            return articles.count
         default:
             return 0
         }
@@ -45,12 +52,26 @@ class SavedPagesTableViewController: UITableViewController {
         if indexPath.section == 0 {
             cell = tableView.dequeueReusableCell(withIdentifier: Cell.savedSearchTableViewCell.rawValue, for: indexPath) as! SavedSearchTableViewCell
         }else if indexPath.section == 1 {
-           cell = tableView.dequeueReusableCell(withIdentifier: Cell.savedSourceTableViewCell.rawValue, for: indexPath) as! SavedSourceTableViewCell
+           let cell = tableView.dequeueReusableCell(withIdentifier: Cell.savedSourceTableViewCell.rawValue, for: indexPath) as! SavedSourceTableViewCell
+            cell.setUp(withArticle: articles[indexPath.row])
+            return cell
         }
         
         return cell
     }
 
+    
+    func loadFakeArticles(){
+        let service = NewsAPIServices()
+        service.getArticles(source: "cnn", sortBy: "top") { (result) in
+            guard let list = result as? Articles else {return}
+            DispatchQueue.main.async {
+                self.articles = list.articles
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

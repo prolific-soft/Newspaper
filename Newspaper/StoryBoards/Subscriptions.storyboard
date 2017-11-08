@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -203,7 +203,6 @@
         <!--Stars-->
         <scene sceneID="oLA-3G-WFN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bag-3r-OYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="gUH-Ti-Uyf" customClass="SubcriptionSourceOpenTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h8u-oB-1Dw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
@@ -309,6 +308,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bag-3r-OYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3610" y="5726"/>
         </scene>
@@ -331,7 +331,7 @@
                                         <searchBar contentMode="redraw" fixedFrame="YES" text="" translatesAutoresizingMaskIntoConstraints="NO" id="gZD-zL-lHV">
                                             <rect key="frame" x="0.0" y="3" width="375" height="56"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                            <color key="barTintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="barTintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </searchBar>
                                     </subviews>
@@ -501,7 +501,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="osb-Ye-itY" kind="show" id="dDc-gh-bVF"/>
+                        <segue destination="osb-Ye-itY" kind="show" identifier="toSourceOpen" id="dDc-gh-bVF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bdi-R5-y7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -511,7 +511,7 @@
         <!--Stars-->
         <scene sceneID="7eV-xZ-pNj">
             <objects>
-                <tableViewController id="osb-Ye-itY" customClass="StarsTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="osb-Ye-itY" customClass="SubcriptionSourceOpenTableViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zsl-k0-uEn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -20,5 +20,6 @@ enum Segue : String {
     
     //Subscription
     case subscriptionToSourceOpen = "subscriptionToSourceOpen"
+    case exploreOpenToStars = "exploreOpenToStars"
     
 }

@@ -27,9 +27,6 @@ class SubscriptionTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         //self.navigationItem.leftBarButtonItem
         
-        
-        
-
     }
 
 
@@ -81,10 +78,20 @@ class SubscriptionTableViewController: UITableViewController {
     }
     
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.exploreOpenToStars.rawValue {
+            if let starsTableViewController = segue.destination as? StarsTableViewController {
+                
+                guard let indexPath = sender as? NSIndexPath else {
+                    return
+                }
 
-    }
+                let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ExploreOpenTableViewCell
+                starsTableViewController.articles = (cell?.articles)!
+            }
+        }
+    }// End prepare for segue
+    
     
     /*
     // Override to support conditional editing of the table view.
@@ -132,8 +139,8 @@ class SubscriptionTableViewController: UITableViewController {
     */
     func loadSourcePlusImage() {
         
-        var sourceWithImages = [String : UIImage]()
-        let loadImages = SourceImages().getSourceImages()
+       // var sourceWithImages = [String : UIImage]()
+        //  let loadImages = SourceImages().getSourceImages()
    
     }
     
@@ -150,3 +157,12 @@ class SubscriptionTableViewController: UITableViewController {
     }
 
 }//End class SubscriptionTableViewController
+
+
+
+extension SubscriptionTableViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: Segue.exploreOpenToStars.rawValue, sender: indexPath)
+    }
+    
+}

@@ -61,6 +61,7 @@
 		EFAD06441FA34C5000E36241 /* ExploreOpenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06431FA34C5000E36241 /* ExploreOpenTableViewCell.swift */; };
 		EFAD06471FA3819800E36241 /* SourceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06461FA3819800E36241 /* SourceList.swift */; };
 		EFAD06491FA77BE400E36241 /* SourceImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06481FA77BE400E36241 /* SourceImages.swift */; };
+		EFD90CC01FB29D18007ED3F5 /* SubscriptionSourceOpenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD90CBF1FB29D18007ED3F5 /* SubscriptionSourceOpenTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -210,6 +211,7 @@
 		EFAD06481FA77BE400E36241 /* SourceImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceImages.swift; sourceTree = "<group>"; };
 		EFAD064B1FA783DA00E36241 /* abc-news-au.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "abc-news-au.png"; sourceTree = "<group>"; };
 		EFAD064C1FA7868C00E36241 /* cnn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cnn.png; sourceTree = "<group>"; };
+		EFD90CBF1FB29D18007ED3F5 /* SubscriptionSourceOpenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionSourceOpenTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,11 +309,11 @@
 		EF184D951FAB96A3000459A4 /* Subscriptions */ = {
 			isa = PBXGroup;
 			children = (
+				EFD90CBE1FB29CD2007ED3F5 /* Source Open */,
 				EF184D961FAB96EA000459A4 /* SubscriptionTableViewController.swift */,
 				EF184DB21FABCE99000459A4 /* SubscriptionSearchTableViewCell.swift */,
 				EF184DB41FABD1C8000459A4 /* AllArticlesTableViewCell.swift */,
 				EF184DB61FABD571000459A4 /* SubsriptionSourcesTableViewCell.swift */,
-				EF1E12721FAF23D3000EF3AF /* SubcriptionSourceOpenTableViewController.swift */,
 			);
 			path = Subscriptions;
 			sourceTree = "<group>";
@@ -576,6 +578,15 @@
 			path = "Source Images";
 			sourceTree = "<group>";
 		};
+		EFD90CBE1FB29CD2007ED3F5 /* Source Open */ = {
+			isa = PBXGroup;
+			children = (
+				EF1E12721FAF23D3000EF3AF /* SubcriptionSourceOpenTableViewController.swift */,
+				EFD90CBF1FB29D18007ED3F5 /* SubscriptionSourceOpenTableViewCell.swift */,
+			);
+			path = "Source Open";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -745,6 +756,7 @@
 				EF184DBD1FABE62E000459A4 /* StarsSearchTableViewCell.swift in Sources */,
 				EF184D8E1FA815F7000459A4 /* SourceOpenTableViewCell.swift in Sources */,
 				EF184DA71FAB9CF2000459A4 /* TagsTableViewController.swift in Sources */,
+				EFD90CC01FB29D18007ED3F5 /* SubscriptionSourceOpenTableViewCell.swift in Sources */,
 				EF5F8EA11FAC26640019EAA4 /* AllTagsTableViewCell.swift in Sources */,
 				EF2921E91FAD6296005EC01A /* StoryboardID.swift in Sources */,
 				EF184D901FA8C6F9000459A4 /* Segue.swift in Sources */,

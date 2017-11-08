@@ -58,10 +58,20 @@ class ExploreOpenTableViewController: UITableViewController {
                 
                 let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ExploreOpenTableViewCell
                 sourceOpenTableViewController.articles = (cell?.articles)!
-
-            
             }
+            
+            if let starsTableViewController = segue.destination as? StarsTableViewController {
+                guard let indexPath = sender as? NSIndexPath else {
+                    return
+                }
+                let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ExploreOpenTableViewCell
+                starsTableViewController.articles = (cell?.articles)!
+            }
+            
+ 
         }
+
+
     }// End prepare for segue
 
 }

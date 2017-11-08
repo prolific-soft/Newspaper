@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var articles = [Article]()
         
         ser.getSources { (sources) in
-            let newSorted = SourceList()
-            let comp = newSorted.sortSourceToCategories(list: sources)
+            //let newSorted = SourceList()
+            //let comp = newSorted.sortSourceToCategories(list: sources)
             print("+++++++++++++++++++++++++++")
             //print(comp)
             print("+++++++++++++++++++++++++++")

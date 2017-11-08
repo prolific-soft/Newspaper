@@ -1,14 +1,15 @@
 //
-//  StarsTableViewCell.swift
+//  SubscriptionSourceOpenTableViewCell.swift
 //  Newspaper
 //
-//  Created by Chidi Emeh on 11/2/17.
+//  Created by Chidi Emeh on 11/7/17.
 //  Copyright © 2017 Chidi Emeh. All rights reserved.
 //
 
 import UIKit
 
-class StarsTableViewCell: UITableViewCell {
+class SubscriptionSourceOpenTableViewCell: UITableViewCell {
+
 
     @IBOutlet weak var sourceImageView: UIImageView!
     @IBOutlet weak var sourceTitleLabel: UILabel!
@@ -21,7 +22,7 @@ class StarsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
@@ -50,12 +51,10 @@ class StarsTableViewCell: UITableViewCell {
                 }
             }
         }
-
+        
         
         
     }
     
-    
-    
 
-}// End StarsTableViewCell
+}// End class SubscriptionSourceOpenTableViewCell

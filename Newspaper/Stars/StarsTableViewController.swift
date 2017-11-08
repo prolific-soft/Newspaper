@@ -28,7 +28,7 @@ class StarsTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.loadFakeArticles()
+       // self.loadFakeArticles()
     }
 
     // MARK: - Table view data source
@@ -63,18 +63,18 @@ class StarsTableViewController: UITableViewController {
         return  cell
     }
     
-
-    func loadFakeArticles(){
-        let service = NewsAPIServices()
-        service.getArticles(source: "bbc-news", sortBy: "top") { (result) in
-            guard let list = result as? Articles else {return}
-            DispatchQueue.main.async {
-                self.articles = list.articles
-                self.tableView.reloadData()
-            }
-        }
-    }
-    
+//
+//    func loadFakeArticles(){
+//        let service = NewsAPIServices()
+//        service.getArticles(source: "bbc-news", sortBy: "top") { (result) in
+//            guard let list = result as? Articles else {return}
+//            DispatchQueue.main.async {
+//                self.articles = list.articles
+//                self.tableView.reloadData()
+//            }
+//        }
+//    }
+//    
 
     /*
     // Override to support conditional editing of the table view.

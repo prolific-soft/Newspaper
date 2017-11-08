@@ -60,12 +60,12 @@ class ExploreOpenTableViewController: UITableViewController {
                 sourceOpenTableViewController.articles = (cell?.articles)!
             }
             
-            if let starsTableViewController = segue.destination as? StarsTableViewController {
+            if let subcriptionSourceOpenTableViewController = segue.destination as? SubcriptionSourceOpenTableViewController {
                 guard let indexPath = sender as? NSIndexPath else {
                     return
                 }
                 let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ExploreOpenTableViewCell
-                starsTableViewController.articles = (cell?.articles)!
+                subcriptionSourceOpenTableViewController.articles = (cell?.articles)!
             }
             
  

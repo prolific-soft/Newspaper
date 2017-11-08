@@ -57,7 +57,7 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
             cell = tableView.dequeueReusableCell(withIdentifier: Cell.starsSearchTableViewCell.rawValue, for: indexPath) as! StarsSearchTableViewCell
             
         }else if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Cell.starsTableViewCell.rawValue, for: indexPath) as! StarsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Cell.subscriptionSourceOpenTableViewCell.rawValue, for: indexPath) as! SubscriptionSourceOpenTableViewCell
             cell.setUp(withArticle: articles[indexPath.row])
             return  cell
         }

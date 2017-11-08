@@ -541,7 +541,7 @@
                                     <outlet property="starsSearchBar" destination="GHO-L7-mvP" id="xcY-eK-IWQ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="starsTableViewCell" rowHeight="131" id="O20-1m-h8V" customClass="StarsTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subscriptionSourceOpenTableViewCell" rowHeight="131" id="O20-1m-h8V" customClass="SubscriptionSourceOpenTableViewCell" customModule="Newspaper" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="375" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O20-1m-h8V" id="sQW-ug-NVZ">
@@ -598,10 +598,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="sourceDateMonthLabel" destination="Eh6-Vm-Ca6" id="eGt-S2-tsO"/>
-                                    <outlet property="sourceImageView" destination="LD9-EZ-UyY" id="gc6-dz-VZp"/>
-                                    <outlet property="sourceNameLabel" destination="fBp-QJ-spZ" id="xgp-fc-YOA"/>
-                                    <outlet property="sourceTitleLabel" destination="MJv-ap-ukM" id="0z3-GM-sj9"/>
+                                    <outlet property="sourceDateMonthLabel" destination="Eh6-Vm-Ca6" id="yPm-KS-vlT"/>
+                                    <outlet property="sourceImageView" destination="LD9-EZ-UyY" id="h0V-kl-RWq"/>
+                                    <outlet property="sourceNameLabel" destination="fBp-QJ-spZ" id="D5u-rU-WaE"/>
+                                    <outlet property="sourceTitleLabel" destination="MJv-ap-ukM" id="Tpb-e6-b3W"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -619,88 +619,99 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="kal-Up-DQZ" kind="show" id="5wH-U2-z5z"/>
+                        <segue destination="kal-Up-DQZ" kind="show" identifier="subStartoArticleOpen" id="5wH-U2-z5z"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTC-sf-omt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="23" y="4864"/>
         </scene>
-        <!--View Controller-->
+        <!--Article Open View Controller-->
         <scene sceneID="cqh-fD-7pC">
             <objects>
-                <viewController id="kal-Up-DQZ" sceneMemberID="viewController">
+                <viewController id="kal-Up-DQZ" customClass="ArticleOpenViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bdd-dV-iL7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="e93-52-Ix8">
-                                <rect key="frame" x="16" y="16" width="343" height="530"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="liy-25-Wl4">
+                                <rect key="frame" x="16" y="20" width="343" height="125"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="liy-25-Wl4">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="125"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffh-A0-SNq">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="82"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="hlo-6s-9iU">
-                                                <rect key="frame" x="0.0" y="90" width="343" height="35"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Nick Douglas" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRs-ka-DZZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="16.5"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
-                                                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lifehacker / 2017-11-18 15:07" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuB-FB-lHB">
-                                                        <rect key="frame" x="0.0" y="18.5" width="343" height="16.5"/>
-                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
-                                                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="343" id="ex9-Ol-wiE"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AjA-l9-8BW">
-                                        <rect key="frame" x="0.0" y="137" width="343" height="195"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6s7-i3-x6D">
-                                        <rect key="frame" x="0.0" y="344" width="343" height="186"/>
-                                        <string key="text">Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App, Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App,Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App, Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App</string>
-                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffh-A0-SNq">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="82"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="hlo-6s-9iU">
+                                        <rect key="frame" x="0.0" y="90" width="343" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Nick Douglas" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRs-ka-DZZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lifehacker / 2017-11-18 15:07" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuB-FB-lHB">
+                                                <rect key="frame" x="0.0" y="18.5" width="343" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="ex9-Ol-wiE"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AjA-l9-8BW">
+                                <rect key="frame" x="0.0" y="153" width="375" height="245"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="245" id="Evp-hE-S4W"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="245" id="k51-MT-y6x"/>
+                                    <constraint firstAttribute="width" secondItem="AjA-l9-8BW" secondAttribute="height" multiplier="75:49" id="sgh-sU-GlR"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGl-7S-lVQ">
-                                <rect key="frame" x="0.0" y="568" width="375" height="35"/>
+                                <rect key="frame" x="0.0" y="555" width="375" height="48"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="b19-Yb-1CS"/>
+                                    <constraint firstAttribute="height" constant="48" id="b19-Yb-1CS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <state key="normal" title="Open">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="openButtonTapped:" destination="kal-Up-DQZ" eventType="touchUpInside" id="ej7-tb-F64"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6s7-i3-x6D">
+                                <rect key="frame" x="16" y="406" width="343" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="119" id="3by-0k-yts"/>
+                                </constraints>
+                                <string key="text">Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App, Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App,Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App, Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App</string>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pdq-aO-2fY" firstAttribute="trailing" secondItem="6s7-i3-x6D" secondAttribute="trailing" constant="16" id="05p-S6-IeG"/>
                             <constraint firstItem="YGl-7S-lVQ" firstAttribute="leading" secondItem="pdq-aO-2fY" secondAttribute="leading" id="3tL-YD-YZL"/>
-                            <constraint firstItem="YGl-7S-lVQ" firstAttribute="top" secondItem="e93-52-Ix8" secondAttribute="bottom" constant="22" id="IWN-QF-0pO"/>
-                            <constraint firstItem="e93-52-Ix8" firstAttribute="leading" secondItem="pdq-aO-2fY" secondAttribute="leading" constant="16" id="M3I-jA-vFX"/>
-                            <constraint firstItem="e93-52-Ix8" firstAttribute="top" secondItem="pdq-aO-2fY" secondAttribute="top" constant="16" id="TYO-en-b7D"/>
+                            <constraint firstItem="6s7-i3-x6D" firstAttribute="leading" secondItem="pdq-aO-2fY" secondAttribute="leading" constant="16" id="CRA-AX-zcN"/>
+                            <constraint firstItem="AjA-l9-8BW" firstAttribute="leading" secondItem="pdq-aO-2fY" secondAttribute="leading" id="GEX-Ec-i56"/>
                             <constraint firstItem="YGl-7S-lVQ" firstAttribute="trailing" secondItem="pdq-aO-2fY" secondAttribute="trailing" id="USV-OP-f6E"/>
+                            <constraint firstItem="liy-25-Wl4" firstAttribute="top" secondItem="pdq-aO-2fY" secondAttribute="top" constant="20" id="XML-bp-lit"/>
+                            <constraint firstItem="pdq-aO-2fY" firstAttribute="trailing" secondItem="liy-25-Wl4" secondAttribute="trailing" constant="16" id="ZFG-9s-n2T"/>
                             <constraint firstItem="YGl-7S-lVQ" firstAttribute="bottom" secondItem="pdq-aO-2fY" secondAttribute="bottom" id="at1-q8-4qo"/>
-                            <constraint firstItem="pdq-aO-2fY" firstAttribute="trailing" secondItem="e93-52-Ix8" secondAttribute="trailing" constant="16" id="lj1-I6-yb4"/>
+                            <constraint firstItem="6s7-i3-x6D" firstAttribute="top" secondItem="AjA-l9-8BW" secondAttribute="bottom" constant="8" id="ayV-JV-cJh"/>
+                            <constraint firstItem="AjA-l9-8BW" firstAttribute="trailing" secondItem="pdq-aO-2fY" secondAttribute="trailing" id="fa2-Y0-ER1"/>
+                            <constraint firstItem="AjA-l9-8BW" firstAttribute="top" secondItem="liy-25-Wl4" secondAttribute="bottom" constant="8" id="pgh-wj-BeT"/>
+                            <constraint firstItem="liy-25-Wl4" firstAttribute="leading" secondItem="pdq-aO-2fY" secondAttribute="leading" constant="16" id="zGg-yy-ASk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pdq-aO-2fY"/>
                     </view>
@@ -708,18 +719,37 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="action" id="xur-1b-d5m">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="kal-Up-DQZ" id="HzJ-ya-HK3"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="reply" id="dcI-Bi-jSU">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="taggedButtonTapped:" destination="kal-Up-DQZ" id="mOQ-sy-hgt"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="trash" id="iuB-kM-BhX">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="markReadButtonTapped:" destination="kal-Up-DQZ" id="qZx-ID-xgH"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="bookmarks" id="T5K-vY-YRo">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="starButtonTapped:" destination="kal-Up-DQZ" id="2id-u4-2Ed"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="articleImage" destination="AjA-l9-8BW" id="3p7-kd-0cG"/>
+                        <outlet property="authorLabel" destination="zRs-ka-DZZ" id="UUR-o7-t6D"/>
+                        <outlet property="descriptionLabel" destination="6s7-i3-x6D" id="Gcw-fx-KMg"/>
+                        <outlet property="sourceTimeLabel" destination="nuB-FB-lHB" id="U86-DE-LmK"/>
+                        <outlet property="titleLabel" destination="ffh-A0-SNq" id="VxM-Lj-hvh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dj-1d-IK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

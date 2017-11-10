@@ -29,7 +29,7 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.loadFakeArticles()
+       // self.loadFakeArticles()
     }
     
     // MARK: - Table view data source

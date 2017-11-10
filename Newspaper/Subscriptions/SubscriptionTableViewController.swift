@@ -27,6 +27,7 @@ class SubscriptionTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         //self.navigationItem.leftBarButtonItem
         
+        loadFakeData()
     }
 
 
@@ -43,7 +44,7 @@ class SubscriptionTableViewController: UITableViewController {
         case 1:
             return 1
         case 2:
-            return 3
+            return imageCategory.count
         default:
             return 1
         }
@@ -57,7 +58,17 @@ class SubscriptionTableViewController: UITableViewController {
         }else if indexPath.section == 1  {
             cell = tableView.dequeueReusableCell(withIdentifier: Cell.allArticlesTableViewCell.rawValue, for: indexPath) as! AllArticlesTableViewCell
         }else if indexPath.section == 2  {
-            cell = tableView.dequeueReusableCell(withIdentifier: Cell.subsriptionSourcesTableViewCell.rawValue, for: indexPath) as! SubsriptionSourcesTableViewCell
+           let cell = tableView.dequeueReusableCell(withIdentifier: Cell.subsriptionSourcesTableViewCell.rawValue, for: indexPath) as! SubsriptionSourcesTableViewCell
+           
+            let key = Array(imageCategory.keys)
+            let keyName = key[indexPath.row]
+            let image = imageCategory[keyName]
+
+            cell.setUp(sourceName: keyName, sourceImage: image!)
+            
+            print(keyName)
+
+            return cell
         }
         return cell
     }
@@ -147,13 +158,31 @@ class SubscriptionTableViewController: UITableViewController {
     func loadFakeData() {
         let ser = SourceList()
         ser.getSources { (sources) in
-            let newSorted = SourceList()
-            let comp = newSorted.sortSourceToCategories(list: sources)
-            self.sourceCategories = comp
-            //            print("+++++++++++++++++++++++++++")
-            //            print(comp)
-            //            print("+++++++++++++++++++++++++++")
+
+            let reSources = sources
+            let sourceImage = SourceImages().getSourceImages()
+            
+            for source in reSources {
+                for imageObject in sourceImage {
+                    if source.id == imageObject.key {
+                        self.imageCategory[source.id] = imageObject.image
+                    }
+                }
+            }
+            
+//            print("??????????????????")
+//            print(self.imageCategory.count)
+//            print("??????????????????")
         }
+        
+        //Get source from dict
+        
+        //create sourceImage dict
+        
+        //Use source to find images
+        
+        //get articles for each source to pass to cell
+        
     }
 
 }//End class SubscriptionTableViewController

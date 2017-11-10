@@ -33,7 +33,7 @@ struct SourceList {
     }
     
 
-    //Gets the sources from and article
+    //Gets the sources from API and article
     func getSources( completion: @escaping ([Source]) -> ()){
         var sources = [Source]()
         let sourceService = NewsAPIServices()

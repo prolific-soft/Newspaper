@@ -9,6 +9,7 @@
 import UIKit
 
 class SubsriptionSourcesTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var sourceImageView: UIImageView!
     @IBOutlet weak var sourceNameLabel: UILabel!
     @IBOutlet weak var sourceCountLabel: UILabel!
@@ -22,6 +23,11 @@ class SubsriptionSourcesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setUp(sourceName : String, sourceImage : UIImage){
+        self.sourceNameLabel.text = sourceName
+        self.sourceImageView.image = sourceImage
     }
 
 }

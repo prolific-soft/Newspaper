@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SafariServices
 
-class ArticleOpenViewController: UIViewController {
+class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
@@ -76,10 +77,23 @@ class ArticleOpenViewController: UIViewController {
     }//End Setup
     
     
+    //Opens Article in a new Safari View
+    func openInSafariView(urlString : String) {
+        let url = URL(string: urlString)!
+        let controller = SFSafariViewController(url: url)
+        self.present(controller, animated: true, completion: nil)
+        controller.delegate = self
+    }
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
     //Open Article to SafariViewController
     @IBAction func openButtonTapped(_ sender: Any) {
-        
-        
+        if let urlString = self.article?.url {
+            openInSafariView(urlString: urlString)
+        }
     }
     
     //Saves the current Article to Star Articles

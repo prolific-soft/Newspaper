@@ -28,6 +28,8 @@ class StarsTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // Uncomment the following line to preserve selection between presentations
+        self.clearsSelectionOnViewWillAppear = true
         self.loadFakeArticles()
     }
 

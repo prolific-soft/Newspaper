@@ -310,6 +310,9 @@
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="aVl-0j-lT7" kind="show" id="ov3-Gm-D2l"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bag-3r-OYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -544,7 +547,7 @@
                                     <outlet property="starsSearchBar" destination="GHO-L7-mvP" id="xcY-eK-IWQ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subscriptionSourceOpenTableViewCell" rowHeight="131" id="O20-1m-h8V" customClass="SubscriptionSourceOpenTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="subscriptionSourceOpenTableViewCell" rowHeight="131" id="O20-1m-h8V" customClass="SubscriptionSourceOpenTableViewCell" customModule="Newspaper" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="375" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O20-1m-h8V" id="sQW-ug-NVZ">
@@ -754,6 +757,135 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dj-1d-IK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="973.60000000000002" y="4874.2128935532237"/>
+        </scene>
+        <!--Article Open View Controller-->
+        <scene sceneID="n9W-gN-pIK">
+            <objects>
+                <viewController id="aVl-0j-lT7" customClass="ArticleOpenViewController" customModule="Newspaper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yxl-8u-vbf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jpD-cE-2yX">
+                                <rect key="frame" x="16" y="20" width="343" height="125"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgN-Ay-T49">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="82"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="R5j-2B-bKB">
+                                        <rect key="frame" x="0.0" y="90" width="343" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Nick Douglas" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOw-Kq-A2I">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lifehacker / 2017-11-18 15:07" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG9-XE-am8">
+                                                <rect key="frame" x="0.0" y="18.5" width="343" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="PvT-k8-U5M"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RLv-vD-oUQ">
+                                <rect key="frame" x="0.0" y="153" width="375" height="245"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="245" id="AL5-do-tex"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="245" id="ixP-aD-NVh"/>
+                                    <constraint firstAttribute="width" secondItem="RLv-vD-oUQ" secondAttribute="height" multiplier="75:49" id="mmN-ct-Khr"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywz-9W-R0H">
+                                <rect key="frame" x="0.0" y="555" width="375" height="48"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Ndg-8Z-WwQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Open">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openButtonTapped:" destination="aVl-0j-lT7" eventType="touchUpInside" id="OHT-uS-uyR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13t-d0-EXX">
+                                <rect key="frame" x="16" y="406" width="343" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="119" id="Z6z-6s-Rrx"/>
+                                </constraints>
+                                <string key="text">Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App, Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App,Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App, Make Your Animoji Videos Twice as Long With This Unofficial iPhone X App</string>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bjt-Gz-Ys2" firstAttribute="trailing" secondItem="jpD-cE-2yX" secondAttribute="trailing" constant="16" id="6P6-ot-nv2"/>
+                            <constraint firstItem="jpD-cE-2yX" firstAttribute="top" secondItem="bjt-Gz-Ys2" secondAttribute="top" constant="20" id="DuT-Ok-RDY"/>
+                            <constraint firstItem="RLv-vD-oUQ" firstAttribute="trailing" secondItem="bjt-Gz-Ys2" secondAttribute="trailing" id="Hac-V2-CEc"/>
+                            <constraint firstItem="ywz-9W-R0H" firstAttribute="leading" secondItem="bjt-Gz-Ys2" secondAttribute="leading" id="MMS-nr-hwG"/>
+                            <constraint firstItem="bjt-Gz-Ys2" firstAttribute="trailing" secondItem="13t-d0-EXX" secondAttribute="trailing" constant="16" id="PdU-HG-oSc"/>
+                            <constraint firstItem="13t-d0-EXX" firstAttribute="top" secondItem="RLv-vD-oUQ" secondAttribute="bottom" constant="8" id="Pzo-d1-tum"/>
+                            <constraint firstItem="jpD-cE-2yX" firstAttribute="leading" secondItem="bjt-Gz-Ys2" secondAttribute="leading" constant="16" id="eLd-5u-B10"/>
+                            <constraint firstItem="RLv-vD-oUQ" firstAttribute="top" secondItem="jpD-cE-2yX" secondAttribute="bottom" constant="8" id="hMt-ea-wbb"/>
+                            <constraint firstItem="13t-d0-EXX" firstAttribute="leading" secondItem="bjt-Gz-Ys2" secondAttribute="leading" constant="16" id="jdh-ar-1op"/>
+                            <constraint firstItem="RLv-vD-oUQ" firstAttribute="leading" secondItem="bjt-Gz-Ys2" secondAttribute="leading" id="r5D-fh-elF"/>
+                            <constraint firstItem="ywz-9W-R0H" firstAttribute="trailing" secondItem="bjt-Gz-Ys2" secondAttribute="trailing" id="tVk-YZ-fTf"/>
+                            <constraint firstItem="ywz-9W-R0H" firstAttribute="bottom" secondItem="bjt-Gz-Ys2" secondAttribute="bottom" id="yKc-oF-JfX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bjt-Gz-Ys2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q7e-ed-QDC">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="action" id="Sns-I4-uUt">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="aVl-0j-lT7" id="vPP-Wt-jtb"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="reply" id="jUB-fm-ST1">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="taggedButtonTapped:" destination="aVl-0j-lT7" id="Vkt-DG-rLW"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="XFG-0Q-x2N">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="markReadButtonTapped:" destination="aVl-0j-lT7" id="kWa-f2-Y1I"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="bookmarks" id="fz4-ft-zws">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="starButtonTapped:" destination="aVl-0j-lT7" id="Jkc-jg-yzz"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="articleImage" destination="RLv-vD-oUQ" id="lV3-IB-h8F"/>
+                        <outlet property="authorLabel" destination="KOw-Kq-A2I" id="Xvu-hR-wr9"/>
+                        <outlet property="descriptionLabel" destination="13t-d0-EXX" id="uvF-Sh-qbL"/>
+                        <outlet property="sourceTimeLabel" destination="jG9-XE-am8" id="xmA-VU-STy"/>
+                        <outlet property="titleLabel" destination="GgN-Ay-T49" id="fV7-Ts-npG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVS-Oi-jsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3609" y="6654"/>
         </scene>
     </scenes>
     <resources>

@@ -30,6 +30,7 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
        // self.loadFakeArticles()
+        self.clearsSelectionOnViewWillAppear = true
     }
     
     // MARK: - Table view data source

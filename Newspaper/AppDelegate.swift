@@ -18,27 +18,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
          FirebaseApp.configure()
 
-        let ser = SourceList()
-        var articles = [Article]()
+//        let ser = SourceList()
+//        var articles = [Article]()
+//
+//        ser.getSources { (sources) in
+//            //let newSorted = SourceList()
+//            //let comp = newSorted.sortSourceToCategories(list: sources)
+//            print("+++++++++++++++++++++++++++")
+//            //print(comp)
+//            print("+++++++++++++++++++++++++++")
+//        }
+//
+//        let services = NewsAPIServices()
+//        services.getArticles(source: "cnn", sortBy: "top") { (result) in
+//            guard let articleList = result as? Articles else {return}
+//
+//            articles = articleList.articles
+//            //print(">>>>>1>>>>>>>")
+//            print(articles.count)
+//        }
+//
+//            ======== Current User =====Optional(<FIRUser: 0x1c00a9840>) ===================
+//                =======Current User ref ======Optional(https://newspaper-3c853.firebaseio.com/users/EdyoP8mfUSYlvgnamssuUI4l21J3) ===================
+//                    ===== Users Ref ========https://newspaper-3c853.firebaseio.com/users ===================
         
-        ser.getSources { (sources) in
-            //let newSorted = SourceList()
-            //let comp = newSorted.sortSourceToCategories(list: sources)
-            print("+++++++++++++++++++++++++++")
-            //print(comp)
-            print("+++++++++++++++++++++++++++")
-        }
-
-        let services = NewsAPIServices()
-        services.getArticles(source: "cnn", sortBy: "top") { (result) in
-            guard let articleList = result as? Articles else {return}
-            
-            articles = articleList.articles
-            //print(">>>>>1>>>>>>>")
-            print(articles.count)
-        }
+       print("======== Current User =====\(FirApi.Stars.CURRENT_USER) ===================")
+       print("=======Current User ref ======\(FirApi.Stars.REF_CURRENT_USER) ===================")
+       print("===== Users Ref ========\(FirApi.Stars.REF_USERS) ===================")
         
-        
+    
         return true
     }
 

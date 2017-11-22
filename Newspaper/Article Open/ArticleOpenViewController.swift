@@ -8,6 +8,8 @@
 
 import UIKit
 import SafariServices
+import FirebaseDatabase
+import FirebaseAuth
 
 class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegate {
 
@@ -98,6 +100,10 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     
     //Saves the current Article to Star Articles
     @IBAction func starButtonTapped(_ sender: UIBarButtonItem) {
+        
+        let user  = Auth.auth().currentUser
+        //let databaseRef
+        
     }
     
     //Marks the article as read

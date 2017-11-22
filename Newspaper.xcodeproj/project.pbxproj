@@ -52,6 +52,12 @@
 		EF5F8EAB1FACDB930019EAA4 /* Stars.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5F8EAA1FACDB930019EAA4 /* Stars.storyboard */; };
 		EF5F8EAD1FACDC410019EAA4 /* SavedPages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5F8EAC1FACDC410019EAA4 /* SavedPages.storyboard */; };
 		EF5F8EAF1FACDC880019EAA4 /* Tags.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5F8EAE1FACDC880019EAA4 /* Tags.storyboard */; };
+		EF94F8331FC60CE6006A8BCD /* FirApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF94F8321FC60CE6006A8BCD /* FirApi.swift */; };
+		EF94F8351FC60E8B006A8BCD /* SubscriptionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF94F8341FC60E8B006A8BCD /* SubscriptionApi.swift */; };
+		EF94F8371FC60EEB006A8BCD /* StarsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF94F8361FC60EEB006A8BCD /* StarsApi.swift */; };
+		EF94F8391FC60F1D006A8BCD /* SavedPagesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF94F8381FC60F1D006A8BCD /* SavedPagesApi.swift */; };
+		EF94F83B1FC60F48006A8BCD /* TagsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF94F83A1FC60F48006A8BCD /* TagsApi.swift */; };
+		EF94F83D1FC6152C006A8BCD /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF94F83C1FC6152C006A8BCD /* UserApi.swift */; };
 		EFAD06351FA25DD400E36241 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06341FA25DD400E36241 /* Cell.swift */; };
 		EFAD06381FA25F1400E36241 /* CategoryExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06371FA25F1400E36241 /* CategoryExploreTableViewController.swift */; };
 		EFAD063A1FA25FBA00E36241 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06391FA25FBA00E36241 /* SearchTableViewCell.swift */; };
@@ -199,6 +205,12 @@
 		EF5F8EBD1FACF10F0019EAA4 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		EF5F8EBE1FACF1BB0019EAA4 /* icons8-menu-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-menu-3.png"; sourceTree = "<group>"; };
 		EF5F8EBF1FACF2E40019EAA4 /* hamburgermenu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburgermenu@3x.png"; sourceTree = "<group>"; };
+		EF94F8321FC60CE6006A8BCD /* FirApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirApi.swift; sourceTree = "<group>"; };
+		EF94F8341FC60E8B006A8BCD /* SubscriptionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionApi.swift; sourceTree = "<group>"; };
+		EF94F8361FC60EEB006A8BCD /* StarsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsApi.swift; sourceTree = "<group>"; };
+		EF94F8381FC60F1D006A8BCD /* SavedPagesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPagesApi.swift; sourceTree = "<group>"; };
+		EF94F83A1FC60F48006A8BCD /* TagsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsApi.swift; sourceTree = "<group>"; };
+		EF94F83C1FC6152C006A8BCD /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 		EFAD06341FA25DD400E36241 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		EFAD06371FA25F1400E36241 /* CategoryExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryExploreTableViewController.swift; sourceTree = "<group>"; };
 		EFAD06391FA25FBA00E36241 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -446,6 +458,7 @@
 		EF53C9561F75EA9F009A1DB8 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				EF94F8311FC60CA2006A8BCD /* Database */,
 				EF53C95C1F75F83C009A1DB8 /* FirArticle.swift */,
 				EF1831601FA0D1EF00BE0140 /* AuthService.swift */,
 			);
@@ -461,6 +474,19 @@
 				EF53C94E1F759D54009A1DB8 /* Sources.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		EF94F8311FC60CA2006A8BCD /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				EF94F8321FC60CE6006A8BCD /* FirApi.swift */,
+				EF94F8341FC60E8B006A8BCD /* SubscriptionApi.swift */,
+				EF94F8361FC60EEB006A8BCD /* StarsApi.swift */,
+				EF94F8381FC60F1D006A8BCD /* SavedPagesApi.swift */,
+				EF94F83A1FC60F48006A8BCD /* TagsApi.swift */,
+				EF94F83C1FC6152C006A8BCD /* UserApi.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		EFAD06331FA25D8100E36241 /* Enums */ = {
@@ -744,8 +770,10 @@
 				EF184DB51FABD1C8000459A4 /* AllArticlesTableViewCell.swift in Sources */,
 				EF2921E41FAD03CA005EC01A /* Extensions.swift in Sources */,
 				EF18315F1FA011EB00BE0140 /* CreateAccountViewController.swift in Sources */,
+				EF94F8371FC60EEB006A8BCD /* StarsApi.swift in Sources */,
 				EF184DB71FABD571000459A4 /* SubsriptionSourcesTableViewCell.swift in Sources */,
 				EF53C94F1F759D54009A1DB8 /* Sources.swift in Sources */,
+				EF94F8331FC60CE6006A8BCD /* FirApi.swift in Sources */,
 				EFAD063E1FA2601E00E36241 /* CategoryExploreCollectionViewCell.swift in Sources */,
 				EF1831571FA008D000BE0140 /* StartViewController.swift in Sources */,
 				EFAD06421FA342FC00E36241 /* ExploreOpenTableViewController.swift in Sources */,
@@ -759,10 +787,12 @@
 				EFD90CC01FB29D18007ED3F5 /* SubscriptionSourceOpenTableViewCell.swift in Sources */,
 				EF5F8EA11FAC26640019EAA4 /* AllTagsTableViewCell.swift in Sources */,
 				EF2921E91FAD6296005EC01A /* StoryboardID.swift in Sources */,
+				EF94F8351FC60E8B006A8BCD /* SubscriptionApi.swift in Sources */,
 				EF184D901FA8C6F9000459A4 /* Segue.swift in Sources */,
 				EF184DBB1FABE5D7000459A4 /* StarsTableViewCell.swift in Sources */,
 				EF184D8C1FA813E8000459A4 /* SourceOpenTableViewController.swift in Sources */,
 				EF18315D1FA011C000BE0140 /* LogInViewController.swift in Sources */,
+				EF94F83D1FC6152C006A8BCD /* UserApi.swift in Sources */,
 				EF184D971FAB96EA000459A4 /* SubscriptionTableViewController.swift in Sources */,
 				EF53C94B1F759D09009A1DB8 /* Articles.swift in Sources */,
 				EF53C9491F759CF9009A1DB8 /* Article.swift in Sources */,
@@ -775,6 +805,8 @@
 				EF184DB31FABCE99000459A4 /* SubscriptionSearchTableViewCell.swift in Sources */,
 				EFAD06351FA25DD400E36241 /* Cell.swift in Sources */,
 				EF5F8E9B1FAC1A740019EAA4 /* SavedSearchTableViewCell.swift in Sources */,
+				EF94F8391FC60F1D006A8BCD /* SavedPagesApi.swift in Sources */,
+				EF94F83B1FC60F48006A8BCD /* TagsApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

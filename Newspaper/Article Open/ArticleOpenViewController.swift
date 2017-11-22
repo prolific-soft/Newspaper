@@ -101,8 +101,14 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     //Saves the current Article to Star Articles
     @IBAction func starButtonTapped(_ sender: UIBarButtonItem) {
         
-        let user  = Auth.auth().currentUser
-        //let databaseRef
+        guard let starReference = FirApi.Stars.REF_STARS else {
+            return
+        }
+        let newStarredArticleId = starReference.childByAutoId().key
+        let newStarredArticleReference = starReference.child(newStarredArticleId)
+        
+        let convertedArticle = ArticleConverter().convertToAny(article: self.article!)
+        newStarredArticleReference.setValue(convertedArticle)
         
     }
     

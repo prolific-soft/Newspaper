@@ -17,22 +17,13 @@ class StarsApi {
     
     /// The Stars Article branch of the Current USER
     
-    //var REF_CURRENT_USER
-    var REF_USERS = Database.database().reference().child("users")
+    var REF_STARS = FirApi.User.REF_CURRENT_USER?.child("stars")
     
-    var CURRENT_USER: User? {
-        if let currentUser = Auth.auth().currentUser {
-            return currentUser
-        }
-        return nil
-    }
+    /// Observe branch and returns a star
     
-    var REF_CURRENT_USER: DatabaseReference? {
-        guard let currentUser = Auth.auth().currentUser else {
-            return nil
-        }
-        return REF_USERS.child(currentUser.uid)
-    }
+    
+    
+    /// Get Star Article on Branch
     
     
 }

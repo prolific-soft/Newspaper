@@ -41,10 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            ======== Current User =====Optional(<FIRUser: 0x1c00a9840>) ===================
 //                =======Current User ref ======Optional(https://newspaper-3c853.firebaseio.com/users/EdyoP8mfUSYlvgnamssuUI4l21J3) ===================
 //                    ===== Users Ref ========https://newspaper-3c853.firebaseio.com/users ===================
-        
-       print("======== Current User =====\(FirApi.Stars.CURRENT_USER) ===================")
-       print("=======Current User ref ======\(FirApi.Stars.REF_CURRENT_USER) ===================")
-       print("===== Users Ref ========\(FirApi.Stars.REF_USERS) ===================")
+//        
+//       print("======== Current User =====\(FirApi.Stars.CURRENT_USER) ===================")
+//       print("=======Current User ref ======\(FirApi.Stars.REF_CURRENT_USER) ===================")
+//       print("===== Users Ref ========\(FirApi.Stars.REF_USERS) ===================")
         
     
         return true

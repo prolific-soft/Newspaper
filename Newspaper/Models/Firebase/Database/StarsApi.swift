@@ -17,10 +17,13 @@ class StarsApi {
     
     /// The Stars Article branch of the Current USER
     
-    var REF_STARS = FirApi.User.REF_CURRENT_USER?.child("stars")
+//    var REF_STARS = FirApi.User.REF_CURRENT_USER?.child("stars")
+//    var user = UserApi().REF_CURRENT_USER?.child("stars")
+    
+    var REF_STARS = UserApi().REF_CURRENT_USER?.child("stars")
+
     
     /// Observe branch and returns a star
-    
     
     
     /// Get Star Article on Branch

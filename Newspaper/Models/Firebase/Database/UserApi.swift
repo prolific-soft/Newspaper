@@ -26,13 +26,23 @@ class UserApi {
         return nil
     }
     
+    
+    
     /// The current User Branch
     var REF_CURRENT_USER: DatabaseReference? {
+        Auth.auth().addStateDidChangeListener { (Auth, User) in
+            //
+        }
+        
         guard let currentUser = Auth.auth().currentUser else {
             return nil
         }
         return REF_USERS.child(currentUser.uid)
     }
+
     
     
-}
+    
+    
+    
+}// End class UserApi

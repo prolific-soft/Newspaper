@@ -101,6 +101,7 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     //Saves the current Article to Star Articles
     @IBAction func starButtonTapped(_ sender: UIBarButtonItem) {
         
+        var isArticleSavedPreviously = false
         guard let starReference = FirApi.Stars.REF_STARS else {
             return
         }
@@ -108,8 +109,12 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
         let newStarredArticleReference = starReference.child(newStarredArticleId)
         
         let convertedArticle = ArticleConverter().convertToAny(article: self.article!)
-        newStarredArticleReference.setValue(convertedArticle)
         
+        newStarredArticleReference.setValue(convertedArticle)
+
+        //TODO:
+        // Disable button once it is saved and change the
+        // icon to indicate star saving was successful
     }
     
     //Marks the article as read

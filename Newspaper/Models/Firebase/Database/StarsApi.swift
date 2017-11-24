@@ -15,13 +15,32 @@ import FirebaseAuth
 
 class StarsApi {
     
-    /// The Stars Article branch of the Current USER
+    /// The current user that owns the star branch
+    var user : User?
     
-//    var REF_STARS = FirApi.User.REF_CURRENT_USER?.child("stars")
-//    var user = UserApi().REF_CURRENT_USER?.child("stars")
+    /// Initialized with the current user
+    init(user: User) {
+        self.user = user
+    }
     
-    var REF_STARS = UserApi().REF_CURRENT_USER?.child("stars")
+    /// Init overload to be used in Singleton class
+    /// FirA
+    init(){
+        
+    }
+    
+    // var REF_STARS = UserApi().REF_CURRENT_USER?.child("stars")
 
+    /// Returns the "stars" branch/node on the Firebase database
+    /// based on the current user signed in. This will be Used to
+    /// save Starred Articles to the "stars" branch/node
+    func getStarREF()-> DatabaseReference? {
+        guard let currentUser = self.user else {
+            return nil
+        }
+        return UserApi.REF_USERS.child(currentUser.uid).child("stars")
+    }
+    
     
     /// Observe branch and returns a star
     

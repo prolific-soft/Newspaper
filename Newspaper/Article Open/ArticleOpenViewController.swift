@@ -25,9 +25,19 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
         }
     }
     
+    var currentUSER : User?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
+  
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        /// Refreshes the state of the current user so if
+        /// another person signed in it will removes previous
+        /// user and assign new user
+        checkUserLoggedIn()
     }
 
     //Hide Tab bar
@@ -91,6 +101,16 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
         controller.dismiss(animated: true, completion: nil)
     }
     
+    
+    func checkUserLoggedIn() {
+        Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+               self.currentUSER = user
+            }
+        }
+    }
+    
+    
     //Open Article to SafariViewController
     @IBAction func openButtonTapped(_ sender: Any) {
         if let urlString = self.article?.url {
@@ -101,10 +121,15 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     //Saves the current Article to Star Articles
     @IBAction func starButtonTapped(_ sender: UIBarButtonItem) {
         
-        var isArticleSavedPreviously = false
-        guard let starReference = FirApi.Stars.REF_STARS else {
+        /// Gets current user for star ref
+        guard let user = currentUSER else {return}
+        let starApi = StarsApi(user: user)
+        let starRef = starApi.getStarREF()
+        
+        guard let starReference = starRef else {
             return
         }
+        
         let newStarredArticleId = starReference.childByAutoId().key
         let newStarredArticleReference = starReference.child(newStarredArticleId)
         

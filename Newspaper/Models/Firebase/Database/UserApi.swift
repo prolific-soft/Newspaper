@@ -26,14 +26,10 @@ class UserApi {
         return nil
     }
     
-    
+    typealias currentUserREF = ( (DatabaseReference?) -> Void  )
     
     /// The current User Branch
     var REF_CURRENT_USER: DatabaseReference? {
-        Auth.auth().addStateDidChangeListener { (Auth, User) in
-            //
-        }
-        
         guard let currentUser = Auth.auth().currentUser else {
             return nil
         }
@@ -41,7 +37,16 @@ class UserApi {
     }
 
     
-    
+    /// Cjecks and returns the current User
+    func getCurrentUser(_ completion : @escaping currentUserREF) {
+        Auth.auth().addStateDidChangeListener { (Auth, User) in
+            guard let user = User else {
+                return
+            }
+            completion(self.REF_USERS.child(user.uid))
+        }
+        
+    }
     
     
     

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 ///This struct converts an article to anyobject
 /// or json ready to be saved on appropriate Firebase
@@ -17,7 +18,34 @@ import Foundation
 class ArticleConverter {
     
     
+    enum FirArticleKey: String {
+        case author = "author"
+        case title = "title"
+        case description = "description"
+        case url = "url"
+        case urlToImage = "urlToImage"
+        case publishedAt = "publishedAt"
+        case key = "key"
+        case source = "source"
+        case addedByUser = "addedByUser"
+        case ref = "ref"
+        case completed = "completed"
+    }
     
+    /// Converts a datasnapshot to an Article
+    func convertSnapshotToArticle(snapshot: DataSnapshot)-> Article {
+        let starArticle = Article()
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        
+        starArticle.author = snapshotValue[FirArticleKey.author.rawValue] as? String
+        starArticle.title = snapshotValue[FirArticleKey.title.rawValue] as? String
+        starArticle.description = snapshotValue[FirArticleKey.description.rawValue] as? String
+        starArticle.url = snapshotValue[FirArticleKey.url.rawValue] as? String
+        starArticle.urlToImage = snapshotValue[FirArticleKey.urlToImage.rawValue] as? String
+        starArticle.publishedAt = snapshotValue[FirArticleKey.publishedAt.rawValue] as? String
+        
+        return starArticle
+    }
     
     
     

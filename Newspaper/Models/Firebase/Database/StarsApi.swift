@@ -17,6 +17,7 @@ class StarsApi {
     
     /// The current user that owns the star branch
     var user : User?
+    var starBranch = StarsApi()
     
     /// Initialized with the current user
     init(user: User) {
@@ -29,7 +30,7 @@ class StarsApi {
         
     }
     
-    // var REF_STARS = UserApi().REF_CURRENT_USER?.child("stars")
+    var REF_STARS = UserApi.REF_CURRENT_USER?.child("stars")
 
     /// Returns the "stars" branch/node on the Firebase database
     /// based on the current user signed in. This will be Used to
@@ -41,8 +42,20 @@ class StarsApi {
         return UserApi.REF_USERS.child(currentUser.uid).child("stars")
     }
     
-    
-    /// Observe branch and returns a star
+    /// Observe branch and returns an array of Starred Articles
+    func observeUserStarredArticles(completion: @escaping ([Article]) -> Void){
+        REF_STARS?.observe(.value, with: { (snapshot) in
+            
+            var articlesToReturn = [Article]()
+            
+            for item in snapshot.children {
+                let converter = ArticleConverter()
+                let article = converter.convertSnapshotToArticle(snapshot: item as! DataSnapshot)
+                articlesToReturn.append(article)
+            }
+            completion(articlesToReturn)
+        })
+    }
     
     
     /// Get Star Article on Branch

@@ -26,6 +26,7 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     }
     
     var currentUSER : User?
+    var handleAuthStateDidChange: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,11 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
         /// another person signed in it will removes previous
         /// user and assign new user
         checkUserLoggedIn()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        guard let handleAuthStateDidChange = handleAuthStateDidChange else { return }
+        Auth.auth().removeStateDidChangeListener(handleAuthStateDidChange)
     }
 
     //Hide Tab bar
@@ -103,7 +109,7 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     
     
     func checkUserLoggedIn() {
-        Auth.auth().addStateDidChangeListener() { auth, user in
+       handleAuthStateDidChange = Auth.auth().addStateDidChangeListener() { auth, user in
             if user != nil {
                self.currentUSER = user
             }
@@ -123,18 +129,18 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
         
         /// Gets current user for star ref
         guard let user = currentUSER else {return}
-        let starApi = StarsApi(user: user)
-        let starRef = starApi.getStarREF()
+//        let starApi = StarsApi(user: user)
+//        let starRef = starApi.getStarREF()
         
-        guard let starReference = starRef else {
-            return
-        }
+        let starReference = UserApi.REF_USERS.child(user.uid).child("stars")
+        
+//        guard let starReference = starRef else {
+//            return
+//        }
         
         let newStarredArticleId = starReference.childByAutoId().key
         let newStarredArticleReference = starReference.child(newStarredArticleId)
-        
         let convertedArticle = ArticleConverter().convertToAny(article: self.article!)
-        
         newStarredArticleReference.setValue(convertedArticle)
 
         //TODO:

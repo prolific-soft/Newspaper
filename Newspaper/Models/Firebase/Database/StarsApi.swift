@@ -43,8 +43,8 @@ class StarsApi {
     }
     
     /// Observe branch and returns an array of Starred Articles
-    func observeUserStarredArticles(completion: @escaping ([Article]) -> Void){
-        REF_STARS?.observe(.value, with: { (snapshot) in
+    func observeUserStarredArticles(userRef: DatabaseReference?, completion: @escaping ([Article]) -> Void){
+        userRef?.observe(.value, with: { (snapshot) in
             
             var articlesToReturn = [Article]()
             

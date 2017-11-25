@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class StarsTableViewController: UITableViewController {
 
     var articles = [Article]()
+    var currentUSER : User?
+    var starReference : DatabaseReference?
+    var handleAuthStateDidChange: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +29,39 @@ class StarsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
 
-         self.loadFakeArticles()
+         self.checkUserLoggedIn()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = true
-        self.loadFakeArticles()
     }
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        /// Refreshes the state of the current user so if
+        /// another person signed in it will removes previous
+        /// user and assign new user
+        //checkUserLoggedIn()
+        self.loadData()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        guard let handleAuthStateDidChange = handleAuthStateDidChange else { return }
+        Auth.auth().removeStateDidChangeListener(handleAuthStateDidChange)
+    }
+    
+    /// Checks for current logged user
+    func checkUserLoggedIn() {
+        handleAuthStateDidChange = Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+                self.currentUSER = user
+            }
+        }
+    }
+    
+    
     // MARK: - Table view data source
 
 
@@ -75,8 +104,35 @@ class StarsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        
     }
     
+    func loadData(){
+        guard let user = self.currentUSER else { return }
+        let starReference = UserApi.REF_USERS.child(user.uid).child("stars")
+        print("TEsssssst")
+        print(starReference.description())
+        
+        starReference.observe(.value) { (snapshot) in
+            //
+            var articlesToReturn = [Article]()
+            
+            for item in snapshot.children {
+                let converter = ArticleConverter()
+                let article = converter.convertSnapshotToArticle(snapshot: item as! DataSnapshot)
+                articlesToReturn.append(article)
+            }
+            
+            DispatchQueue.main.async {
+                self.articles = articlesToReturn
+                self.tableView.reloadData()
+                print(self.articles)
+            }
+
+        }
+
+ 
+    }//End loadData()
 
     /*
     // Override to support conditional editing of the table view.

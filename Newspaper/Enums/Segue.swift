@@ -23,4 +23,7 @@ enum Segue : String {
     case exploreOpenToStars = "exploreOpenToStars"
     case subStartoArticleOpen = "subStartoArticleOpen"
     
+    //Star
+    case startoArticleOpen = "startoArticleOpen"
+    
 }

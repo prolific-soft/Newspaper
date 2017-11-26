@@ -106,8 +106,6 @@ class StarsTableViewController: UITableViewController {
     func loadData(){
         guard let user = self.currentUSER else { return }
         let starReference = UserApi.REF_USERS.child(user.uid).child("stars")
-        print("TEsssssst")
-        print(starReference.description())
         
         starReference.observe(.value) { (snapshot) in
             //
@@ -124,7 +122,6 @@ class StarsTableViewController: UITableViewController {
                 self.tableView.reloadData()
                 print(self.articles)
             }
-
         }
 
     }//End loadData()
@@ -174,4 +171,27 @@ class StarsTableViewController: UITableViewController {
     }
     */
 
+}
+
+
+/// SEGUE
+extension StarsTableViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.startoArticleOpen.rawValue {
+            
+            guard let indexPath = sender as? NSIndexPath else { return }
+            
+            let cell = tableView.cellForRow(at: indexPath as IndexPath) as? StarsTableViewCell
+            
+            if let articleOpenTableViewController = segue.destination as? ArticleOpenViewController {
+                articleOpenTableViewController.article = cell?.article!
+            }
+        }
+    }// End prepare for Segue
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: Segue.startoArticleOpen.rawValue, sender: indexPath)
+    }
+    
 }

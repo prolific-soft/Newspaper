@@ -13,9 +13,14 @@ import FirebaseDatabase
 class StarsTableViewController: UITableViewController {
 
     var articles = [Article]()
-    var currentUSER : User?
     var starReference : DatabaseReference?
     var handleAuthStateDidChange: AuthStateDidChangeListenerHandle?
+    
+    var currentUSER : User? {
+        didSet {
+            self.loadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,16 +41,9 @@ class StarsTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = true
+        //self.loadData()
     }
 
-    
-    override func viewDidAppear(_ animated: Bool) {
-        /// Refreshes the state of the current user so if
-        /// another person signed in it will removes previous
-        /// user and assign new user
-        //checkUserLoggedIn()
-        self.loadData()
-    }
     
     override func viewDidDisappear(_ animated: Bool) {
         guard let handleAuthStateDidChange = handleAuthStateDidChange else { return }
@@ -78,7 +76,6 @@ class StarsTableViewController: UITableViewController {
         default:
             return 0
         }
-
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,7 +101,6 @@ class StarsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-        
     }
     
     func loadData(){
@@ -131,7 +127,6 @@ class StarsTableViewController: UITableViewController {
 
         }
 
- 
     }//End loadData()
 
     /*

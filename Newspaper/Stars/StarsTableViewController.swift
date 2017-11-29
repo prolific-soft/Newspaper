@@ -10,40 +10,33 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
+
 class StarsTableViewController: UITableViewController {
 
+    ///MARK: Class Properties
     var articles = [Article]()
     var starReference : DatabaseReference?
     var articleRef : DatabaseReference?
     var articlesByRef = [DatabaseReference : Article]()
     var handleAuthStateDidChange: AuthStateDidChangeListenerHandle?
     
+    //The user currently logged in
     var currentUSER : User? {
         didSet {
             self.loadData()
         }
     }
     
+    //First Loading Func
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.clearsSelectionOnViewWillAppear = true
-        
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-
          self.checkUserLoggedIn()
-
+        
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        // Uncomment the following line to preserve selection between presentations
-        //self.loadData()
-    }
-
     
     override func viewDidDisappear(_ animated: Bool) {
         guard let handleAuthStateDidChange = handleAuthStateDidChange else { return }
@@ -57,14 +50,20 @@ class StarsTableViewController: UITableViewController {
                 self.currentUSER = user
             }
         }
-    }
+    }//End checkUserLoggedIn()
     
+}
+
+
+/// MARK: Configuring Cells
+extension StarsTableViewController {
     
-    // MARK: - Table view data source
+    //Number of Sections
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
+    //Number of Rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
@@ -76,20 +75,25 @@ class StarsTableViewController: UITableViewController {
         }
     }
     
+    //Cell for Row
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var  cell = UITableViewCell()
         if indexPath.section == 0 {
-           cell = tableView.dequeueReusableCell(withIdentifier: Cell.starsSearchTableViewCell.rawValue, for: indexPath) as! StarsSearchTableViewCell
+            cell = tableView.dequeueReusableCell(withIdentifier: Cell.starsSearchTableViewCell.rawValue, for: indexPath) as! StarsSearchTableViewCell
             
         }else if indexPath.section == 1 {
-           let cell = tableView.dequeueReusableCell(withIdentifier: Cell.starsTableViewCell.rawValue, for: indexPath) as! StarsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Cell.starsTableViewCell.rawValue, for: indexPath) as! StarsTableViewCell
             cell.setUp(withArticle: articles[indexPath.row])
             return  cell
         }
         return  cell
     }
-    
+}
 
+
+/// MARK: Loading Data for Cells
+extension StarsTableViewController {
+    
     func loadFakeArticles(){
         let service = NewsAPIServices()
         service.getArticles(source: "bbc-news", sortBy: "top") { (result) in
@@ -128,14 +132,18 @@ class StarsTableViewController: UITableViewController {
                 print(self.articles)
             }
         }
-
+        
     }//End loadData()
+}
 
 
+/// MARK: - Editing Cells
+extension StarsTableViewController {
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
@@ -146,15 +154,13 @@ class StarsTableViewController: UITableViewController {
                     keyRef.removeValue()
                     self.tableView.reloadData()
                 }
-            }//End for
-        }//End editingStyle .delete
-    }
-
-
+            }
+        }
+    }//End Commit EditingStyle
 }
 
 
-/// MARK: - Navigation
+/// MARK: - Navigation & Segue
 extension StarsTableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -173,5 +179,8 @@ extension StarsTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: Segue.startoArticleOpen.rawValue, sender: indexPath)
     }
-    
 }
+
+
+
+

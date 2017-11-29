@@ -14,6 +14,8 @@ class StarsTableViewController: UITableViewController {
 
     var articles = [Article]()
     var starReference : DatabaseReference?
+    var articleRef : DatabaseReference?
+    var articlesByRef = [DatabaseReference : Article]()
     var handleAuthStateDidChange: AuthStateDidChangeListenerHandle?
     
     var currentUSER : User? {
@@ -59,8 +61,6 @@ class StarsTableViewController: UITableViewController {
     
     
     // MARK: - Table view data source
-
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -103,16 +103,23 @@ class StarsTableViewController: UITableViewController {
     
     func loadData(){
         guard let user = self.currentUSER else { return }
-        let starReference = UserApi.REF_USERS.child(user.uid).child("stars")
+        let starReference = UserApi.REF_USERS.child(user.uid).child(FirebaseBranchName.stars.rawValue)
         
         starReference.observe(.value) { (snapshot) in
-            //
             var articlesToReturn = [Article]()
             
             for item in snapshot.children {
                 let converter = ArticleConverter()
                 let article = converter.convertSnapshotToArticle(snapshot: item as! DataSnapshot)
                 articlesToReturn.append(article)
+                
+                //Get the ref of the item and store it as key for an
+                //article in the dicionary
+                guard let itemRef = item as? DataSnapshot else { return }
+                let articleRef = itemRef.ref
+                self.articlesByRef[articleRef] = article
+                
+                //print("Key: \(articleRef) , Value : \(article)")
             }
             
             DispatchQueue.main.async {
@@ -132,8 +139,15 @@ class StarsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
+            let article = articles[indexPath.row]
+            
+            for (keyRef, value) in articlesByRef {
+                if value.title == article.title  {
+                    keyRef.removeValue()
+                    self.tableView.reloadData()
+                }
+            }//End for
+        }//End editingStyle .delete
     }
 
 

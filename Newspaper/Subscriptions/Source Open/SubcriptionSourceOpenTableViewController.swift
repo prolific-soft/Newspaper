@@ -7,26 +7,37 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class SubcriptionSourceOpenTableViewController: UITableViewController {
 
  
     var articles = [Article]()
+    var source : Source?
+    
+    var currentUSER : User?
+    var handleAuthStateDidChange: AuthStateDidChangeListenerHandle?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = true
-        
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        //self.loadFakeArticles()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        checkUserLoggedIn()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        guard let handleAuthStateDidChange = handleAuthStateDidChange else { return }
+        Auth.auth().removeStateDidChangeListener(handleAuthStateDidChange)
+    }
+
     
     override func viewWillAppear(_ animated: Bool) {
        // self.loadFakeArticles()
@@ -65,6 +76,27 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
         return  cell
     }
     
+    
+    @IBAction func saveNewsSource(_ sender: Any) {
+        
+        /// Gets current user for star ref
+        guard let user = currentUSER else {return}
+        
+        let subscriptionReference = UserApi.REF_USERS.child(user.uid).child("subscriptions")
+        
+        let subscriptionId = subscriptionReference.childByAutoId().key
+        let subscriptionIdReference = subscriptionReference.child(subscriptionId)
+        let convertedSource = SourceConverter().convertToAny(source: self.source!)
+        subscriptionIdReference.setValue(convertedSource) 
+    }
+    
+    func checkUserLoggedIn() {
+        handleAuthStateDidChange = Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+                self.currentUSER = user
+            }
+        }
+    }
     
     func loadFakeArticles(){
         let service = NewsAPIServices()
@@ -108,7 +140,6 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
     
     
     
-    
-    
-    
 }//End class SubcriptionSourceOpenTableViewController
+
+

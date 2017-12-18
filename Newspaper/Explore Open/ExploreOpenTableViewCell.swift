@@ -62,7 +62,6 @@ class ExploreOpenTableViewCell: UITableViewCell {
         tempService.getArticles(source: sourceID, sortBy: "top", { (result) in
             guard let sourceResult = result as? Articles else {return}
             
-            
 //            let articles = sourceResult.articles
 //            print("&&&&&&&&&&")
 //            print("Articles")
@@ -78,8 +77,6 @@ class ExploreOpenTableViewCell: UITableViewCell {
                 print("&&&&&&&&&&")
                 self.articles = articles
             }
-            
-            
         })
     }
     

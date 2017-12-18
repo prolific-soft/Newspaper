@@ -50,9 +50,6 @@ class StarsTableViewCell: UITableViewCell {
                 }
             }
         }
-
-        
-        
     }
     
     

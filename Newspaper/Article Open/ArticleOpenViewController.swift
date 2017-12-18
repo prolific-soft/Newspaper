@@ -21,7 +21,6 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     
     var article : Article? {
         didSet {
-            //print("Was sett >>>>>>>>>>>>>>>>>")
         }
     }
     
@@ -55,15 +54,6 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
         self.tabBarController?.tabBar.isHidden = false
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     //Sets up view with article
     func setUp(){
@@ -91,7 +81,6 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
                 }
             }
         }
-                    //print("Finished setup sett >>>>>>>>>>>>>>>>>")
     }//End Setup
     
     

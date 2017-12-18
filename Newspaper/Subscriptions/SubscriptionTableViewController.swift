@@ -16,9 +16,16 @@ class SubscriptionTableViewController: UITableViewController {
     var imageCategory = [String : UIImage]()
     var sourceCategories = [String : [Source]]()
     
+    deinit {
+        print("Sub denitted")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        NotificationCenter.default.addObserver(forName: Notification.Name("sign out notification"), object: nil, queue: .main) { (_) in
+//            <#code#>
+//        }
         // Uncomment the following line to preserve selection between presentations
          self.clearsSelectionOnViewWillAppear = true
 

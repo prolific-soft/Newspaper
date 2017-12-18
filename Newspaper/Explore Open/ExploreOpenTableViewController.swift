@@ -65,7 +65,9 @@ class ExploreOpenTableViewController: UITableViewController {
                     return
                 }
                 let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ExploreOpenTableViewCell
+            
                 subcriptionSourceOpenTableViewController.articles = (cell?.articles)!
+                subcriptionSourceOpenTableViewController.source = cell?.source!
             }
             
  

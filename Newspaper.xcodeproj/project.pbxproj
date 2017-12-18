@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		669A624C8F6FD631D8A42283 /* Pods_Newspaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBF7EAFAAB6CC33F51DC058 /* Pods_Newspaper.framework */; };
+		EF0B76501FE8512D00C35F95 /* SourceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B764F1FE8512D00C35F95 /* SourceConverter.swift */; };
 		EF12B43A1FCF11A600EEE3B9 /* FirebaseBranchName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12B4391FCF11A600EEE3B9 /* FirebaseBranchName.swift */; };
 		EF1831521F9FB36400BE0140 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1831511F9FB36400BE0140 /* Login.storyboard */; };
 		EF1831571FA008D000BE0140 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1831561FA008D000BE0140 /* StartViewController.swift */; };
@@ -76,6 +77,7 @@
 		0FBF7EAFAAB6CC33F51DC058 /* Pods_Newspaper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newspaper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C56B5B7B975620DFBB369B7 /* Pods-Newspaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newspaper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Newspaper/Pods-Newspaper.release.xcconfig"; sourceTree = "<group>"; };
 		B852147EC626797A51C02FB9 /* Pods-Newspaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newspaper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Newspaper/Pods-Newspaper.debug.xcconfig"; sourceTree = "<group>"; };
+		EF0B764F1FE8512D00C35F95 /* SourceConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceConverter.swift; sourceTree = "<group>"; };
 		EF12B4391FCF11A600EEE3B9 /* FirebaseBranchName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseBranchName.swift; sourceTree = "<group>"; };
 		EF1831511F9FB36400BE0140 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		EF1831561FA008D000BE0140 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 				EF94F83A1FC60F48006A8BCD /* TagsApi.swift */,
 				EF94F83C1FC6152C006A8BCD /* UserApi.swift */,
 				EF94F83E1FC6207F006A8BCD /* ArticleConverter.swift */,
+				EF0B764F1FE8512D00C35F95 /* SourceConverter.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -791,6 +794,7 @@
 				EF1E12731FAF23D3000EF3AF /* SubcriptionSourceOpenTableViewController.swift in Sources */,
 				EF184DBD1FABE62E000459A4 /* StarsSearchTableViewCell.swift in Sources */,
 				EF184D8E1FA815F7000459A4 /* SourceOpenTableViewCell.swift in Sources */,
+				EF0B76501FE8512D00C35F95 /* SourceConverter.swift in Sources */,
 				EF184DA71FAB9CF2000459A4 /* TagsTableViewController.swift in Sources */,
 				EFD90CC01FB29D18007ED3F5 /* SubscriptionSourceOpenTableViewCell.swift in Sources */,
 				EF5F8EA11FAC26640019EAA4 /* AllTagsTableViewCell.swift in Sources */,

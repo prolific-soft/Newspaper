@@ -38,7 +38,6 @@ class UserApi {
 
     var handle = Auth.auth().addStateDidChangeListener() { (auth, user) in
         if user != nil {
-            
         }
     }
     

@@ -172,7 +172,7 @@ class SubscriptionTableViewController: UITableViewController {
             for source in reSources {
                 for imageObject in sourceImage {
                     if source.id == imageObject.key {
-                        self.imageCategory[source.id] = imageObject.image
+                        self.imageCategory[source.id!] = imageObject.image
                     }
                 }
             }

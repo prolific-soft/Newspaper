@@ -20,14 +20,14 @@ struct urlsToLogos: Codable {
 //in the NEWS API
 class Source: Codable {
     //Properties
-    var id: String
-    var name: String
-    var description: String
-    var url: String
-    var category: String
-    var language: String
-    var urlsToLogos: urlsToLogos
-    var sortBysAvailable: [String]
+    var id: String?
+    var name: String?
+    var description: String?
+    var url: String?
+    var category: String?
+    var language: String?
+    var urlsToLogos : urlsToLogos?
+    var sortBysAvailable: [String]?
     
 }
 

@@ -27,7 +27,7 @@ struct SourceList {
                     sources.append(newSource)
                 }
             }
-            sorted[key] = sources
+            sorted[key!] = sources
         }
         return sorted
     }

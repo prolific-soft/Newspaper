@@ -23,18 +23,30 @@ class SourceConverter {
         case url = "url"
         case category = "category"
         case language = "language"
-        case urlsToImage = "urlsToImage"
+        case urlsToLogos = "urlsToLogos"
         case sortBysAvailable = "sortBysAvailable"
     }
     
 
-    /// Converts a datasnapshot to an Article
-    func convertSnapshotToArticle(snapshot: DataSnapshot) {
-
+    /// Converts a datasnapshot to a Source
+    func convertSnapshotToArticle(snapshot: DataSnapshot) -> Source {
+        let subscribedSource = Source()
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        
+        subscribedSource.id = snapshotValue[FirSourceKey.id.rawValue] as? String
+        subscribedSource.name = snapshotValue[FirSourceKey.name.rawValue] as? String
+        subscribedSource.description = snapshotValue[FirSourceKey.description.rawValue] as? String
+        subscribedSource.url = snapshotValue[FirSourceKey.url.rawValue] as? String
+        subscribedSource.category = snapshotValue[FirSourceKey.category.rawValue] as? String
+        subscribedSource.language = snapshotValue[FirSourceKey.language.rawValue] as? String
+        subscribedSource.urlsToLogos = snapshotValue[FirSourceKey.urlsToLogos.rawValue] as? urlsToLogos
+        subscribedSource.sortBysAvailable = snapshotValue[FirSourceKey.sortBysAvailable.rawValue] as? [String]
+        
+        return subscribedSource
     
     }
     
-    /// Converts the article to Firebase ready JSON
+    /// Converts the Source to Firebase ready JSON
     func convertToAny(source : Source) -> Any {
         let jsonEncoder = JSONEncoder()
         var jsonString =  [String: Any]()

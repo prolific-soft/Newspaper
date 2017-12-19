@@ -115,6 +115,9 @@ class SubscriptionTableViewController: UITableViewController {
             if let subcriptionSourceOpenTableViewController = segue.destination as? SubcriptionSourceOpenTableViewController {
                 guard let indexPath = sender as? NSIndexPath else { return }
                 let cell = tableView.cellForRow(at: indexPath as IndexPath) as? SubsriptionSourcesTableViewCell
+                if let titleName = cell?.source?.name {
+                    subcriptionSourceOpenTableViewController.navigationItem.title = titleName
+                }
                 subcriptionSourceOpenTableViewController.articles = (cell?.articles)!
             }
         }

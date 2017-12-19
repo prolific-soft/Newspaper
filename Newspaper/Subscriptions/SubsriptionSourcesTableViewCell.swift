@@ -30,6 +30,7 @@ class SubsriptionSourcesTableViewCell: UITableViewCell {
     
 
     func setUp(source : Source){
+        self.source = source
         self.sourceNameLabel.text = source.name
         loadArticlesForSources(withource: source)
     }

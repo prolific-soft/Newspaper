@@ -21,14 +21,13 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        self.clearsSelectionOnViewWillAppear = true
+        //self.clearsSelectionOnViewWillAppear = true
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.clearsSelectionOnViewWillAppear = true
         checkUserLoggedIn()
     }
     
@@ -36,16 +35,8 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
         guard let handleAuthStateDidChange = handleAuthStateDidChange else { return }
         Auth.auth().removeStateDidChangeListener(handleAuthStateDidChange)
     }
-
-    
-    override func viewWillAppear(_ animated: Bool) {
-        //self.loadFakeArticles()
-        self.clearsSelectionOnViewWillAppear = true
-    }
     
     // MARK: - Table view data source
-    
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -59,7 +50,6 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
         default:
             return 0
         }
-        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

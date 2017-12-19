@@ -30,12 +30,13 @@ class StarsTableViewController: UITableViewController {
     //First Loading Func
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.clearsSelectionOnViewWillAppear = true
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
-
-         self.checkUserLoggedIn()
-        
+        self.checkUserLoggedIn()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.clearsSelectionOnViewWillAppear = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {

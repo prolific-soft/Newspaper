@@ -103,7 +103,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bbc-sport" translatesAutoresizingMaskIntoConstraints="NO" id="dtG-Qx-v8h">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-rss-100-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="dtG-Qx-v8h">
                                             <rect key="frame" x="18" y="6" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="dtG-Qx-v8h" secondAttribute="height" multiplier="1:1" id="pCk-Ct-xMh"/>
@@ -630,7 +630,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <segue destination="kal-Up-DQZ" kind="show" identifier="subStartoArticleOpen" id="5wH-U2-z5z"/>
+                        <segue destination="kal-Up-DQZ" kind="show" identifier="sourceOpenToArticleOpen" id="5wH-U2-z5z"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTC-sf-omt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -897,12 +897,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bbc-sport" width="180" height="180"/>
         <image name="breitbart-news" width="152" height="152"/>
+        <image name="icons8-rss-100-2.png" width="100" height="100"/>
         <image name="image-placeholder" width="200" height="200"/>
         <image name="subs" width="21" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vtj-Kr-NwZ"/>
+        <segue reference="hvw-YH-MZp"/>
     </inferredMetricsTieBreakers>
 </document>

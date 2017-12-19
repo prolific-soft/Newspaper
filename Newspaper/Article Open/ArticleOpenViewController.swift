@@ -10,6 +10,7 @@ import UIKit
 import SafariServices
 import FirebaseDatabase
 import FirebaseAuth
+import SVProgressHUD
 
 class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegate {
 
@@ -118,14 +119,7 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
         
         /// Gets current user for star ref
         guard let user = currentUSER else {return}
-//        let starApi = StarsApi(user: user)
-//        let starRef = starApi.getStarREF()
-        
         let starReference = UserApi.REF_USERS.child(user.uid).child(FirebaseBranchName.stars.rawValue)
-        
-//        guard let starReference = starRef else {
-//            return
-//        }
         
         let newStarredArticleId = starReference.childByAutoId().key
         let newStarredArticleReference = starReference.child(newStarredArticleId)
@@ -135,12 +129,15 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
         //TODO:
         // Disable button once it is saved and change the
         // icon to indicate star saving was successful
+        SVProgressHUD.setDefaultMaskType(.black)
+        SVProgressHUD.setMinimumSize(CGSize(width: 50, height: 100))
+        SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+        SVProgressHUD.showSuccess(withStatus: "Saved to Stars")
     }
     
     //Marks the article as read
     @IBAction func markReadButtonTapped(_ sender: UIBarButtonItem) {
     }
-    
     
     //Adds the current article to selected Tag
     @IBAction func taggedButtonTapped(_ sender: UIBarButtonItem) {
@@ -149,8 +146,7 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     //Opens options to share article
     @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
     }
-    
-    
+
     
 }//End class ArticleOpenViewController
 

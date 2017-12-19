@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import SVProgressHUD
 
 class SubcriptionSourceOpenTableViewController: UITableViewController {
 
@@ -65,7 +66,8 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
         return  cell
     }
     
-    
+    //Subscribes to a NewsSource and saved to the
+    //Firebase Branch of the user
     @IBAction func saveNewsSource(_ sender: Any) {
         
         /// Gets current user for star ref
@@ -74,7 +76,12 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
         let subscriptionId = subscriptionReference.childByAutoId().key
         let subscriptionIdReference = subscriptionReference.child(subscriptionId)
         let convertedSource = SourceConverter().convertToAny(source: self.source!)
-        subscriptionIdReference.setValue(convertedSource) 
+        subscriptionIdReference.setValue(convertedSource)
+        
+        SVProgressHUD.setDefaultMaskType(.black)
+        SVProgressHUD.setMinimumSize(CGSize(width: 50, height: 100))
+        SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+        SVProgressHUD.showSuccess(withStatus: "Subscribed!")
     }
     
     func checkUserLoggedIn() {
@@ -101,12 +108,15 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
                 articleOpenTableViewController.article = cell?.article!
             }
         }
-     }// End prepare for Segue
+     }// End prepare for Segue subStartoArticleOpen
  
 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: Segue.sourceOpenToArticleOpen.rawValue, sender: indexPath)
+        if indexPath.section == 1 {
+            self.performSegue(withIdentifier: Segue.sourceOpenToArticleOpen.rawValue, sender: indexPath)
+        }
+       
     }
     
     

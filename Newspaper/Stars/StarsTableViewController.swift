@@ -93,17 +93,6 @@ extension StarsTableViewController {
 /// MARK: Loading Data for Cells
 extension StarsTableViewController {
     
-    func loadFakeArticles(){
-        let service = NewsAPIServices()
-        service.getArticles(source: "bbc-news", sortBy: "top") { (result) in
-            guard let list = result as? Articles else {return}
-            DispatchQueue.main.async {
-                self.articles = list.articles
-                self.tableView.reloadData()
-            }
-        }
-    }
-    
     func loadData(){
         guard let user = self.currentUSER else { return }
         let starReference = UserApi.REF_USERS.child(user.uid).child(FirebaseBranchName.stars.rawValue)
@@ -137,7 +126,7 @@ extension StarsTableViewController {
 extension StarsTableViewController {
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        return indexPath.section == 1 ? true : false
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

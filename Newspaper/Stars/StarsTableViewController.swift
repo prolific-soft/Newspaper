@@ -51,7 +51,6 @@ class StarsTableViewController: UITableViewController {
             }
         }
     }//End checkUserLoggedIn()
-    
 }
 
 
@@ -80,7 +79,6 @@ extension StarsTableViewController {
         var  cell = UITableViewCell()
         if indexPath.section == 0 {
             cell = tableView.dequeueReusableCell(withIdentifier: Cell.starsSearchTableViewCell.rawValue, for: indexPath) as! StarsSearchTableViewCell
-            
         }else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: Cell.starsTableViewCell.rawValue, for: indexPath) as! StarsTableViewCell
             cell.setUp(withArticle: articles[indexPath.row])
@@ -122,14 +120,11 @@ extension StarsTableViewController {
                 guard let itemRef = item as? DataSnapshot else { return }
                 let articleRef = itemRef.ref
                 self.articlesByRef[articleRef] = article
-                
-                //print("Key: \(articleRef) , Value : \(article)")
             }
             
             DispatchQueue.main.async {
                 self.articles = articlesToReturn
                 self.tableView.reloadData()
-                print(self.articles)
             }
         }
         

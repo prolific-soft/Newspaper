@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SubscriptionSourceOpenTableViewCell: UITableViewCell {
 
@@ -44,15 +45,19 @@ class SubscriptionSourceOpenTableViewCell: UITableViewCell {
         //Format Time to Hours Ago before setting
         //sourceTimeLabel.text = withArticle.publishedAt
         let tempImageView = UIImageView()
-        if let url = URL(string: withArticle.urlToImage!) {
+        
+        guard let urlString = withArticle.urlToImage else {
+            SVProgressHUD.showError(withStatus: "No News Available :(")
+            return
+        }
+        
+        if let url = URL(string: urlString) {
             tempImageView.downloadImageFromUrl(url: url) { (image) in
                 if let data = image {
                     self.sourceImageView.image = data
                 }
             }
         }
-        
-        
         
     }
     

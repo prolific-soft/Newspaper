@@ -13,5 +13,6 @@ import Foundation
 
 enum FirebaseBranchName : String {
     case stars = "stars"
+    case subscriptions = "subscriptions"
     
 }

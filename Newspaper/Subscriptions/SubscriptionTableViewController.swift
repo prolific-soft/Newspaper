@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 import SVProgressHUD
 
 class SubscriptionTableViewController: UITableViewController {
@@ -16,31 +17,39 @@ class SubscriptionTableViewController: UITableViewController {
     var imageCategory = [String : UIImage]()
     var sourceCategories = [String : [Source]]()
     
-    deinit {
-        print("Sub denitted")
+    var sources = [Source]()
+
+    
+    var subscriptionReference : DatabaseReference?
+    var sourceRef : DatabaseReference?
+    var sourcesByRef = [DatabaseReference : Source]()
+    var handleAuthStateDidChange: AuthStateDidChangeListenerHandle?
+    
+    
+    //The user currently logged in
+    var currentUSER : User? {
+        didSet {
+            self.loadData()
+        }
     }
     
+    //First Loading Func
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        NotificationCenter.default.addObserver(forName: Notification.Name("sign out notification"), object: nil, queue: .main) { (_) in
-//            <#code#>
-//        }
-        // Uncomment the following line to preserve selection between presentations
-         self.clearsSelectionOnViewWillAppear = true
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        //self.navigationItem.leftBarButtonItem
-        
-        loadFakeData()
+        self.clearsSelectionOnViewWillAppear = true
+        self.checkUserLoggedIn()
     }
 
 
+    //Remove Auth Listener
+    override func viewDidDisappear(_ animated: Bool) {
+        guard let handleAuthStateDidChange = handleAuthStateDidChange else { return }
+        Auth.auth().removeStateDidChangeListener(handleAuthStateDidChange)
+    }
+
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 3
     }
 
@@ -51,30 +60,28 @@ class SubscriptionTableViewController: UITableViewController {
         case 1:
             return 1
         case 2:
-            return imageCategory.count
+            return sources.count
         default:
             return 1
         }
     }
 
-    //Deque Cells
+    //Dequeue Cells
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell =  UITableViewCell()
         if indexPath.section == 0 {
             cell = tableView.dequeueReusableCell(withIdentifier: Cell.subscriptionSearchTableViewCell.rawValue, for: indexPath) as! SubscriptionSearchTableViewCell
         }else if indexPath.section == 1  {
-            cell = tableView.dequeueReusableCell(withIdentifier: Cell.allArticlesTableViewCell.rawValue, for: indexPath) as! AllArticlesTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Cell.allArticlesTableViewCell.rawValue, for: indexPath) as! AllArticlesTableViewCell
+            
+            cell.setUp(sources: self.sources)
+            return cell
+            
         }else if indexPath.section == 2  {
            let cell = tableView.dequeueReusableCell(withIdentifier: Cell.subsriptionSourcesTableViewCell.rawValue, for: indexPath) as! SubsriptionSourcesTableViewCell
-           
-            let key = Array(imageCategory.keys)
-            let keyName = key[indexPath.row]
-            let image = imageCategory[keyName]
-
-            cell.setUp(sourceName: keyName, sourceImage: image!)
             
-            print(keyName)
-
+            let source = sources[indexPath.row]
+            cell.setUp(source: source)
             return cell
         }
         return cell
@@ -83,114 +90,67 @@ class SubscriptionTableViewController: UITableViewController {
     //Temporary Logout User
     //This will be implemented at the Slide Menu
     @IBAction func logoutTapped(_ sender: Any) {
-        
         do {
             try Auth.auth().signOut()
         }catch let logoutError {
             SVProgressHUD.showError(withStatus: logoutError.localizedDescription)
         }
-
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let navController = storyboard.instantiateViewController(withIdentifier: StoryboardID.startNavigationController.rawValue) as! UINavigationController
         self.present(navController, animated: true, completion: nil)
     }
     
-    
+    // Prepare for Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segue.exploreOpenToStars.rawValue {
             if let starsTableViewController = segue.destination as? StarsTableViewController {
                 
-                guard let indexPath = sender as? NSIndexPath else {
-                    return
-                }
-
+                guard let indexPath = sender as? NSIndexPath else { return }
                 let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ExploreOpenTableViewCell
                 starsTableViewController.articles = (cell?.articles)!
             }
         }
-    }// End prepare for segue
+    }
     
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    /// Checks for current logged user
+    func checkUserLoggedIn() {
+        handleAuthStateDidChange = Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+                self.currentUSER = user
+            }
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    func loadSourcePlusImage() {
+    
+    func loadData(){
+        guard let user = self.currentUSER else { return }
+        let subscribedSourceRef = UserApi.REF_USERS.child(user.uid).child(FirebaseBranchName.subscriptions.rawValue)
         
-       // var sourceWithImages = [String : UIImage]()
-        //  let loadImages = SourceImages().getSourceImages()
-   
-    }
-    
-    func loadFakeData() {
-        let ser = SourceList()
-        ser.getSources { (sources) in
-
-            let reSources = sources
-            let sourceImage = SourceImages().getSourceImages()
+        subscribedSourceRef.observe(.value) { (snapshot) in
+            var sourcesToReturn = [Source]()
             
-            for source in reSources {
-                for imageObject in sourceImage {
-                    if source.id == imageObject.key {
-                        self.imageCategory[source.id!] = imageObject.image
-                    }
-                }
+            for item in snapshot.children{
+                let converter = SourceConverter()
+                let source = converter.convertSnapshotToArticle(snapshot: item as! DataSnapshot)
+                sourcesToReturn.append(source)
+                
+                //Get the ref of the item and store it as key for an
+                //Source in the dicionary
+                guard let itemRef = item as? DataSnapshot else { return }
+                let sourceRef = itemRef.ref
+                self.sourcesByRef[sourceRef] = source
             }
             
-//            print("??????????????????")
-//            print(self.imageCategory.count)
-//            print("??????????????????")
+            DispatchQueue.main.async {
+                self.sources = sourcesToReturn
+                self.tableView.reloadData()
+//                print("++++++++++++++++++++++++++++++++")
+//                print("Number of Sources : \(self.sources.count)")
+//                print("++++++++++++++++++++++++++++++++")
+            }
         }
-        
-        //Get source from dict
-        
-        //create sourceImage dict
-        
-        //Use source to find images
-        
-        //get articles for each source to pass to cell
-        
-    }
+    }//End loadData()
+
 
 }//End class SubscriptionTableViewController
 
@@ -201,4 +161,26 @@ extension SubscriptionTableViewController {
         self.performSegue(withIdentifier: Segue.exploreOpenToStars.rawValue, sender: indexPath)
     }
     
+}
+
+/// MARK: - Editing Cells
+extension SubscriptionTableViewController {
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            let source = sources[indexPath.row]
+            
+            for (keyRef, value) in sourcesByRef {
+                if value.name! == source.name!  {
+                    keyRef.removeValue()
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }//End Commit EditingStyle
 }

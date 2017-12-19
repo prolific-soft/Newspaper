@@ -27,6 +27,8 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
         self.clearsSelectionOnViewWillAppear = true
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+        loadFakeArticles()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -83,7 +85,6 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
         guard let user = currentUSER else {return}
         
         let subscriptionReference = UserApi.REF_USERS.child(user.uid).child("subscriptions")
-        
         let subscriptionId = subscriptionReference.childByAutoId().key
         let subscriptionIdReference = subscriptionReference.child(subscriptionId)
         let convertedSource = SourceConverter().convertToAny(source: self.source!)

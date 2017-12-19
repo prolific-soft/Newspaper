@@ -14,6 +14,9 @@ class SubsriptionSourcesTableViewCell: UITableViewCell {
     @IBOutlet weak var sourceNameLabel: UILabel!
     @IBOutlet weak var sourceCountLabel: UILabel!
     
+    var source : Source?
+    var articles : [Article]?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,9 +28,22 @@ class SubsriptionSourcesTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUp(sourceName : String, sourceImage : UIImage){
-        self.sourceNameLabel.text = sourceName
-        self.sourceImageView.image = sourceImage
+
+    func setUp(source : Source){
+        self.sourceNameLabel.text = source.name
+        loadArticlesForSources(withource: source)
+    }
+    
+    func loadArticlesForSources(withource: Source) {
+        let downloader = NewsAPIServices()
+        downloader.getArticles(source: withource.id!, sortBy: "top", { (result) in
+        guard let downloadedArticles = result as? Articles else {return}
+        
+        DispatchQueue.main.async {
+            self.articles = downloadedArticles.articles
+            self.sourceCountLabel.text =  "\(self.articles?.count ?? 0)"
+            }
+        })
     }
 
 }

@@ -23,8 +23,31 @@ class AllArticlesTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
+    }
+    
+    func setUp(sources: [Source]){
+        var loadedArticles = [Article]()
+        for source in sources {
+            let downloader = NewsAPIServices()
+            downloader.getArticles(source: source.id!, sortBy: "top", { (result) in
+                guard let downloadedArticles = result as? Articles else {return}
+                let articleList = downloadedArticles.articles
+                
+                for article in articleList {
+                    loadedArticles.append(article)
+                }
+    
+                DispatchQueue.main.async {
+                    self.articles = loadedArticles
+                    self.numberOfArticleCountLabel.text = "\(self.articles?.count ?? 0)"
+                }
+            })
+        }
+        
+
+        
+
     }
 
 }

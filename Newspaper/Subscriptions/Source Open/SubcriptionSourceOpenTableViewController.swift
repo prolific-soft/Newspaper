@@ -12,7 +12,6 @@ import FirebaseAuth
 
 class SubcriptionSourceOpenTableViewController: UITableViewController {
 
- 
     var articles = [Article]()
     var source : Source?
     
@@ -27,8 +26,6 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
         self.clearsSelectionOnViewWillAppear = true
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        
-        loadFakeArticles()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,7 +39,7 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
 
     
     override func viewWillAppear(_ animated: Bool) {
-       // self.loadFakeArticles()
+        //self.loadFakeArticles()
         self.clearsSelectionOnViewWillAppear = true
     }
     
@@ -83,7 +80,6 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
         
         /// Gets current user for star ref
         guard let user = currentUSER else {return}
-        
         let subscriptionReference = UserApi.REF_USERS.child(user.uid).child("subscriptions")
         let subscriptionId = subscriptionReference.childByAutoId().key
         let subscriptionIdReference = subscriptionReference.child(subscriptionId)
@@ -98,18 +94,7 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
             }
         }
     }
-    
-    func loadFakeArticles(){
-        let service = NewsAPIServices()
-        service.getArticles(source: "bbc-news", sortBy: "top") { (result) in
-            guard let list = result as? Articles else {return}
-            DispatchQueue.main.async {
-                self.articles = list.articles
-                self.tableView.reloadData()
-            }
-        }
-    }
-    
+
     
     @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -118,25 +103,20 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
 
 
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Segue.subStartoArticleOpen.rawValue {
-            
+        if segue.identifier == Segue.sourceOpenToArticleOpen.rawValue {
             guard let indexPath = sender as? NSIndexPath else { return }
             
             let cell = tableView.cellForRow(at: indexPath as IndexPath) as? SubscriptionSourceOpenTableViewCell
-
-
             if let articleOpenTableViewController = segue.destination as? ArticleOpenViewController {
                 articleOpenTableViewController.article = cell?.article!
-
             }
         }
-        
      }// End prepare for Segue
  
 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: Segue.subStartoArticleOpen.rawValue, sender: indexPath)
+        self.performSegue(withIdentifier: Segue.sourceOpenToArticleOpen.rawValue, sender: indexPath)
     }
     
     

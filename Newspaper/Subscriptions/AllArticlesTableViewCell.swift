@@ -44,10 +44,6 @@ class AllArticlesTableViewCell: UITableViewCell {
                 }
             })
         }
-        
-
-        
-
     }
 
 }

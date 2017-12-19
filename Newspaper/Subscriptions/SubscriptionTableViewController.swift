@@ -104,12 +104,30 @@ class SubscriptionTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segue.exploreOpenToStars.rawValue {
             if let starsTableViewController = segue.destination as? StarsTableViewController {
-                
+            
                 guard let indexPath = sender as? NSIndexPath else { return }
                 let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ExploreOpenTableViewCell
                 starsTableViewController.articles = (cell?.articles)!
             }
         }
+        
+        if segue.identifier == Segue.subscriptionToSourceOpen.rawValue {
+            if let subcriptionSourceOpenTableViewController = segue.destination as? SubcriptionSourceOpenTableViewController {
+                guard let indexPath = sender as? NSIndexPath else { return }
+                let cell = tableView.cellForRow(at: indexPath as IndexPath) as? SubsriptionSourcesTableViewCell
+                subcriptionSourceOpenTableViewController.articles = (cell?.articles)!
+            }
+        }
+
+        if segue.identifier == Segue.allArticlesToSourceOpen.rawValue {
+            if let subcriptionSourceOpenTableViewController = segue.destination as? SubcriptionSourceOpenTableViewController {
+                guard let indexPath = sender as? NSIndexPath else { return }
+                let cell = tableView.cellForRow(at: indexPath as IndexPath) as? AllArticlesTableViewCell
+                subcriptionSourceOpenTableViewController.articles = (cell?.articles)!
+            }
+        }
+        
+        
     }
     
     
@@ -155,22 +173,27 @@ class SubscriptionTableViewController: UITableViewController {
 }//End class SubscriptionTableViewController
 
 
-
 extension SubscriptionTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: Segue.exploreOpenToStars.rawValue, sender: indexPath)
+        if indexPath.section == 2 {
+            self.performSegue(withIdentifier: Segue.subscriptionToSourceOpen.rawValue, sender: indexPath)
+        }
+        if indexPath.section == 1 {
+            self.performSegue(withIdentifier: Segue.allArticlesToSourceOpen.rawValue, sender: indexPath)
+        }
     }
-    
 }
 
 /// MARK: - Editing Cells
 extension SubscriptionTableViewController {
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        //Only section 2 can be deleted
+        return indexPath.section == 2 ? true : false
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
             // Delete the row from the data source
             let source = sources[indexPath.row]
@@ -182,5 +205,6 @@ extension SubscriptionTableViewController {
                 }
             }
         }
+
     }//End Commit EditingStyle
 }

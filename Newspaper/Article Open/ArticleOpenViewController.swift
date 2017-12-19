@@ -21,6 +21,7 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     
     var article : Article? {
         didSet {
+            
         }
     }
     
@@ -30,7 +31,6 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
-  
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -121,7 +121,7 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
 //        let starApi = StarsApi(user: user)
 //        let starRef = starApi.getStarREF()
         
-        let starReference = UserApi.REF_USERS.child(user.uid).child("stars")
+        let starReference = UserApi.REF_USERS.child(user.uid).child(FirebaseBranchName.stars.rawValue)
         
 //        guard let starReference = starRef else {
 //            return

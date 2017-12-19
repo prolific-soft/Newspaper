@@ -22,6 +22,8 @@ enum Segue : String {
     case subscriptionToSourceOpen = "subscriptionToSourceOpen"
     case exploreOpenToStars = "exploreOpenToStars"
     case subStartoArticleOpen = "subStartoArticleOpen"
+    case allArticlesToSourceOpen = "allArticlesToSourceOpen"
+    case sourceOpenToArticleOpen = "sourceOpenToArticleOpen"
     
     //Star
     case startoArticleOpen = "startoArticleOpen"

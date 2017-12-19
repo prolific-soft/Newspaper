@@ -171,6 +171,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="gUH-Ti-Uyf" kind="show" identifier="subscriptionToSourceOpen" id="hvw-YH-MZp"/>
+                        <segue destination="gUH-Ti-Uyf" kind="show" identifier="allArticlesToSourceOpen" id="Vtj-Kr-NwZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wI1-Tn-pyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -236,7 +237,7 @@
                                     <outlet property="starsSearchBar" destination="EJY-vN-ZIz" id="hKn-Ed-D30"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="starsTableViewCell" rowHeight="131" id="U8H-Uq-fJs" customClass="StarsTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subscriptionSourceOpenTableViewCell" rowHeight="131" id="U8H-Uq-fJs" customClass="SubscriptionSourceOpenTableViewCell" customModule="Newspaper" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="375" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U8H-Uq-fJs" id="ISG-d5-YHM">
@@ -311,7 +312,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="aVl-0j-lT7" kind="show" id="ov3-Gm-D2l"/>
+                        <segue destination="aVl-0j-lT7" kind="show" identifier="sourceOpenToArticleOpen" id="ov3-Gm-D2l"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bag-3r-OYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -901,4 +902,7 @@
         <image name="image-placeholder" width="200" height="200"/>
         <image name="subs" width="21" height="26"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Vtj-Kr-NwZ"/>
+    </inferredMetricsTieBreakers>
 </document>

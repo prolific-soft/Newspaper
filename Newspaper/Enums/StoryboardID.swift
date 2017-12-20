@@ -13,4 +13,8 @@ enum StoryboardID : String {
     case startViewController = "startViewController"
     case startNavigationController = "startNavigationController"
     case tabbarViewController = "tabBarScene"
+    
+    //TagSelector
+    case tagSelectorTableViewController = "TagSelectorTableViewController"
+    case tagSelectorNavVC = "tagSelectorNavVC"
 }

@@ -10,7 +10,6 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-
 class StarsTableViewController: UITableViewController {
 
     ///MARK: Class Properties

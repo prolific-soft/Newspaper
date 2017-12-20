@@ -150,10 +150,6 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     
     //Adds the current article to selected Tag
     @IBAction func taggedButtonTapped(_ sender: UIBarButtonItem) {
-    }
-    
-    //Opens options to share article
-    @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
         
         guard let selectedArticle = self.article else { return }
         NotificationCenter.default.post(name: NSNotification.Name.SelectedArticle , object: selectedArticle)
@@ -170,12 +166,22 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
         guard let savedPageVC = navBar?.viewControllers[0] as? SavedPagesTableViewController else {return}
         savedPageVC.article = self.article
         //print(savedPageVC.article)
+    }
+    
+    //Opens options to share article
+    @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
+
+        //Get TagOpenStoryBoard
+        let storyboard = UIStoryboard(name: "Stars", bundle: nil)
+        let tagSelectorNavVC = storyboard.instantiateViewController(withIdentifier: StoryboardID.tagSelectorNavVC.rawValue) as! UINavigationController
+        let tagSelectorVC = tagSelectorNavVC.viewControllers[0] as! TagSelectorTableViewController
+        tagSelectorVC.article = self.article
+        self.present(tagSelectorNavVC, animated: true, completion: nil)
         
     }
 
     
 }//End class ArticleOpenViewController
-
 
 
 

@@ -66,6 +66,8 @@
 		EF94F83B1FC60F48006A8BCD /* TagsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF94F83A1FC60F48006A8BCD /* TagsApi.swift */; };
 		EF94F83D1FC6152C006A8BCD /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF94F83C1FC6152C006A8BCD /* UserApi.swift */; };
 		EF94F83F1FC6207F006A8BCD /* ArticleConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF94F83E1FC6207F006A8BCD /* ArticleConverter.swift */; };
+		EFAACA0F1FEAD07300673091 /* TagSelectorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAACA0E1FEAD07300673091 /* TagSelectorTableViewController.swift */; };
+		EFAACA111FEAD8B600673091 /* TagSelectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAACA101FEAD8B600673091 /* TagSelectorTableViewCell.swift */; };
 		EFAD06351FA25DD400E36241 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06341FA25DD400E36241 /* Cell.swift */; };
 		EFAD06381FA25F1400E36241 /* CategoryExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06371FA25F1400E36241 /* CategoryExploreTableViewController.swift */; };
 		EFAD063A1FA25FBA00E36241 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD06391FA25FBA00E36241 /* SearchTableViewCell.swift */; };
@@ -226,6 +228,8 @@
 		EF94F83A1FC60F48006A8BCD /* TagsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsApi.swift; sourceTree = "<group>"; };
 		EF94F83C1FC6152C006A8BCD /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
 		EF94F83E1FC6207F006A8BCD /* ArticleConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleConverter.swift; sourceTree = "<group>"; };
+		EFAACA0E1FEAD07300673091 /* TagSelectorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectorTableViewController.swift; sourceTree = "<group>"; };
+		EFAACA101FEAD8B600673091 /* TagSelectorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectorTableViewCell.swift; sourceTree = "<group>"; };
 		EFAD06341FA25DD400E36241 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		EFAD06371FA25F1400E36241 /* CategoryExploreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryExploreTableViewController.swift; sourceTree = "<group>"; };
 		EFAD06391FA25FBA00E36241 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -415,6 +419,7 @@
 			children = (
 				EF1831501F9FB34800BE0140 /* StoryBoards */,
 				EF184DA51FAB9CDF000459A4 /* Tags */,
+				EFAACA0D1FEAD00F00673091 /* Tag Selector */,
 				EF184DA21FAB9C64000459A4 /* Saved Pages */,
 				EF184D9F1FAB9BA1000459A4 /* Stars */,
 				EF1E126F1FAD9470000EF3AF /* TabBar */,
@@ -507,6 +512,15 @@
 				EF0B764F1FE8512D00C35F95 /* SourceConverter.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		EFAACA0D1FEAD00F00673091 /* Tag Selector */ = {
+			isa = PBXGroup;
+			children = (
+				EFAACA0E1FEAD07300673091 /* TagSelectorTableViewController.swift */,
+				EFAACA101FEAD8B600673091 /* TagSelectorTableViewCell.swift */,
+			);
+			path = "Tag Selector";
 			sourceTree = "<group>";
 		};
 		EFAD06331FA25D8100E36241 /* Enums */ = {
@@ -803,6 +817,7 @@
 				EF184DB71FABD571000459A4 /* SubsriptionSourcesTableViewCell.swift in Sources */,
 				EF53C94F1F759D54009A1DB8 /* Sources.swift in Sources */,
 				EF94F8331FC60CE6006A8BCD /* FirApi.swift in Sources */,
+				EFAACA0F1FEAD07300673091 /* TagSelectorTableViewController.swift in Sources */,
 				EFAD063E1FA2601E00E36241 /* CategoryExploreCollectionViewCell.swift in Sources */,
 				EF1831571FA008D000BE0140 /* StartViewController.swift in Sources */,
 				EFAD06421FA342FC00E36241 /* ExploreOpenTableViewController.swift in Sources */,
@@ -813,6 +828,7 @@
 				EF184DBD1FABE62E000459A4 /* StarsSearchTableViewCell.swift in Sources */,
 				EF184D8E1FA815F7000459A4 /* SourceOpenTableViewCell.swift in Sources */,
 				EF0B76501FE8512D00C35F95 /* SourceConverter.swift in Sources */,
+				EFAACA111FEAD8B600673091 /* TagSelectorTableViewCell.swift in Sources */,
 				EF184DA71FAB9CF2000459A4 /* TagsTableViewController.swift in Sources */,
 				EFD90CC01FB29D18007ED3F5 /* SubscriptionSourceOpenTableViewCell.swift in Sources */,
 				EF5F8EA11FAC26640019EAA4 /* AllTagsTableViewCell.swift in Sources */,

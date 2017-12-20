@@ -33,6 +33,8 @@ enum Cell : String {
     case tagSearchTableViewCell = "tagSearchTableViewCell"
     case allTagsTableViewCell = "allTagsTableViewCell"
     case tagTableViewCell = "tagTableViewCell"
+    //Tags Selector
+    case tagSelectorTableViewCell = "tagSelectorTableViewCell"
 
     
 }

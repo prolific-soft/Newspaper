@@ -12,8 +12,10 @@ import Foundation
 /// Firebase branch to avoid typing string literals
 
 enum FirebaseBranchName : String {
+    //Database Branch
     case stars = "stars"
     case subscriptions = "subscriptions"
     case savedPages = "savedPages"
+    case tags = "tags"
     
 }

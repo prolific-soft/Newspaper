@@ -248,22 +248,22 @@
                                             <rect key="frame" x="94" y="8" width="275" height="99"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The LAD Bible is one of the largest community for guys aged 16-30 in the world. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8f-8U-GP6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="74.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="73.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                     <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyR-GB-aXI">
-                                                    <rect key="frame" x="0.0" y="83.5" width="275" height="15.5"/>
+                                                    <rect key="frame" x="0.0" y="82.5" width="275" height="16.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrepreneur " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBE-lW-vup">
-                                                            <rect key="frame" x="0.0" y="0.0" width="223" height="15.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="223" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                                             <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sep 2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqN-fm-EY8">
-                                                            <rect key="frame" x="223" y="0.0" width="52" height="15.5"/>
+                                                            <rect key="frame" x="223" y="0.0" width="52" height="16.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="52" id="0hx-81-R9x"/>
                                                             </constraints>
@@ -559,22 +559,22 @@
                                             <rect key="frame" x="94" y="8" width="275" height="99"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The LAD Bible is one of the largest community for guys aged 16-30 in the world. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJv-ap-ukM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="74.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="73.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                     <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Znk-Nh-vTQ">
-                                                    <rect key="frame" x="0.0" y="83.5" width="275" height="15.5"/>
+                                                    <rect key="frame" x="0.0" y="82.5" width="275" height="16.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrepreneur " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBp-QJ-spZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="223" height="15.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="223" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                                             <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sep 2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh6-Vm-Ca6">
-                                                            <rect key="frame" x="223" y="0.0" width="52" height="15.5"/>
+                                                            <rect key="frame" x="223" y="0.0" width="52" height="16.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="52" id="y4K-cR-IJ3"/>
                                                             </constraints>
@@ -764,7 +764,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dj-1d-IK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.60000000000002" y="4874.2128935532237"/>
+            <point key="canvasLocation" x="974" y="4864"/>
         </scene>
         <!--Article Open View Controller-->
         <scene sceneID="n9W-gN-pIK">

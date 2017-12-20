@@ -11,6 +11,17 @@ import SafariServices
 import FirebaseDatabase
 import FirebaseAuth
 import SVProgressHUD
+import Foundation
+
+
+protocol ArticleSelectorDelegate: class {
+    func articleSelector( article: Article?)
+}
+
+extension NSNotification.Name {
+    static let SelectedArticle = NSNotification.Name("SelectedArticle")
+}
+
 
 class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegate {
 
@@ -20,11 +31,9 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var articleImage: UIImageView!
     
-    var article : Article? {
-        didSet {
-            
-        }
-    }
+    var article : Article?
+    
+    weak var articleDelegate : ArticleSelectorDelegate?
     
     var currentUSER : User?
     var handleAuthStateDidChange: AuthStateDidChangeListenerHandle?
@@ -145,6 +154,35 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     
     //Opens options to share article
     @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
+        
+        guard let selectedArticle = self.article else { return }
+        NotificationCenter.default.post(name: NSNotification.Name.SelectedArticle , object: selectedArticle)
+        
+        SVProgressHUD.setDefaultMaskType(.black)
+        SVProgressHUD.setMinimumSize(CGSize(width: 50, height: 100))
+        SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+        SVProgressHUD.showSuccess(withStatus: "Link Copied")
+        
+        print("Selected Saved Link \(selectedArticle.url!)")
+        
+        let tabBarVCS = self.tabBarController?.viewControllers
+        let navBar = tabBarVCS![2] as? UINavigationController
+        
+        guard let savedPageVC = navBar?.viewControllers[0] as? SavedPagesTableViewController else {return}
+        
+        print(savedPageVC.article)
+        savedPageVC.article = self.article
+        print(savedPageVC.article)
+        
+        //print(tabBarVCS.debugDescription)
+        
+        //guard let selectedArticle = self.article else { return }
+       // NotificationCenter.default.post(name: NSNotification.Name.SelectedArticle , object: selectedArticle)
+       // NotificationCenter.default.post(name: NSNotification.Name.SelectedArticle, object: self, userInfo: ["key" : selectedArticle])
+        
+        
+        //articleDelegate?.articleSelector(article: self.article)
+        
     }
 
     

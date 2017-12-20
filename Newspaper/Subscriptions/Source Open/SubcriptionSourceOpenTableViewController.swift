@@ -81,7 +81,7 @@ class SubcriptionSourceOpenTableViewController: UITableViewController {
         SVProgressHUD.setDefaultMaskType(.black)
         SVProgressHUD.setMinimumSize(CGSize(width: 50, height: 100))
         SVProgressHUD.setMinimumDismissTimeInterval(1.5)
-        SVProgressHUD.showSuccess(withStatus: "Subscribed!")
+        SVProgressHUD.showSuccess(withStatus: "Subscribed")
     }
     
     func checkUserLoggedIn() {

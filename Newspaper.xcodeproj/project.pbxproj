@@ -11,6 +11,9 @@
 		EF0B76501FE8512D00C35F95 /* SourceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B764F1FE8512D00C35F95 /* SourceConverter.swift */; };
 		EF0B76571FE90C1200C35F95 /* icons8-rss-100-2.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0B76551FE90C1100C35F95 /* icons8-rss-100-2.png */; };
 		EF0B76581FE90C1200C35F95 /* icons8-rss-100.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0B76561FE90C1100C35F95 /* icons8-rss-100.png */; };
+		EF0B765A1FE9829900C35F95 /* icons8-rss-100-3.png in Resources */ = {isa = PBXBuildFile; fileRef = EF0B76591FE9829800C35F95 /* icons8-rss-100-3.png */; };
+		EF0B765C1FE9949100C35F95 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B765B1FE9949100C35F95 /* Notification.swift */; };
+		EF0B765D1FE9E88200C35F95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5F8EB91FACEA060019EAA4 /* Assets.xcassets */; };
 		EF12B43A1FCF11A600EEE3B9 /* FirebaseBranchName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF12B4391FCF11A600EEE3B9 /* FirebaseBranchName.swift */; };
 		EF1831521F9FB36400BE0140 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1831511F9FB36400BE0140 /* Login.storyboard */; };
 		EF1831571FA008D000BE0140 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1831561FA008D000BE0140 /* StartViewController.swift */; };
@@ -82,6 +85,8 @@
 		EF0B764F1FE8512D00C35F95 /* SourceConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceConverter.swift; sourceTree = "<group>"; };
 		EF0B76551FE90C1100C35F95 /* icons8-rss-100-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-rss-100-2.png"; sourceTree = "<group>"; };
 		EF0B76561FE90C1100C35F95 /* icons8-rss-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-rss-100.png"; sourceTree = "<group>"; };
+		EF0B76591FE9829800C35F95 /* icons8-rss-100-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-rss-100-3.png"; sourceTree = "<group>"; };
+		EF0B765B1FE9949100C35F95 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		EF12B4391FCF11A600EEE3B9 /* FirebaseBranchName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseBranchName.swift; sourceTree = "<group>"; };
 		EF1831511F9FB36400BE0140 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		EF1831561FA008D000BE0140 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -433,6 +438,7 @@
 				EF5F8EB91FACEA060019EAA4 /* Assets.xcassets */,
 				EF0B76551FE90C1100C35F95 /* icons8-rss-100-2.png */,
 				EF0B76561FE90C1100C35F95 /* icons8-rss-100.png */,
+				EF0B76591FE9829800C35F95 /* icons8-rss-100-3.png */,
 				EF2921E11FACF4E4005EC01A /* hamMenu@3x.png */,
 				EF5F8EBF1FACF2E40019EAA4 /* hamburgermenu@3x.png */,
 				EF5F8EBE1FACF1BB0019EAA4 /* icons8-menu-3.png */,
@@ -510,6 +516,7 @@
 				EF184D8F1FA8C6F9000459A4 /* Segue.swift */,
 				EF2921E81FAD6296005EC01A /* StoryboardID.swift */,
 				EF12B4391FCF11A600EEE3B9 /* FirebaseBranchName.swift */,
+				EF0B765B1FE9949100C35F95 /* Notification.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -700,6 +707,8 @@
 				EF1831521F9FB36400BE0140 /* Login.storyboard in Resources */,
 				EF5F8EAD1FACDC410019EAA4 /* SavedPages.storyboard in Resources */,
 				EF0B76571FE90C1200C35F95 /* icons8-rss-100-2.png in Resources */,
+				EF0B765D1FE9E88200C35F95 /* Assets.xcassets in Resources */,
+				EF0B765A1FE9829900C35F95 /* icons8-rss-100-3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,6 +789,7 @@
 				EFAD06381FA25F1400E36241 /* CategoryExploreTableViewController.swift in Sources */,
 				EF53C9531F75C983009A1DB8 /* NewsAPIServices.swift in Sources */,
 				EFAD063A1FA25FBA00E36241 /* SearchTableViewCell.swift in Sources */,
+				EF0B765C1FE9949100C35F95 /* Notification.swift in Sources */,
 				EF5F8E9D1FAC1BB60019EAA4 /* SavedSourceTableViewCell.swift in Sources */,
 				EF1831591FA00BFB00BE0140 /* MoreLoginOptionViewController.swift in Sources */,
 				EFAD06491FA77BE400E36241 /* SourceImages.swift in Sources */,

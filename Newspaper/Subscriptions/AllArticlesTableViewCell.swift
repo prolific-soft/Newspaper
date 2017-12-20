@@ -34,6 +34,7 @@ class AllArticlesTableViewCell: UITableViewCell {
                 guard let downloadedArticles = result as? Articles else {return}
                 let articleList = downloadedArticles.articles
                 
+                //TODO: Fix loading Error
                 for article in articleList {
                     loadedArticles.append(article)
                 }

@@ -47,42 +47,28 @@ class ExploreOpenTableViewController: UITableViewController {
         if segue.identifier == Segue.toSourceOpen.rawValue {
             if let sourceOpenTableViewController = segue.destination as? SourceOpenTableViewController {
 
-                guard let indexPath = sender as? NSIndexPath else {
-                    return
-                }
-                
-//                print("&&&&&&&&&&")
-//                print("IndexPath")
-//                print("\(indexPath.description)")
-//                print("&&&&&&&&&&")
-                
+                guard let indexPath = sender as? NSIndexPath else { return }
                 let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ExploreOpenTableViewCell
                 sourceOpenTableViewController.articles = (cell?.articles)!
             }
             
             if let subcriptionSourceOpenTableViewController = segue.destination as? SubcriptionSourceOpenTableViewController {
-                guard let indexPath = sender as? NSIndexPath else {
-                    return
-                }
+                guard let indexPath = sender as? NSIndexPath else { return }
                 let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ExploreOpenTableViewCell
-            
+                if let titleName = cell?.source?.name {
+                    subcriptionSourceOpenTableViewController.navigationItem.title = titleName
+                }
                 subcriptionSourceOpenTableViewController.articles = (cell?.articles)!
                 subcriptionSourceOpenTableViewController.source = cell?.source!
             }
-            
- 
         }
-
-
     }// End prepare for segue
-
 }
 
 extension ExploreOpenTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: Segue.toSourceOpen.rawValue, sender: indexPath)
     }
-    
 }
 
 

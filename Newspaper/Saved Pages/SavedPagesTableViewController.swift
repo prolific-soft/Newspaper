@@ -41,6 +41,7 @@ class SavedPagesTableViewController: UITableViewController {
     //First Loading Func
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
         checkUserLoggedIn()
@@ -68,7 +69,7 @@ class SavedPagesTableViewController: UITableViewController {
     }
     
     @IBAction func addArticleTapped(_ sender: UIBarButtonItem) {
-        guard let urlString = self.urlString else {return}
+        //guard let urlString = self.urlString else {return}
         
         let alert = UIAlertController(title: "Save web page",
                                       message: " Paste here the URL of the web page you want to save: ",
@@ -95,7 +96,7 @@ class SavedPagesTableViewController: UITableViewController {
         let cancelAction = UIAlertAction(title: "Cancel",
                                          style: .default)
         alert.addTextField { (textfield) in
-            textfield.text = urlString
+            textfield.text = self.urlString ?? ""
         }
         alert.addAction(cancelAction)
         alert.addAction(saveAction)
@@ -125,25 +126,20 @@ extension SavedPagesTableViewController {
 
 
 
-/// MARK: Cells on Apprearance
+/// MARK: Cells upon Appearing
 extension SavedPagesTableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = true
-        print("+++++++++++++++++++")
-        print("View Appeared with \(self.article?.description)")
-        print("+++++++++++++++++++")
+     
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         guard let handleAuthStateDidChange = handleAuthStateDidChange else { return }
         Auth.auth().removeStateDidChangeListener(handleAuthStateDidChange)
     }
-
 }
 
 
@@ -178,6 +174,8 @@ extension SavedPagesTableViewController {
 }
 
 
+
+
 //MARK: - Data Source
 extension SavedPagesTableViewController {
     
@@ -209,6 +207,9 @@ extension SavedPagesTableViewController {
     }
 }
 
+
+
+
 /// MARK: - Editing Cells
 extension SavedPagesTableViewController {
     
@@ -230,3 +231,39 @@ extension SavedPagesTableViewController {
         }
     }//End Commit EditingStyle
 }
+
+
+
+
+/// MARK: - Prepare for Segue
+extension SavedPagesTableViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            self.performSegue(withIdentifier: Segue.sourceOpenToArticleOpen.rawValue, sender: indexPath)
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.sourceOpenToArticleOpen.rawValue {
+            guard let indexPath = sender as? NSIndexPath else { return }
+            
+            let cell = tableView.cellForRow(at: indexPath as IndexPath) as? SavedSourceTableViewCell
+            if let articleOpenTableViewController = segue.destination as? ArticleOpenViewController {
+                articleOpenTableViewController.article = cell?.article!
+            }
+        }
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+

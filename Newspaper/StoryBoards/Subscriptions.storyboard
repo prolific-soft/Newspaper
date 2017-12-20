@@ -35,7 +35,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="fMn-yI-NWV">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                             <color key="barTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <offsetWrapper key="searchTextPositionAdjustment" horizontal="1" vertical="0.0"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -61,10 +61,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHi-Q2-Wz2">
-                                            <rect key="frame" x="31" y="17" width="559" height="21"/>
+                                            <rect key="frame" x="31" y="17" width="334" height="21"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All articles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1l2-fm-vJo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="21"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="168" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="168" id="BfY-kp-HBD"/>
                                                     </constraints>
@@ -73,7 +73,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbz-JN-hhD">
-                                                    <rect key="frame" x="393" y="0.0" width="166" height="21"/>
+                                                    <rect key="frame" x="168" y="0.0" width="166" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="166" id="x1z-sf-nrG"/>
                                                     </constraints>
@@ -110,10 +110,10 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WY6-fA-RzG">
-                                            <rect key="frame" x="75" y="15" width="517" height="18"/>
+                                            <rect key="frame" x="75" y="15" width="292" height="18"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNM-pv-cUF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="453" height="18"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="228" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="228" id="haE-uQ-1rt"/>
                                                     </constraints>
@@ -122,7 +122,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzH-b4-MWm">
-                                                    <rect key="frame" x="453" y="0.0" width="64" height="18"/>
+                                                    <rect key="frame" x="228" y="0.0" width="64" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="64" id="QnQ-R9-1Lv"/>
                                                     </constraints>
@@ -221,7 +221,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="EJY-vN-ZIz">
-                                            <rect key="frame" x="0.0" y="1" width="600" height="56"/>
+                                            <rect key="frame" x="0.0" y="1" width="375" height="56"/>
                                             <color key="barTintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </searchBar>
@@ -245,25 +245,25 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="1Q5-hf-zSC">
-                                            <rect key="frame" x="94" y="8" width="500" height="99"/>
+                                            <rect key="frame" x="94" y="8" width="275" height="99"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The LAD Bible is one of the largest community for guys aged 16-30 in the world. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8f-8U-GP6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="500" height="73.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="74.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                     <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyR-GB-aXI">
-                                                    <rect key="frame" x="0.0" y="82.5" width="500" height="16.5"/>
+                                                    <rect key="frame" x="0.0" y="83.5" width="275" height="15.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrepreneur " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBE-lW-vup">
-                                                            <rect key="frame" x="0.0" y="0.0" width="448" height="16.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="223" height="15.5"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                                             <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sep 2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqN-fm-EY8">
-                                                            <rect key="frame" x="448" y="0.0" width="52" height="16.5"/>
+                                                            <rect key="frame" x="223" y="0.0" width="52" height="15.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="52" id="0hx-81-R9x"/>
                                                             </constraints>
@@ -442,22 +442,22 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="BBC News" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dZ-eb-f6Z">
-                                            <rect key="frame" x="88" y="3.5" width="504" height="26"/>
+                                            <rect key="frame" x="88" y="3.5" width="279" height="26"/>
                                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="19"/>
                                             <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.92289169520000003" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="The LAD Bible is one of the largest community for guys aged 16-30 in the world. Send us your funniest pictures and videos!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fp-cm-2bZ">
-                                            <rect key="frame" x="88" y="40" width="504" height="44"/>
+                                            <rect key="frame" x="88" y="40" width="279" height="87.5"/>
                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                             <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="0.74159888699999998" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="D03-i4-HB5">
-                                            <rect key="frame" x="313.5" y="88" width="250" height="89.5"/>
+                                            <rect key="frame" x="88.5" y="131.5" width="250" height="46"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8k subscribers" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Es-Z8-l3E">
-                                                    <rect key="frame" x="0.0" y="0.0" width="115" height="89.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="115" height="46"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="115" id="3kv-Nd-JxY"/>
                                                     </constraints>
@@ -466,7 +466,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 articles/week" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIb-d9-Ctc">
-                                                    <rect key="frame" x="125" y="0.0" width="125" height="89.5"/>
+                                                    <rect key="frame" x="125" y="0.0" width="125" height="46"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="125" id="bsY-Z0-eHh"/>
                                                     </constraints>
@@ -532,7 +532,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="GHO-L7-mvP">
-                                            <rect key="frame" x="0.0" y="1" width="600" height="56"/>
+                                            <rect key="frame" x="0.0" y="1" width="375" height="56"/>
                                             <color key="barTintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </searchBar>
@@ -556,25 +556,25 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Jaf-Ye-LUw">
-                                            <rect key="frame" x="94" y="8" width="500" height="99"/>
+                                            <rect key="frame" x="94" y="8" width="275" height="99"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The LAD Bible is one of the largest community for guys aged 16-30 in the world. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJv-ap-ukM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="500" height="73.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="74.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                                     <color key="textColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Znk-Nh-vTQ">
-                                                    <rect key="frame" x="0.0" y="82.5" width="500" height="16.5"/>
+                                                    <rect key="frame" x="0.0" y="83.5" width="275" height="15.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrepreneur " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBp-QJ-spZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="448" height="16.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="223" height="15.5"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                                             <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sep 2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh6-Vm-Ca6">
-                                                            <rect key="frame" x="448" y="0.0" width="52" height="16.5"/>
+                                                            <rect key="frame" x="223" y="0.0" width="52" height="15.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="52" id="y4K-cR-IJ3"/>
                                                             </constraints>

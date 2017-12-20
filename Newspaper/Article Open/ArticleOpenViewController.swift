@@ -163,25 +163,13 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
         SVProgressHUD.setMinimumDismissTimeInterval(1.5)
         SVProgressHUD.showSuccess(withStatus: "Link Copied")
         
-        print("Selected Saved Link \(selectedArticle.url!)")
-        
+        //Use tab bar to access the SavedPages VC
+        //so as to set it's article
         let tabBarVCS = self.tabBarController?.viewControllers
         let navBar = tabBarVCS![2] as? UINavigationController
-        
         guard let savedPageVC = navBar?.viewControllers[0] as? SavedPagesTableViewController else {return}
-        
-        print(savedPageVC.article)
         savedPageVC.article = self.article
-        print(savedPageVC.article)
-        
-        //print(tabBarVCS.debugDescription)
-        
-        //guard let selectedArticle = self.article else { return }
-       // NotificationCenter.default.post(name: NSNotification.Name.SelectedArticle , object: selectedArticle)
-       // NotificationCenter.default.post(name: NSNotification.Name.SelectedArticle, object: self, userInfo: ["key" : selectedArticle])
-        
-        
-        //articleDelegate?.articleSelector(article: self.article)
+        //print(savedPageVC.article)
         
     }
 

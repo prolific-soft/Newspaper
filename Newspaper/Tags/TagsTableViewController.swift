@@ -14,6 +14,7 @@ import SVProgressHUD
 class TagsTableViewController: UITableViewController {
 
     // Class Properties
+    var count = 0
     var articles = [Article]()
     var starReference : DatabaseReference?
     var articleRef : DatabaseReference?
@@ -39,9 +40,6 @@ class TagsTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //self.loadData()
-        print("Tgas: \(tagArticlesByRef.count)")
-        
-
     }
     
     override func viewDidDisappear(_ animated: Bool) {

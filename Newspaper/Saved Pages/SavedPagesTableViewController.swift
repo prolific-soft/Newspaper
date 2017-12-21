@@ -42,6 +42,7 @@ class SavedPagesTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
         checkUserLoggedIn()
+        self.clearsSelectionOnViewWillAppear = true
     }
 
     /// Checks for current logged user
@@ -125,14 +126,6 @@ extension SavedPagesTableViewController {
 
 /// MARK: Cells upon Appearing
 extension SavedPagesTableViewController {
-    
-    override func viewWillAppear(_ animated: Bool) {
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-     
-    }
-    
     override func viewDidDisappear(_ animated: Bool) {
         guard let handleAuthStateDidChange = handleAuthStateDidChange else { return }
         Auth.auth().removeStateDidChangeListener(handleAuthStateDidChange)

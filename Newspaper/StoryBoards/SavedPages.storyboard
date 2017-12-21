@@ -51,7 +51,7 @@
                                     <outlet property="savedSearchBar" destination="hk4-KK-Dti" id="TFJ-GX-ccL"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="savedSourceTableViewCell" rowHeight="131" id="Ydy-OW-iGo" customClass="SavedSourceTableViewCell" customModule="Newspaper" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="savedSourceTableViewCell" rowHeight="131" id="Ydy-OW-iGo" customClass="SavedSourceTableViewCell" customModule="Newspaper" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="85" width="375" height="131"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ydy-OW-iGo" id="WdF-Kp-2G2">

@@ -24,7 +24,9 @@ class TagSelectorTableViewCell: UITableViewCell {
     }
 
     func setUp(name: String){
-        tagLabel.text = name
+        var cachename = ""
+        cachename = name
+        tagLabel.text = cachename
     }
     
     

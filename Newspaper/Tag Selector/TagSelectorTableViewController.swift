@@ -21,16 +21,19 @@ class TagSelectorTableViewController: UITableViewController {
         didSet {
         }
     }
+    
+    var count = 0
     var articles = [Article]()
     var starReference : DatabaseReference?
     var articleRef : DatabaseReference?
     var articlesByRef = [DatabaseReference : Article]()
+    var tagArticlesByRef = [DatabaseReference : [Article]]()
     var handleAuthStateDidChange: AuthStateDidChangeListenerHandle?
     
     //The user currently logged in
     var currentUSER : User? {
         didSet {
-           // self.loadData()
+            self.loadData()
             print("User was set")
         }
     }
@@ -38,17 +41,22 @@ class TagSelectorTableViewController: UITableViewController {
     //First Loading Func
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tags = ["Duff", "Phlegm", "Put"]
         checkUserLoggedIn()
-//        print("+++++++++++++++++++")
-//        print("Article was set")
-//        print("Article \(self.article?.author)")
-//        print("Article \(self.article?.description)")
-//        print("+++++++++++++++++++")
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        self.loadData()
+        let index = IndexPath(row: self.tagArticlesByRef.count, section: 0)
+        print(">>>> 1 >>>>>>")
+        print(index)
+        print(">>>>>>>>>>>")
+        self.count = tagArticlesByRef.count
+        print("Count : \(count)")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.loadData()
+
     }
     
     /// Checks for current logged user
@@ -68,7 +76,8 @@ class TagSelectorTableViewController: UITableViewController {
     //Dismisses the modal
     @IBAction func DoneTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true) {
-            //Finish up saving 
+            //Finish up saving
+            self.tableView.reloadData()
         }
     }
     
@@ -81,24 +90,29 @@ class TagSelectorTableViewController: UITableViewController {
         let saveAction = UIAlertAction(title: "OK",
                                        style: .default) { action in
                                         guard let textField = alert.textFields?.first,
-                                            let text = textField.text else { return } //CHECK TO MAKE SURE NOT EMPTY
+                                            let text = textField.text else { return }
                                         
                                         self.tags.append(text)
                                         print("3")
                                         guard let taggedArticle = self.article else { return }
                                         self.addTagArticleToFirebase(withTag: text, article: taggedArticle)
+                                        self.count = self.count + 1
+                                        print("Count Increaded: \(self.count)")
                                         self.tableView.reloadData()
-                                        print("2")
+                                        
+                                        //TODO: Fix so that it shows name of added tag
+
+                                       
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .default)
         alert.addTextField()
         alert.addAction(cancelAction)
         alert.addAction(saveAction)
-        
         present(alert, animated: true, completion: nil)
     }
 }
+
 
 //MARK: - Saving Tags to Branch
 extension TagSelectorTableViewController {
@@ -115,6 +129,54 @@ extension TagSelectorTableViewController {
 
 
 
+//MARK: - Loading Data
+extension TagSelectorTableViewController {
+    func loadData() {
+        
+        //Get the tag for current user
+        guard let user = self.currentUSER else { return }
+        let tagsReference = UserApi.REF_USERS.child(user.uid).child(FirebaseBranchName.tags.rawValue)
+        
+        //Find the tag keys
+        tagsReference.observe(DataEventType.value) { (snapshot) in
+            guard let tagDict = snapshot.value as? [String : AnyObject] else {return}
+            let keys = Array(tagDict.keys)
+            
+            //Take each tags keys and finds the articles for that tag
+            for key in keys {
+                let keyReference = tagsReference.child(key)
+                keyReference.observe(.value, with: { (snap) in
+                    var articlesToReturn = [Article]()
+                    
+                    //The articles for tag keys
+                    for item in snap.children {
+                        let converter = ArticleConverter()
+                        let article = converter.convertSnapshotToArticle(snapshot: item as! DataSnapshot)
+                        articlesToReturn.append(article)
+                        
+                        guard let itemRef = item as? DataSnapshot else { return }
+                        let articleRef = itemRef.ref
+                       
+                        //Add the articles to article ref and the key ref to tagArticleByRefs
+                        DispatchQueue.main.async {
+                            self.articlesByRef[articleRef] = article
+                            self.tagArticlesByRef[keyReference] = articlesToReturn
+                        }
+                    }
+                })
+
+            }//eND FOR KEYS
+            
+        }//End tagsReference.observe
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }//End loadData
+}
+
+
+
+
 //MARK: - Data Source
 extension TagSelectorTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -122,7 +184,8 @@ extension TagSelectorTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tags.count
+        //return tags.count tagArticlesByRef.keys.count
+        return count
     }
 }
 
@@ -133,7 +196,12 @@ extension TagSelectorTableViewController {
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      let cell = tableView.dequeueReusableCell(withIdentifier: Cell.tagSelectorTableViewCell.rawValue, for: indexPath) as! TagSelectorTableViewCell
      
-        cell.setUp(name: tags[indexPath.row] )
+        var name = ""
+        let tagKeys = Array(tagArticlesByRef.keys)
+        name = tagKeys[indexPath.row].key
+        cell.setUp(name: name)
+        //cell.setUp(name: tags[indexPath.row] )
+        
      return cell
         
     }

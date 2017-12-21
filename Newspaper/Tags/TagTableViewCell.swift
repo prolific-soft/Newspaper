@@ -10,6 +10,10 @@ import UIKit
 
 class TagTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var tagName: UILabel!
+    
+    var articles : [Article]?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +24,12 @@ class TagTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setUp(name : String, articles : [Article]){
+        self.tagName.text = name
+        self.articles = articles
+        print("Tag Cell Article was set : \(articles.count)")
+    }
+    
 
 }

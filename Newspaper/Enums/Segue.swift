@@ -28,5 +28,8 @@ enum Segue : String {
     //Article Open
     case articleOpenToTagSelectorTVC = "articleOpenToTagSelectorTVC"
     case toTagVC = "toTagVC"
+    //Tags
+    case allTagTableViewCellToSSOTVC = "allTagTableViewCellToSSOTVC"
+    case tagTableViewCellToSSOCTVC = "tagTableViewCellToSSOCTVC"
     
 }

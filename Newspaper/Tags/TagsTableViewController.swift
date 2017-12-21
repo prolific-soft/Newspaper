@@ -7,27 +7,59 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
+import SVProgressHUD
 
 class TagsTableViewController: UITableViewController {
 
+    // Class Properties
+    var articles = [Article]()
+    var starReference : DatabaseReference?
+    var articleRef : DatabaseReference?
+    var articlesByRef = [DatabaseReference : Article]()
+    var tagArticlesByRef = [DatabaseReference : [Article]]()
+    var handleAuthStateDidChange: AuthStateDidChangeListenerHandle?
+    
+    //The user currently logged in
+    var currentUSER : User? {
+        didSet {
+            print("User was set")
+            self.loadData()
+        }
+    }
+    
+    //First loading func
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkUserLoggedIn()
+        self.clearsSelectionOnViewWillAppear = true
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //self.loadData()
+        print("Tgas: \(tagArticlesByRef.count)")
+        
 
-        // Uncomment the following line to preserve selection between presentations
-         self.clearsSelectionOnViewWillAppear = true
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        guard let handleAuthStateDidChange = handleAuthStateDidChange else { return }
+        Auth.auth().removeStateDidChangeListener(handleAuthStateDidChange)
     }
 
+}
 
+
+// MARK: - Data Source
+extension TagsTableViewController {
+    
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 3
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
@@ -35,69 +67,136 @@ class TagsTableViewController: UITableViewController {
         case 1:
             return 1
         case 2:
-            return 3
+            return tagArticlesByRef.count
         default:
             return 1
         }
     }
-
-
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell =  UITableViewCell()
         if indexPath.section == 0 {
             cell = tableView.dequeueReusableCell(withIdentifier: Cell.tagSearchTableViewCell.rawValue, for: indexPath) as! TagSearchTableViewCell
         }else if indexPath.section == 1  {
-            cell = tableView.dequeueReusableCell(withIdentifier: Cell.allTagsTableViewCell.rawValue, for: indexPath) as! AllTagsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Cell.allTagsTableViewCell.rawValue, for: indexPath) as! AllTagsTableViewCell
+            //load Articles for AllTags
+            for (_, v) in articlesByRef {
+                self.articles.append(v)
+            }
+            cell.setUp(articles: self.articles)
+            return cell
         }else if indexPath.section == 2  {
-            cell = tableView.dequeueReusableCell(withIdentifier: Cell.tagTableViewCell.rawValue, for: indexPath) as! TagTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Cell.tagTableViewCell.rawValue, for: indexPath) as! TagTableViewCell
+            
+            let tagKeys = Array(tagArticlesByRef.keys)
+            let nameRef = tagKeys[indexPath.row]
+            
+            cell.setUp(name: nameRef.key, articles: tagArticlesByRef[nameRef]!)
+            return cell
         }
         return cell
     }
-
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+//MARK: - Load Current User
+extension TagsTableViewController {
+    
+    /// Checks for current logged user
+    func checkUserLoggedIn() {
+        handleAuthStateDidChange = Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+                self.currentUSER = user
+            }
+        }
+    }
+    
+    //Loads data from Firebase
+    func loadData() {
+        
+        //Get the tag for current user
+        guard let user = self.currentUSER else { return }
+        let tagsReference = UserApi.REF_USERS.child(user.uid).child(FirebaseBranchName.tags.rawValue)
+        
+        //Find the tag keys
+        tagsReference.observe(DataEventType.value) { (snapshot) in
+            guard let tagDict = snapshot.value as? [String : AnyObject] else {return}
+            let keys = Array(tagDict.keys)
+            
+            //Take each tags keys and finds the articles for that tag
+            for key in keys {
+                let keyReference = tagsReference.child(key)
+                keyReference.observe(.value, with: { (snap) in
+                    var articlesToReturn = [Article]()
+                    
+                    //The articles for tag keys
+                    for item in snap.children {
+                        let converter = ArticleConverter()
+                        let article = converter.convertSnapshotToArticle(snapshot: item as! DataSnapshot)
+                        articlesToReturn.append(article)
+                        
+                        guard let itemRef = item as? DataSnapshot else { return }
+                        let articleRef = itemRef.ref
+                        
+                        //Add the articles to article ref and the key ref to tagArticleByRefs
+                        DispatchQueue.main.async {
+                            self.articlesByRef[articleRef] = article
+                            self.tagArticlesByRef[keyReference] = articlesToReturn
+                            self.tableView.reloadData()
+                        }
+                    }
+                })
+            }//eND FOR KEYS
+        }//End tagsReference.observe
+    }//End loadData
+    
+}
+
+
+//MARK: Segue
+extension TagsTableViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2 {
+            self.performSegue(withIdentifier: Segue.tagTableViewCellToSSOCTVC.rawValue, sender: indexPath)
+        }
+        if indexPath.section == 1 {
+            self.performSegue(withIdentifier: Segue.allTagTableViewCellToSSOTVC.rawValue, sender: indexPath)
+        }
+    }
+    
+    // Prepare for Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        if segue.identifier == Segue.allTagTableViewCellToSSOTVC.rawValue {
+            if let subcriptionSourceOpenTableViewController = segue.destination as? SubcriptionSourceOpenTableViewController {
+                guard let indexPath = sender as? NSIndexPath else { return }
+                let cell = tableView.cellForRow(at: indexPath as IndexPath) as? AllTagsTableViewCell
+                
+                subcriptionSourceOpenTableViewController.navigationItem.title = "All Tags"
+                subcriptionSourceOpenTableViewController.articles = (cell?.articles)!
+            }
+        }
+        
+        if segue.identifier == Segue.tagTableViewCellToSSOCTVC.rawValue {
+            if let subcriptionSourceOpenTableViewController = segue.destination as? SubcriptionSourceOpenTableViewController {
+                guard let indexPath = sender as? NSIndexPath else { return }
+                let cell = tableView.cellForRow(at: indexPath as IndexPath) as? TagTableViewCell
+                
+                let tagKeys = Array(tagArticlesByRef.keys)
+                let nameRef = tagKeys[indexPath.row]
+                let tagName = nameRef.key
+                subcriptionSourceOpenTableViewController.navigationItem.title = tagName
+                subcriptionSourceOpenTableViewController.articles = (cell?.articles)!
+            }
+        }
+        
+    }
+    
+}
+
+
+
+
+

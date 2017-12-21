@@ -10,6 +10,8 @@ import UIKit
 
 class AllTagsTableViewCell: UITableViewCell {
 
+    var articles : [Article]?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,8 +19,11 @@ class AllTagsTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func setUp(articles: [Article]){
+        self.articles = articles
+         print("AllTags Cell was set : \(articles.count)")
     }
 
 }

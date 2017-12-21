@@ -17,9 +17,6 @@ class SavedPagesTableViewController: UITableViewController {
     ///MARK: Class Properties
     var article : Article? {
         didSet {
-            print("+++++++++++++++++++")
-            print("Article was set")
-            print("+++++++++++++++++++")
             self.urlString = article?.url
         }
     }
@@ -84,9 +81,9 @@ class SavedPagesTableViewController: UITableViewController {
 
                                         
                                         SVProgressHUD.setDefaultMaskType(.black)
-                                        SVProgressHUD.setMinimumSize(CGSize(width: 60, height: 100))
+                                        SVProgressHUD.setMinimumSize(CGSize(width: 50, height: 100))
                                         SVProgressHUD.setMinimumDismissTimeInterval(1.5)
-                                        SVProgressHUD.showSuccess(withStatus: "Added to Saved Pages")
+                                        SVProgressHUD.showSuccess(withStatus: "Article Saved")
 
                                         guard let savedArticle = self.article else { return }
                                         self.addArticleToFirebase(withArticle: savedArticle)

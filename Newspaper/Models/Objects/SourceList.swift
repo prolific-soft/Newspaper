@@ -43,9 +43,6 @@ struct SourceList {
             }
             sources = sourcesResult.sources
             completion(sources)
-            print("==================")
-            print("\(sources.count)")
-            print("==================")
         }
     }
     

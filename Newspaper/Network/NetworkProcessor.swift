@@ -32,7 +32,6 @@ class NetworkProcessor {
                 if let httpResponse = response as? HTTPURLResponse {
                     switch httpResponse.statusCode {
                     case 200:
-                        print("Success")
                         if let responseData = data {
                             do{
                                 var downloadedObject : Codable?
@@ -41,7 +40,6 @@ class NetworkProcessor {
                                     downloadedObject = try JSONDecoder().decode(Article.self, from: responseData)
                                 case "articles":
                                    downloadedObject = try JSONDecoder().decode(Articles.self, from: responseData)
-                                    print("Articles was downloaded")
                                 case "source":
                                    downloadedObject = try JSONDecoder().decode(Source.self, from: responseData)
                                 case "sources":
@@ -74,7 +72,6 @@ class NetworkProcessor {
                 if let httpResponse = response as? HTTPURLResponse {
                     switch httpResponse.statusCode {
                     case 200:
-                        print("Success downloading Image")
                         if let responseData = data {
                             completion(responseData, nil, nil)
                         }

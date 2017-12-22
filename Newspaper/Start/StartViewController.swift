@@ -17,6 +17,16 @@ class StartViewController: UIViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.toolbar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+         self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.toolbar.isHidden = false
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         //Sign In Already Existing User
         if Auth.auth().currentUser != nil {
@@ -26,11 +36,11 @@ class StartViewController: UIViewController {
         }
     }
     
-    @IBAction func exploreButtonTapped(_ sender: UIButton) {
+    @IBAction func exploreButtonTapped(_ sender: CustomButton) {
         
     }
     
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
+    @IBAction func loginButtonTapped(_ sender: CustomButton) {
     }
     
     

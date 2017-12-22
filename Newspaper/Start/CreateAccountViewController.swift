@@ -24,7 +24,6 @@ class CreateAccountViewController: UIViewController {
 
     
     @IBAction func createAccountButtonTapped(_ sender: UIButton) {
-        
         guard let emailText = emailTextField.text, let passwordText = passwordTextField.text else {
             return
         }

@@ -14,6 +14,8 @@ class MoreLoginOptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
 
     @IBAction func emailLoginButtonTapped(_ sender: UIButton) {
     }
@@ -22,9 +24,13 @@ class MoreLoginOptionViewController: UIViewController {
     }
     
     @IBAction func closeButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.toolbar.isHidden = true
+        //self.navigationController?.navigationBar.isHidden = true
+    }
     
     
     /*

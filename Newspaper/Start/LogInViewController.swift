@@ -20,6 +20,9 @@ class LogInViewController: UIViewController {
         SVProgressHUD.setDefaultMaskType(.black)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.toolbar.isHidden = true
+    }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         guard let emailText = emailTextfield.text, let passwordText = passwordTextfield.text else {

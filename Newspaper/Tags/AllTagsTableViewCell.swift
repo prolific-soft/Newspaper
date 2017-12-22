@@ -23,7 +23,6 @@ class AllTagsTableViewCell: UITableViewCell {
     
     func setUp(articles: [Article]){
         self.articles = articles
-         print("AllTags Cell was set : \(articles.count)")
     }
 
 }

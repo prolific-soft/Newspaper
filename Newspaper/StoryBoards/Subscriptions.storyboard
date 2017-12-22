@@ -156,7 +156,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Subscriptions" id="Tga-ZZ-5Jz">
-                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="TCn-SL-4jj">
+                        <barButtonItem key="leftBarButtonItem" image="Hamburger" id="TCn-SL-4jj">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="logoutTapped:" destination="jAw-yp-PW6" id="Vkw-Yi-7wz"/>
@@ -307,7 +307,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Stars" id="cT4-Bd-hjA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="9Kb-HL-OTP">
+                        <barButtonItem key="rightBarButtonItem" image="eye" id="9Kb-HL-OTP">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -619,10 +619,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Stars" id="8N0-LM-fdw">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="search" id="8Xv-FL-wE4">
+                            <barButtonItem image="eye" id="8Xv-FL-wE4">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </barButtonItem>
-                            <barButtonItem systemItem="bookmarks" id="vmf-lU-pW7">
+                            <barButtonItem image="Subbed" id="vmf-lU-pW7">
                                 <connections>
                                     <action selector="saveNewsSource:" destination="osb-Ye-itY" id="X30-7s-1jy"/>
                                 </connections>
@@ -728,25 +728,25 @@
                     </view>
                     <navigationItem key="navigationItem" id="2eC-u7-rl0">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="action" id="xur-1b-d5m">
+                            <barButtonItem image="Tag" id="xur-1b-d5m">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="shareButtonTapped:" destination="kal-Up-DQZ" id="HzJ-ya-HK3"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="reply" id="dcI-Bi-jSU">
+                            <barButtonItem image="SavedPages" id="dcI-Bi-jSU">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="taggedButtonTapped:" destination="kal-Up-DQZ" id="mOQ-sy-hgt"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="trash" id="iuB-kM-BhX">
+                            <barButtonItem image="Read" id="iuB-kM-BhX">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="markReadButtonTapped:" destination="kal-Up-DQZ" id="qZx-ID-xgH"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="bookmarks" id="T5K-vY-YRo">
+                            <barButtonItem image="NavStar-1" id="T5K-vY-YRo">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="starButtonTapped:" destination="kal-Up-DQZ" id="2id-u4-2Ed"/>
@@ -857,25 +857,25 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q7e-ed-QDC">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="action" id="Sns-I4-uUt">
+                            <barButtonItem image="Tag" id="Sns-I4-uUt">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="shareButtonTapped:" destination="aVl-0j-lT7" id="vPP-Wt-jtb"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="reply" id="jUB-fm-ST1">
+                            <barButtonItem image="SavedPages" id="jUB-fm-ST1">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="taggedButtonTapped:" destination="aVl-0j-lT7" id="Vkt-DG-rLW"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="trash" id="XFG-0Q-x2N">
+                            <barButtonItem image="Read" id="XFG-0Q-x2N">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="markReadButtonTapped:" destination="aVl-0j-lT7" id="kWa-f2-Y1I"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="bookmarks" id="fz4-ft-zws">
+                            <barButtonItem image="NavStar-1" id="fz4-ft-zws">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="starButtonTapped:" destination="aVl-0j-lT7" id="Jkc-jg-yzz"/>
@@ -897,7 +897,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Hamburger" width="20" height="18"/>
+        <image name="NavStar-1" width="24" height="24"/>
+        <image name="Read" width="23" height="23"/>
+        <image name="SavedPages" width="18" height="24"/>
+        <image name="Subbed" width="18" height="24"/>
+        <image name="Tag" width="24" height="24"/>
         <image name="breitbart-news" width="152" height="152"/>
+        <image name="eye" width="24" height="16"/>
         <image name="icons8-rss-100-2.png" width="100" height="100"/>
         <image name="image-placeholder" width="200" height="200"/>
         <image name="subs" width="21" height="26"/>

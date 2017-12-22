@@ -115,7 +115,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tags" id="IhQ-o6-Kxk">
-                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="d8j-OP-aSF">
+                        <barButtonItem key="leftBarButtonItem" image="Hamburger" id="d8j-OP-aSF">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -257,7 +257,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Stars" id="sP1-Pl-tIJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="0jy-ea-YNZ">
+                        <barButtonItem key="rightBarButtonItem" image="eye" id="0jy-ea-YNZ">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -362,25 +362,25 @@
                     </view>
                     <navigationItem key="navigationItem" id="SLR-Eu-qiw">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="action" id="Vxz-T4-aTa">
+                            <barButtonItem image="Tag" id="Vxz-T4-aTa">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="shareButtonTapped:" destination="OOl-6j-nT7" id="OiC-Fo-Icx"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="reply" id="72l-25-Ie9">
+                            <barButtonItem image="SavedPages" id="72l-25-Ie9">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="taggedButtonTapped:" destination="OOl-6j-nT7" id="xTx-43-3jp"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="trash" id="d6l-Je-ZoZ">
+                            <barButtonItem image="Read" id="d6l-Je-ZoZ">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="markReadButtonTapped:" destination="OOl-6j-nT7" id="bLA-xf-ktJ"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="bookmarks" id="BZP-x1-9O5">
+                            <barButtonItem image="NavStar-1" id="BZP-x1-9O5">
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="starButtonTapped:" destination="OOl-6j-nT7" id="vVV-OG-EvL"/>
@@ -402,7 +402,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Hamburger" width="20" height="18"/>
+        <image name="NavStar-1" width="24" height="24"/>
+        <image name="Read" width="23" height="23"/>
+        <image name="SavedPages" width="18" height="24"/>
+        <image name="Tag" width="24" height="24"/>
         <image name="breitbart-news" width="152" height="152"/>
+        <image name="eye" width="24" height="16"/>
         <image name="icons8-price-tag-blue" width="100" height="100"/>
         <image name="tags.png" width="33" height="33"/>
         <image name="tags_filled.png" width="27" height="27"/>

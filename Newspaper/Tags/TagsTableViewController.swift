@@ -25,7 +25,6 @@ class TagsTableViewController: UITableViewController {
     //The user currently logged in
     var currentUSER : User? {
         didSet {
-            print("User was set")
             self.loadData()
         }
     }

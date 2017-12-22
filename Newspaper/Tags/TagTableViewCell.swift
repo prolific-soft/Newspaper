@@ -28,7 +28,6 @@ class TagTableViewCell: UITableViewCell {
     func setUp(name : String, articles : [Article]){
         self.tagName.text = name
         self.articles = articles
-        print("Tag Cell Article was set : \(articles.count)")
     }
     
 

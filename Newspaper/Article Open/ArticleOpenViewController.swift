@@ -44,9 +44,6 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        /// Refreshes the state of the current user so if
-        /// another person signed in it will removes previous
-        /// user and assign new user
         checkUserLoggedIn()
     }
     
@@ -127,7 +124,11 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     @IBAction func starButtonTapped(_ sender: UIBarButtonItem) {
         
         /// Gets current user for star ref
-        guard let user = currentUSER else {return}
+        guard let user = currentUSER else {
+            showLoginAnimation()
+            return
+        }
+        
         let starReference = UserApi.REF_USERS.child(user.uid).child(FirebaseBranchName.stars.rawValue)
         
         let newStarredArticleId = starReference.childByAutoId().key
@@ -138,27 +139,30 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
         //TODO:
         // Disable button once it is saved and change the
         // icon to indicate star saving was successful
-        SVProgressHUD.setDefaultMaskType(.black)
-        SVProgressHUD.setMinimumSize(CGSize(width: 50, height: 100))
-        SVProgressHUD.setMinimumDismissTimeInterval(1.5)
-        SVProgressHUD.showSuccess(withStatus: "Saved to Stars")
+        savedStarProgressAnimation()
+
     }
     
     //Marks the article as read
     @IBAction func markReadButtonTapped(_ sender: UIBarButtonItem) {
+        if currentUSER == nil {
+            showLoginAnimation()
+            return
+        }
     }
     
     //Adds the current article to selected Tag
     @IBAction func taggedButtonTapped(_ sender: UIBarButtonItem) {
         
+        /// Gets current user for star ref
+        if currentUSER == nil {
+            showLoginAnimation()
+            return
+        }
+        
         guard let selectedArticle = self.article else { return }
         NotificationCenter.default.post(name: NSNotification.Name.SelectedArticle , object: selectedArticle)
-        
-        SVProgressHUD.setDefaultMaskType(.black)
-        SVProgressHUD.setMinimumSize(CGSize(width: 50, height: 100))
-        SVProgressHUD.setMinimumDismissTimeInterval(1.5)
-        SVProgressHUD.showSuccess(withStatus: "Link Copied")
-        
+        linkCopiedProgressAnimation()
         //Use tab bar to access the SavedPages VC
         //so as to set it's article
         guard let tabBarVCS = self.tabBarController?.viewControllers else { return }
@@ -170,6 +174,12 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     
     //Opens options to share article
     @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
+        
+        /// Gets current user for star ref
+        if currentUSER == nil {
+            showLoginAnimation()
+            return
+        }
 
         //Get TagOpenStoryBoard
         let storyboard = UIStoryboard(name: "Stars", bundle: nil)
@@ -185,6 +195,33 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
 
 
 
+//MARK: - ProgressHUD Animations
+extension ArticleOpenViewController {
+    
+    func linkCopiedProgressAnimation(){
+        SVProgressHUD.setDefaultMaskType(.black)
+        SVProgressHUD.setMinimumSize(CGSize(width: 50, height: 100))
+        SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+        SVProgressHUD.showSuccess(withStatus: "Link Copied")
+    }
+    
+    func savedStarProgressAnimation(){
+        SVProgressHUD.setDefaultMaskType(.black)
+        SVProgressHUD.setMinimumSize(CGSize(width: 50, height: 100))
+        SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+        SVProgressHUD.showSuccess(withStatus: "Saved to Stars")
+    }
+    
+    func showLoginAnimation(){
+        SVProgressHUD.setDefaultMaskType(.none)
+        SVProgressHUD.setDefaultStyle(.light)
+        SVProgressHUD.setMinimumSize(CGSize(width: 100, height: 100))
+        SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+        SVProgressHUD.showInfo(withStatus: "Login to Continue")
+        SVProgressHUD.dismiss(withDelay: 1.5)
+    }
+    
+}
 
 
 

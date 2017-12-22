@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class StarsTableViewCell: UITableViewCell {
 
@@ -43,7 +44,15 @@ class StarsTableViewCell: UITableViewCell {
         //Format Time to Hours Ago before setting
         //sourceTimeLabel.text = withArticle.publishedAt
         let tempImageView = UIImageView()
-        if let url = URL(string: withArticle.urlToImage!) {
+        guard let imageURLString = withArticle.urlToImage else {
+            SVProgressHUD.setDefaultMaskType(.black)
+            SVProgressHUD.setMinimumSize(CGSize(width: 100, height: 200))
+            SVProgressHUD.setMinimumDismissTimeInterval(1.8)
+            SVProgressHUD.showSuccess(withStatus: "Some images are missing")
+            return
+        }
+        
+        if let url = URL(string: imageURLString) {
             tempImageView.downloadImageFromUrl(url: url) { (image) in
                 if let data = image {
                     self.sourceImageView.image = data

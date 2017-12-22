@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SVProgressHUD
 import UIKit
 
 extension UIImageView {
@@ -20,15 +21,16 @@ extension UIImageView {
         imageDownloader.downloadImageDataFromURL { (imageData, response, error) in
             
             DispatchQueue.main.async {
-                if let data = imageData {
-                    completion(UIImage(data: data)!)
+                guard let data = imageData else { return }
+                guard let image = UIImage(data: data) else {
+                    SVProgressHUD.setDefaultMaskType(.black)
+                    SVProgressHUD.setMinimumSize(CGSize(width: 100, height: 200))
+                    SVProgressHUD.setMinimumDismissTimeInterval(1.8)
+                    SVProgressHUD.showSuccess(withStatus: "Some images are missing")
+                    return
                 }
+                completion(image)
             }
         }
-        
-        
     }
-    
-    
-    
 }

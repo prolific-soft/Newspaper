@@ -161,8 +161,8 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
         
         //Use tab bar to access the SavedPages VC
         //so as to set it's article
-        let tabBarVCS = self.tabBarController?.viewControllers
-        let navBar = tabBarVCS![2] as? UINavigationController
+        guard let tabBarVCS = self.tabBarController?.viewControllers else { return }
+        let navBar = tabBarVCS[2] as? UINavigationController
         guard let savedPageVC = navBar?.viewControllers[0] as? SavedPagesTableViewController else {return}
         savedPageVC.article = self.article
         //print(savedPageVC.article)

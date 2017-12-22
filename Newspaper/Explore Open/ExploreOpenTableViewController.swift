@@ -45,11 +45,13 @@ class ExploreOpenTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segue.toSourceOpen.rawValue {
-            if let sourceOpenTableViewController = segue.destination as? SourceOpenTableViewController {
+            if let starsTableViewController = segue.destination as? StarsTableViewController {
 
                 guard let indexPath = sender as? NSIndexPath else { return }
                 let cell = tableView.cellForRow(at: indexPath as IndexPath) as? ExploreOpenTableViewCell
-                sourceOpenTableViewController.articles = (cell?.articles)!
+                starsTableViewController.articles = (cell?.articles)!
+                guard let title = cell?.source?.name else { return }
+                starsTableViewController.navigationItem.title = title
             }
             
             if let subcriptionSourceOpenTableViewController = segue.destination as? SubcriptionSourceOpenTableViewController {

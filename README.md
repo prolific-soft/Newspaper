@@ -1,3 +1,3 @@
 # Newspaper
 
-<a href="https://giphy.com/gifs/xUNda2vlmkNjnbeaGc"><img src="https://giphy.com/gifs/xUNda2vlmkNjnbeaGc" title="Newspaper"/></a>
+<a href="http://g.recordit.co/86DPIBuDWE.gif"><img src="http://g.recordit.co/86DPIBuDWE.gif" title="Newspaper"/></a>

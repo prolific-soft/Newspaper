@@ -1,5 +1,5 @@
 <h1 align="center">
- # Newspaper
+ Newspaper
 </h1>
 
 <h4 align="center">Stay up to date with the latest news.</h4>

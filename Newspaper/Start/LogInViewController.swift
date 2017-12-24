@@ -10,14 +10,17 @@ import UIKit
 import SVProgressHUD
 
 class LogInViewController: UIViewController {
-
+    @IBOutlet weak var backScrollView: UIScrollView!
+    
     @IBOutlet weak var emailTextfield: UITextField!
     
     @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var backView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SVProgressHUD.setDefaultMaskType(.black)
+
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -32,19 +35,20 @@ class LogInViewController: UIViewController {
            //SVProgressHUD.showSuccess(withStatus: "Success!")
             self.performSegue(withIdentifier: Segue.loginToTabbar.rawValue, sender: nil)
         }) { (ErrorMessage) in
+            SVProgressHUD.setDefaultMaskType(.black)
             SVProgressHUD.showError(withStatus: ErrorMessage!)
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+
+//MARK: - Textfield Animation
+extension LogInViewController {
+    
+}
+
+
+
+
+

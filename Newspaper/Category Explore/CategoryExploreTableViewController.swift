@@ -97,8 +97,8 @@ extension CategoryExploreTableViewController : UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        layout.minimumLineSpacing = 3.0  //5.0
-        layout.minimumInteritemSpacing = 3.0  //2.5
+        layout.minimumLineSpacing = 1.0  //5.0
+        layout.minimumInteritemSpacing = 1.0  //2.5
         
         let numberOfItemsPerRow : CGFloat = 2.0
         let itemWidth = (collectionView.bounds.width - layout.minimumLineSpacing) / numberOfItemsPerRow

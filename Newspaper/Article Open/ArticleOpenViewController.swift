@@ -14,15 +14,6 @@ import SVProgressHUD
 import Foundation
 
 
-protocol ArticleSelectorDelegate: class {
-    func articleSelector( article: Article?)
-}
-
-extension NSNotification.Name {
-    static let SelectedArticle = NSNotification.Name("SelectedArticle")
-}
-
-
 class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -32,8 +23,6 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
     @IBOutlet weak var articleImage: UIImageView!
     
     var article : Article?
-    
-    weak var articleDelegate : ArticleSelectorDelegate?
     
     var currentUSER : User?
     var handleAuthStateDidChange: AuthStateDidChangeListenerHandle?
@@ -160,8 +149,6 @@ class ArticleOpenViewController: UIViewController, SFSafariViewControllerDelegat
             return
         }
         
-        guard let selectedArticle = self.article else { return }
-        NotificationCenter.default.post(name: NSNotification.Name.SelectedArticle , object: selectedArticle)
         linkCopiedProgressAnimation()
         //Use tab bar to access the SavedPages VC
         //so as to set it's article

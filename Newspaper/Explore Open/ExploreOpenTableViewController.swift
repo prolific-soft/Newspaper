@@ -60,8 +60,10 @@ class ExploreOpenTableViewController: UITableViewController {
                 if let titleName = cell?.source?.name {
                     subcriptionSourceOpenTableViewController.navigationItem.title = titleName
                 }
-                subcriptionSourceOpenTableViewController.articles = (cell?.articles)!
-                subcriptionSourceOpenTableViewController.source = cell?.source!
+                guard let article = cell?.articles else {return}
+                guard let source = cell?.source else {return}
+                subcriptionSourceOpenTableViewController.articles = article
+                subcriptionSourceOpenTableViewController.source = source
             }
         }
     }// End prepare for segue

@@ -29,10 +29,13 @@
 * Delete selected news from rows
 
 
-<p align="center">
-	<a href="http://g.recordit.co/86DPIBuDWE.gif"><img src="http://g.recordit.co/86DPIBuDWE.gif" title=“Explore News Categories”/></a>
-	<a href="http://g.recordit.co/Km58Um9Oim.gif"><img src="http://g.recordit.co/Km58Um9Oim.gif" title=“User Authentication - Login/Create Account”/></a>
+<p align="center">	
+<div>
+<img style="float:left;" src='http://g.recordit.co/86DPIBuDWE.gif' title='Explore-News-Categories' alt='Explore-News-Categories'/>
+<img style="float:left;" src='http://g.recordit.co/Km58Um9Oim.gif' title='User-Authentication-Login-Create Account' alt='User-Authentication-Login-Create Account'/>
+</div>
 </p>
+
 
 
 ## Todo List

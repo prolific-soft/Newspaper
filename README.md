@@ -5,8 +5,8 @@
 <h4 align="center">Stay up to date with the latest news.</h4>
 
 <p align="center">
-  <a href="#key-features">Features</a> •
-  <a href=“#to-do-list”>Todo List</a> •
+  <a href="#Features">Features</a> •
+  <a href=“#Todo-List”>Todo List</a> •
   <a href="#download">Download</a> •
   <a href="#credits">Credits</a> 
 </p>
@@ -21,7 +21,7 @@
 
 * User Authentication - create account/login
 * News categories 
-* News by a sources Eg CNN, BBC, TechRadar etc  
+* News by sources Eg CNN, BBC, TechRadar etc  
 * Subscribe to a news source
 * Save news for reading later
 * Copy and save news link 

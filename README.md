@@ -1,9 +1,5 @@
 <h1 align="center">
-  <br>
-![](Newspaper/Source%20Images/logo.png)
-  <br>
-  Newspaper
-  <br>
+ # Newspaper
 </h1>
 
 <h4 align="center">Stay up to date with the latest news.</h4>
@@ -12,7 +8,7 @@
   <a href="#key-features">Features</a> •
   <a href=“#to-do-list”>Todo List</a> •
   <a href="#download">Download</a> •
-  <a href="#credits">Credits</a> •
+  <a href="#credits">Credits</a> 
 </p>
 
 

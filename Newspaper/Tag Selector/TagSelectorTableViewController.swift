@@ -96,12 +96,19 @@ class TagSelectorTableViewController: UITableViewController {
                                         print("3")
                                         guard let taggedArticle = self.article else { return }
                                         self.addTagArticleToFirebase(withTag: text, article: taggedArticle)
-                                        self.count = self.count + 1
+                                        //self.count = self.count + 1
                                         print("Count Increaded: \(self.count)")
-                                        self.tableView.reloadData()
+//                                        self.tableView.beginUpdates()
+//                                        self.tableView.reloadData()
+//                                        self.tableView.endUpdates()
                                         
                                         //TODO: Fix so that it shows name of added tag
-
+//                                        if self.count != 0 {
+//                                            self.tableView.beginUpdates()
+//                                            self.tableView.insertRows(at: [IndexPath(row: self.count-1, section: 0)], with: .automatic)
+//                                            self.tableView.endUpdates()
+//                                        }
+                                    
                                        
         }
         

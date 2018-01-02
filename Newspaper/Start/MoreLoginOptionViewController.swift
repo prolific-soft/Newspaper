@@ -10,9 +10,11 @@ import UIKit
 
 class MoreLoginOptionViewController: UIViewController {
 
+    @IBOutlet weak var createAccountButton: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.cutomizeButton()
     }
     
     
@@ -32,6 +34,12 @@ class MoreLoginOptionViewController: UIViewController {
         //self.navigationController?.navigationBar.isHidden = true
     }
     
+    
+    func cutomizeButton(){
+        createAccountButton.layer.borderWidth = 1.4
+        createAccountButton.layer.cornerRadius = 4
+        createAccountButton.layer.borderColor = UIColor(red: 61/255, green: 148/255, blue: 255/255, alpha: 1).cgColor
+    }
     
     /*
     // MARK: - Navigation

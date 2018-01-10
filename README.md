@@ -43,6 +43,7 @@
 * User profile info at slide menu  
 * Fix duplicate adding/deleting
 * Fix duplicate tags appearing
+* Add image caching
 
 
 ## Download
